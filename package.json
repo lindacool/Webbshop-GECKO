@@ -9,8 +9,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "mon": "nodemon index",
-    "sass": "node-sass scss -o css --watch",
-    "com": "git commit -m"
+    "sass": "node-sass scss -o css --watch"
   },
   "repository": {
     "type": "git",
