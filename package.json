@@ -1,0 +1,34 @@
+{
+  "name": "geckowebshop",
+  "version": "1.0.0",
+  "description": "Webshop. Gecko clothing company",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lindacool/Webbshop-GECKO.git"
+  },
+  "author": "Love, Blomman, LindaCool & Loppan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lindacool/Webbshop-GECKO/issues"
+  },
+  "homepage": "https://github.com/lindacool/Webbshop-GECKO#readme",
+  "dependencies": {
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.2",
+    "node-sass-middleware": "^0.11.0"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "cypress": "^4.0.2",
+    "mocha": "^7.0.1",
+    "nodemon": "^2.0.2"
+  }
+}
