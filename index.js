@@ -1,6 +1,8 @@
+const express = require("express");
 const mongoose = require("mongoose");
 const config = require("./config/config");
 
+const app = express();
 
 
 
@@ -8,6 +10,8 @@ const config = require("./config/config");
 
 
 
+
+const PORT = process.env.PORT || 4000;
 
 const options = {
     useNewUrlParser: true,
