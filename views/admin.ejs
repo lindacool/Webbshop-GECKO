@@ -1,1 +1,41 @@
-admin
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <form action="/admin" class="createproduct" method="post">
+
+        <input type="text" name="title" placeholder="title" />
+        <input type="text" name="imgUrl" placeholder="imgUrl" />
+        <input type="text" name="price" placeholder="price" />
+        <input type="text" name="description" placeholder="description" />
+        <input type="text" name="size" placeholder="size" />
+
+        <label for="newArrival">new arrival</label>
+        <input type="checkbox" name="newArrival" />
+
+        <label for="male">male</label>
+        <input type="checkbox" name="male" />
+
+        <label for="female">female</label>
+        <input type="checkbox" name="female" />
+
+        <button type="submit">create product</button>
+
+    </form>
+
+
+    <div>
+        <% products.forEach(product => {  %>
+            <p><%=product%></p>
+     <%   }); %>
+    </div>
+</body>
+</html>
