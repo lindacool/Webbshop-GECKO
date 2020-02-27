@@ -18,22 +18,24 @@ router.get('/products', async (req, res)=>{
 //     sex: "F"
 //    })
 //    await product.save()
-    const allProducts = await Product.find();
+    const products = await Product.find();
 
-    res.render('productPage', {allProducts}) //skickar med alla produkter
+    res.render('productPage', {products}) //skickar med alla produkter
 })
 
-router.get('/women', async (req, res)=>{
-    const womenProducts = await Product.find();
 
-    res.render('startpage', {womenProducts}) //skickar med alla kvinno-produkter
+
+router.get('/women', async (req, res)=>{
+    const products = await Product.find({sex: 'F'});
+
+    res.render('productPage', {products}) //skickar med alla kvinno-produkter
 })
 
 router.get('/men', async (req, res)=>{
-    const menProducts = await Product.find()
+    const products = await Product.find({sex: 'M'});
     //en query som hämtar alla som är men;
 
-    res.render('startpage', {menProducts}) //skickar med alla man-produkter
+    res.render('productPage', {products}) //skickar med alla man-produkter
 })
 
 module.exports = router;
