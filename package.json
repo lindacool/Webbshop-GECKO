@@ -28,13 +28,13 @@
     "fs": "0.0.1-security",
     "mongoose": "^5.9.2",
     "node-sass": "^4.13.1",
-    "node-sass-middleware": "^0.11.0",
     "scss": "^0.2.4"
   },
   "devDependencies": {
     "chai": "^4.2.0",
     "cypress": "^4.0.2",
     "mocha": "^7.0.1",
+    "node-sass-middleware": "^0.11.0",
     "nodemon": "^2.0.2"
   }
 }
