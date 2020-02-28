@@ -7,17 +7,6 @@ const router = express.Router();
 
 router.get('/products', async (req, res)=>{
 
-//    const product = new Product({
-
-//     title: "Tjejtröja",
-//     imgUrl: "URL",
-//     price: 15,
-//     description: "Description",
-//     size: "XXL",
-//     newArrival: false,
-//     sex: "F"
-//    })
-//    await product.save()
     const products = await Product.find();
 
     res.render('productPage', {products}) //skickar med alla produkter
