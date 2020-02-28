@@ -1,12 +1,18 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const bodyParser = require('body-parser');
 const config = require("./config/config");
-const router = require('./router/productPageRouting');
+const startPageRouter = require('./router/startPageRouting');
+const productPageRouter = require('./router/productPageRouting');
+const adminPageRouter = require('./router/adminPageRouting');
+const detailProductPageRouter = require('./router/detailProductPageRouting');
 const app = express();
 
-app.set('view engine', 'ejs')
+app.set('view engine', 'ejs');
 
-app.use(router)
+app.use(bodyParser.urlencoded({extended: false}));
+
+app.use(productPageRouter, startPageRouter, adminPageRouter, detailProductPageRouter);
 
 
 

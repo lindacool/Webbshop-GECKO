@@ -28,9 +28,11 @@ const productSchema = new mongoose.Schema( {
         type: Boolean,
         required: true
     },
-    sex: {
-        type: String,
-        required: true
+    male: {
+        type: Boolean,
+    },
+    female: {
+        type: Boolean,
     }
 
 })
