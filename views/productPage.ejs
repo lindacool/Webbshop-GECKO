@@ -8,10 +8,16 @@
 </head>
 <body>
     <div>
-<p><%= products %></p>
-<br>
-<br>
 
+        <% products.forEach((product) => { %>
+
+            <div>
+                <h2><a href="/products/<%= product._id %>"><%= product.title %></a></h2>
+                <h2><%= product.description %></h2>
+                <h2><%= product.price %></h2>
+            </div>
+
+        <% }) %>
 
     </div>
 </body>
