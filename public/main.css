@@ -1,2 +1,6 @@
-body {
-  background-color: #7f8345; }
+.container-fluid #subscribebox {
+  background-color: #7f8375;
+  color: white;
+  text-align: center;
+  font-family: "spartan";
+  padding: 8px; }
