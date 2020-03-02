@@ -1,3 +1,6 @@
+li {
+  list-style-type: none; }
+
 .container-fluid #subscribebox {
   background-color: #7f8375;
   color: white;
