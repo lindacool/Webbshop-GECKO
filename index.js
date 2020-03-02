@@ -6,6 +6,7 @@ const startPageRouter = require("./router/startPageRouting");
 const productPageRouter = require("./router/productPageRouting");
 const adminPageRouter = require("./router/adminPageRouting");
 const detailProductPageRouter = require("./router/detailProductPageRouting");
+const loginPopUpRouter = require("./router/loginPopUpRouting");
 const sassMiddleware = require("node-sass-middleware");
 const path = require("path");
 const app = express();
@@ -22,7 +23,8 @@ app.use(
   productPageRouter,
   startPageRouter,
   adminPageRouter,
-  detailProductPageRouter
+  detailProductPageRouter,
+  loginPopUpRouter
 );
 app.use(
   sassMiddleware({
