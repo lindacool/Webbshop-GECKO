@@ -20,6 +20,7 @@ router.post('/admin', async (req, res)=>{
         description: req.body.description,
         size: req.body.size,
         newArrival: req.body.newArrival = Boolean(req.body.newArrival),
+        topSeller: req.body.topSeller = Boolean(req.body.newArrival),
         male: req.body.male = Boolean(req.body.male),
         female: req.body.female = Boolean(req.body.female)
     })
