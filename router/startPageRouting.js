@@ -4,6 +4,7 @@ const Product = require('../model/productModel');
 const router = express();
 
 router.get('/', async (req, res) => {
+    
     const newArrivals = await Product.find();
     res.render('startpage', {
         newArrivals
