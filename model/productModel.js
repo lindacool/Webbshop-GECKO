@@ -26,14 +26,16 @@ const productSchema = new mongoose.Schema( {
         required: true
     },
     newArrival: {
-        type: Boolean,
-        required: true
+        type: Boolean
+    },
+    topSeller: {
+        type: Boolean
     },
     male: {
-        type: Boolean,
+        type: Boolean
     },
     female: {
-        type: Boolean,
+        type: Boolean
     }
 
 })

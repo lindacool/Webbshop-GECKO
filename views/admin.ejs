@@ -18,16 +18,16 @@
         <input type="text" name="description" placeholder="description" />
         <input type="text" name="size" placeholder="size" />
 
-        <label for="newArrival">new arrival</label>
+        <label for="newArrival">New arrival</label>
         <input type="checkbox" name="newArrival" />
 
-        <label for="male">male</label>
+        <label for="male">Male</label>
         <input type="checkbox" name="male" />
 
-        <label for="female">female</label>
+        <label for="female">Female</label>
         <input type="checkbox" name="female" />
 
-        <button type="submit">create product</button>
+        <button type="submit">Create product</button>
 
     </form>
 
@@ -35,7 +35,7 @@
     <div>
         <% products.forEach((product) => {  %>
             <div>
-                <form action="/editProduct/<%= product._id %>" method="POST">
+                <form action="/edit/<%= product._id %>" method="POST">
                     <p>Title: <input type="text" value="<%= product.title %>"></p>
                     <p>imgUrl: <%= product.imgUrl %></p>
                     <p>Price: <%= product.price %></p>
@@ -44,7 +44,7 @@
                     <p>New arrival: <%= product.newArrival %></p>
                     <p>Male: <%= product.male %></p>
                     <p>Female: <%= product.female %></p>
-                    <button type="submit"></button>
+                    <button type="submit">Edit product</button>
                 </form>
                 <hr>
                 <br>
