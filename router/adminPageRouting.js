@@ -29,7 +29,7 @@ router.post('/admin', async (req, res)=>{
         }
     })
 
-    res.redirect('admin')
+    res.redirect('admin');
 })
 
 module.exports = router;

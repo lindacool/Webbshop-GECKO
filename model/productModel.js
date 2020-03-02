@@ -9,7 +9,8 @@ const productSchema = new mongoose.Schema( {
     imgUrl: {
         type: String,
         required: true,
-        minLength: 2
+        minLength: 2,
+        
     },
     price: {
         type: Number,
