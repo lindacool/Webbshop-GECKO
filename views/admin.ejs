@@ -21,6 +21,9 @@
         <label for="newArrival">New arrival</label>
         <input type="checkbox" name="newArrival" />
 
+        <label for="topSeller">Top seller</label>
+        <input type="checkbox" name="topSeller" />
+
         <label for="male">Male</label>
         <input type="checkbox" name="male" />
 
@@ -42,6 +45,7 @@
                     <p>Description: <%= product.description %></p>
                     <p>Size: <%= product.size %></p>
                     <p>New arrival: <%= product.newArrival %></p>
+                    <p>Top seller: <%= product.topSeller %></p>
                     <p>Male: <%= product.male %></p>
                     <p>Female: <%= product.female %></p>
                     <button type="submit">Edit product</button>
