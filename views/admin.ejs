@@ -33,8 +33,22 @@
 
 
     <div>
-        <% products.forEach(product => {  %>
-            <p><%=product%></p>
+        <% products.forEach((product) => {  %>
+            <div>
+                <form action="/editProduct/<%= product._id %>" method="POST">
+                    <p>Title: <input type="text" value="<%= product.title %>"></p>
+                    <p>imgUrl: <%= product.imgUrl %></p>
+                    <p>Price: <%= product.price %></p>
+                    <p>Description: <%= product.description %></p>
+                    <p>Size: <%= product.size %></p>
+                    <p>New arrival: <%= product.newArrival %></p>
+                    <p>Male: <%= product.male %></p>
+                    <p>Female: <%= product.female %></p>
+                    <button type="submit"></button>
+                </form>
+                <hr>
+                <br>
+            </div>
      <%   }); %>
     </div>
 </body>

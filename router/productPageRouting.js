@@ -7,7 +7,6 @@ const router = express.Router();
 
 router.get('/products', async (req, res)=>{
 
-
     const products = await Product.find();
 
     res.render('productPage', {products}) //skickar med alla produkter

@@ -3,12 +3,12 @@ const Product = require('../model/productModel');
 
 const router = express.Router();
 
-router.get("products/:id", async (req, res) => {
+router.get("/products/:id", async (req, res) => {
 
-    const clickedProduct = Product.findById( {_id: req.params.id} );
+    const clickedProduct = await Product.findById( {_id: req.params.id} );
 
     res.render("detailProductPage", { clickedProduct });
-
+    
 });
 
 module.exports = router;

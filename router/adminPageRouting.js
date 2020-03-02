@@ -29,7 +29,15 @@ router.post('/admin', async (req, res)=>{
         }
     })
 
-    res.redirect('admin');
-})
+    res.redirect('admin')
+});
+
+router.get("/products/:id", async (req, res) => {
+
+    const clickedProduct = await Product.findById( {_id: req.params.id} );
+    
+    res.render("detailProductPage", { clickedProduct });
+    
+});
 
 module.exports = router;
