@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Spartan:100&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Spartan:100,200,300,400,500,600,700,800,900&display=swap");
 body div {
   font-family: 'Spartan', sans-serif; }
 
@@ -134,4 +134,5 @@ body .productContainer {
     body .productContainer .product .productPrice {
       width: 100%; }
       body .productContainer .product .productPrice .price {
-        font-style: italic; }
+        font-weight: 700;
+        font-size: 80%; }
