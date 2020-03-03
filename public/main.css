@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Spartan:100,200,300,400,500,600,700,800,900&display=swap");
+<<<<<<< HEAD
 body {
   padding-bottom: 0; }
   body div {
@@ -47,6 +48,63 @@ body {
   body .close {
     cursor: pointer;
     transform: rotate(45deg); }
+=======
+body div {
+  font-family: 'Spartan', sans-serif; }
+
+body .nav {
+  z-index: 999;
+  width: 100%;
+  position: absolute;
+  transform: translateX(-130%);
+  transition-timing-function: ease-in;
+  background-color: white;
+  transition: 1s; }
+  body .nav .search {
+    width: 100%;
+    padding: 10px; }
+    body .nav .search .inputsearch {
+      width: 90%;
+      border: none;
+      border-bottom: 1px solid #7f8375;
+      background: #f7f7f7; }
+  body .nav ul {
+    width: 80%;
+    margin: 0 auto;
+    padding: 0; }
+    body .nav ul li {
+      list-style: none;
+      padding: 5px;
+      color: #7f8375;
+      text-decoration: none; }
+      body .nav ul li a {
+        color: #7f8375;
+        text-decoration: none; }
+      body .nav ul li :hover {
+        color: black;
+        text-decoration: none; }
+
+body .navShow {
+  transition: 1s;
+  transform: translateX(0%);
+  transition-timing-function: ease-out; }
+
+body .toggle {
+  width: 100%;
+  padding: 10px 20px;
+  text-align: left;
+  background-color: bisque; }
+  body .toggle .hambutton {
+    border: none;
+    background: bisque; }
+
+body nav.active {
+  left: 0px; }
+
+body .close {
+  cursor: pointer;
+  transform: rotate(45deg); }
+>>>>>>> e81456f4e3c47402c653f9014603c3ac965e66cb
 
 #sticky-footer {
   padding: 0px;
