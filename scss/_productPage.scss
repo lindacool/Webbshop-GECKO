@@ -1,3 +1,5 @@
+@import "mixins";
+
 body {
     
     div {
@@ -91,8 +93,10 @@ body {
                     }
                 }
             }
+            @include tablet {
+                width: 31%;
+
+            }
         }
     }
-
-
 }
