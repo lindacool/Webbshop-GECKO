@@ -1,6 +1,9 @@
 const {User, validateUser} = require("../model/userModel");
 const express = require("express");
 const router = express.Router();
+const bcrypt = require("bcrypt");
+
+const saltRounds = 10;
 
 router.get("/register", (req, res) => {
 
