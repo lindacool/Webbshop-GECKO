@@ -125,6 +125,9 @@ body .productContainer {
         body .productContainer .product .productInfo .productPrice .price {
           font-weight: 700;
           font-size: 80%; }
+    @media (min-width: 820px) {
+      body .productContainer .product {
+        width: 31%; } }
 
 body #sticky-footer {
   padding: 0px;
