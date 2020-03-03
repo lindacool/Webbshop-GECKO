@@ -1,35 +1,40 @@
 body {
   font-family: sans-serif; }
-  body nav {
+  body .nav {
+    z-index: 999;
     width: 100%;
-    background: #f7f7f7;
-    z-index: 1;
-    position: fixed;
-    left: -100%;
-    transition: all 500ms linear; }
-    body nav .search {
+    position: absolute;
+    transform: translateX(-130%);
+    transition-timing-function: ease-in;
+    background-color: white;
+    transition: 1s; }
+    body .nav .search {
       width: 100%;
       padding: 10px; }
-      body nav .search .inputsearch {
+      body .nav .search .inputsearch {
         width: 90%;
         border: none;
         border-bottom: 1px solid #7f8375;
         background: #f7f7f7; }
-    body nav ul {
+    body .nav ul {
       width: 80%;
       margin: 0 auto;
       padding: 0; }
-      body nav ul li {
+      body .nav ul li {
         list-style: none;
         padding: 5px;
         color: #7f8375;
         text-decoration: none; }
-        body nav ul li a {
+        body .nav ul li a {
           color: #7f8375;
           text-decoration: none; }
-        body nav ul li :hover {
+        body .nav ul li :hover {
           color: black;
           text-decoration: none; }
+  body .navShow {
+    transition: 1s;
+    transform: translateX(0%);
+    transition-timing-function: ease-out; }
   body .toggle {
     width: 100%;
     padding: 10px 20px;

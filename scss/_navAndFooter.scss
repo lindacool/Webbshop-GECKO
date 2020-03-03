@@ -1,14 +1,15 @@
 body {
     font-family: sans-serif;
 
-    nav {
+    .nav {
+        z-index: 999;
         width: 100%;
-        background: rgb(247, 247, 247);
-        z-index: 1;
-        position: fixed;
-        left: -100%;
-        transition: all 500ms linear;
-
+        position: absolute;
+        transform: translateX(-130%);
+        transition-timing-function: ease-in;
+        background-color: white;
+        transition: 1s;
+        
         .search {
             width: 100%;
             padding: 10px;
@@ -20,7 +21,6 @@ body {
                 background: rgb(247, 247, 247);
             }
         }
-
 
         ul {
             width: 80%;
@@ -46,6 +46,12 @@ body {
                 }
             }
         }
+    }
+    .navShow {
+    
+        transition: 1s;
+        transform: translateX(0%);
+        transition-timing-function: ease-out;
     }
 
     .toggle {
@@ -78,6 +84,5 @@ body {
 
     li {
         list-style-type: none;
-
     }
 }
