@@ -2,29 +2,37 @@
 <html lang="en">
     <%- include ("partial/header.ejs") %>
 <body>
+<!-- Navbar -->
     <%- include ("partial/navbar.ejs") %>
 
+<!-- Categories -->
     <div class="categoryContainer">
         <div class="categoryContainerHeader">
             <h2><%= heading %></h2>
         </div>
         <div class="categoryContainerCategory">
-            <p><%= otherCategories[0] %></p>
-            <p><%= otherCategories[1] %></p>
+            <p><a href="/<%= otherCategories[0] %>">Shop <%= otherCategories[0] %></a></p>
+            <p><a href="/<%= otherCategories[1] %>">Shop <%= otherCategories[1] %></a></p>
         </div>
-
     </div>
 
-    <% products.forEach((product) => { %>
-
-        <div>
-            <img src="<%= product.imgUrl %>" alt="productImage">
-            <h2><a href="/products/<%= product._id %>"><%= product.title %></a></h2>
-            <p><%= product.description %></p>
-            <p><%= product.price %></p>
-        </div>
-
-    <% }) %>
+<!-- Products -->
+    <div class="productContainer">
+        <% products.forEach((product) => { %>
+            <div class="product">
+                <div class="productImage">
+                    <a href="/products/<%= product._id %>"><img src="<%= product.imgUrl %>" alt="productImage"></a>
+                </div>
+                <div class="productTitle">
+                    <span class="title"><%= product.title %></span>
+                    <span class="colors">colors</span>
+                </div>
+                <div class="productPrice">
+                    <span class="price"><%= product.price %></span>
+                </div>
+            </div>
+        <% }) %>
+    </div>
 
     
 

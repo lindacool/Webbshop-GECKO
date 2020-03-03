@@ -9,7 +9,7 @@ router.get('/products', async (req, res)=>{
 
     const products = await Product.find();
     const heading = "Unisex";
-    const otherCategories = ["Shop Men", "Shop Women"];
+    const otherCategories = ["men", "women"];
 
     res.render('productPage', {products, heading, otherCategories}); //skickar med alla produkter
 })
@@ -19,7 +19,7 @@ router.get('/products', async (req, res)=>{
 router.get('/women', async (req, res)=>{
     const products = await Product.find({female: true});
     const heading = "Women";
-    const otherCategories = ["Shop Unisex", "Shop Men"];
+    const otherCategories = ["products", "men"];
 
     res.render('productPage', {products, heading, otherCategories}); //skickar med alla kvinno-produkter
 })
@@ -27,7 +27,7 @@ router.get('/women', async (req, res)=>{
 router.get('/men', async (req, res)=>{
     const products = await Product.find({male: true});
     const heading = "Men";
-    const otherCategories = ["Shop Unisex", "Shop Women"];
+    const otherCategories = ["products", "women"];
 
     res.render('productPage', {products, heading, otherCategories}) //skickar med alla man-produkter
 })
