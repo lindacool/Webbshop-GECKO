@@ -129,31 +129,29 @@ body .productContainer {
 body #sticky-footer {
   padding: 0px;
   margin-top: 10px; }
-  body #sticky-footer .container-fluid {
+  body #sticky-footer .myFooter {
     background-color: #7f8375;
-    opacity: 70%;
     color: white;
     letter-spacing: 3px;
     padding-top: 70px;
     padding-bottom: 50px;
-    position: absolute; }
-    body #sticky-footer .container-fluid #footer-container {
-      flex: none;
-      padding-top: 10px;
-      padding-bottom: 20px; }
-      body #sticky-footer .container-fluid #footer-container li {
-        list-style-type: none;
-        padding: 5px;
-        justify-content: left;
-        font-size: 13px;
-        font-weight: 100; }
-      body #sticky-footer .container-fluid #footer-container ul {
-        padding-left: 2px; }
-      body #sticky-footer .container-fluid #footer-container .information {
-        padding-left: 2px;
-        text-transform: uppercase;
-        font-size: 11px;
-        font-weight: 700; }
-      body #sticky-footer .container-fluid #footer-container .line {
-        border: 0.4px solid white;
-        opacity: 50%; }
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%; }
+    body #sticky-footer .myFooter li {
+      list-style-type: none;
+      padding: 5px;
+      justify-content: left;
+      font-size: 13px;
+      font-weight: 100; }
+    body #sticky-footer .myFooter ul {
+      padding-left: 2px; }
+    body #sticky-footer .myFooter .information {
+      padding-left: 2px;
+      text-transform: uppercase;
+      font-size: 11px;
+      font-weight: 700; }
+    body #sticky-footer .myFooter .line {
+      border: 0.4px solid white;
+      opacity: 50%; }
