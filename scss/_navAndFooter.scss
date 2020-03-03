@@ -77,17 +77,20 @@ body {
 
 // footer
 
-.container-fluid {
+.myFooter {
     background-color: #7f8375;
     opacity: 70%;
     color: white;
     letter-spacing: 3px;
+    padding-top: 70px;
+    padding-bottom: 50px;
+    position: absolute;
 
     li {
         list-style-type: none;
         padding: 5px;
         justify-content: left;
-
+        font-size: 15px;
     }
 
     ul {
@@ -99,6 +102,11 @@ body {
         text-transform: uppercase;
         font-size: 13px;
         font-weight: bold;
+    }
+
+    .line {
+        border: 0.4px solid white;
+        opacity: 50%;
     }
 
 }
