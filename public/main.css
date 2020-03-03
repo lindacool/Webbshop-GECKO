@@ -1,89 +1,65 @@
 @import url("https://fonts.googleapis.com/css?family=Spartan:100,200,300,400,500,600,700,800,900&display=swap");
-body div {
-  font-family: 'Spartan', sans-serif; }
-
-body nav {
-  width: 100%;
-  background: #f7f7f7;
-  z-index: 1;
-  position: fixed;
-  left: -100%;
-  transition: all 500ms linear;
-  font-family: 'Spartan', sans-serif; }
-  body nav .search {
+body {
+  padding-bottom: 0; }
+  body div {
+    font-family: 'Spartan', sans-serif; }
+  body .nav {
+    z-index: 999;
     width: 100%;
-    padding: 10px; }
-    body nav .search .inputsearch {
-      width: 90%;
-      border: none;
-      border-bottom: 1px solid #7f8375;
-      background: #f7f7f7; }
-  body nav ul {
-    width: 80%;
-    margin: 0 auto;
-    padding: 0; }
-    body nav ul li {
-      list-style: none;
-      padding: 5px;
-      color: #7f8375;
-      text-decoration: none; }
-      body nav ul li a {
+    position: absolute;
+    transform: translateX(-130%);
+    transition-timing-function: ease-in;
+    background-color: white;
+    transition: 1s; }
+    body .nav .search {
+      width: 100%;
+      padding: 10px; }
+      body .nav .search .inputsearch {
+        width: 90%;
+        border: none;
+        border-bottom: 1px solid #7f8375;
+        background: #f7f7f7; }
+    body .nav ul {
+      width: 80%;
+      margin: 0 auto;
+      padding: 0; }
+      body .nav ul li {
+        list-style: none;
+        padding: 5px;
         color: #7f8375;
         text-decoration: none; }
-      body nav ul li :hover {
-        color: black;
-        text-decoration: none; }
-
-body .toggle {
-  width: 100%;
-  padding: 10px 20px;
-  text-align: left;
-  background-color: bisque; }
-  body .toggle .hambutton {
-    border: none;
-    background: bisque; }
-
-body nav.active {
-  left: 0px; }
-
-body .close {
-  cursor: pointer;
-  transform: rotate(45deg); }
-
-#sticky-footer {
-  padding: 0px;
-  margin-top: 10px; }
-  #sticky-footer .myFooter {
-    background-color: #7f8375;
-    opacity: 70%;
-    color: white;
-    letter-spacing: 3px;
-    padding-top: 70px;
-    padding-bottom: 50px;
-    position: absolute;
-    flex: none; }
-    #sticky-footer .myFooter li {
-      list-style-type: none;
-      padding: 5px;
-      justify-content: left;
-      font-size: 13px; }
-    #sticky-footer .myFooter ul {
-      padding-left: 2px; }
-    #sticky-footer .myFooter .information {
-      padding-left: 2px;
-      text-transform: uppercase;
-      font-size: 11px;
-      font-weight: bold; }
-    #sticky-footer .myFooter .line {
-      border: 0.4px solid white;
-      opacity: 50%; }
+        body .nav ul li a {
+          color: #7f8375;
+          text-decoration: none; }
+        body .nav ul li :hover {
+          color: black;
+          text-decoration: none; }
+  body .navShow {
+    transition: 1s;
+    transform: translateX(0%);
+    transition-timing-function: ease-out; }
+  body .toggle {
+    width: 100%;
+    padding: 10px 20px;
+    text-align: left;
+    background-color: bisque; }
+    body .toggle .hambutton {
+      border: none;
+      background: bisque; }
+  body nav.active {
+    left: 0px; }
+  body .close {
+    cursor: pointer;
+    transform: rotate(45deg); }
 
 .container-fluid #subscribebox {
   background-color: #7f8375;
   color: white;
   text-align: center;
-  font-family: "spartan";
-  padding: 8px; }
+  font-family: 'Spartan', sans-serif;
+  padding: 8px;
+  font-weight: 100;
+  font-size: 80%; }
 
 body div {
   font-family: 'Spartan', sans-serif;
@@ -149,3 +125,34 @@ body .productContainer {
         body .productContainer .product .productInfo .productPrice .price {
           font-weight: 700;
           font-size: 80%; }
+
+body #sticky-footer {
+  padding: 0px;
+  margin-top: 10px; }
+  body #sticky-footer .myFooter {
+    background-color: #7f8375;
+    opacity: 70%;
+    color: white;
+    letter-spacing: 3px;
+    padding-top: 70px;
+    padding-bottom: 50px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%; }
+    body #sticky-footer .myFooter li {
+      list-style-type: none;
+      padding: 5px;
+      justify-content: left;
+      font-size: 13px;
+      font-weight: 100; }
+    body #sticky-footer .myFooter ul {
+      padding-left: 2px; }
+    body #sticky-footer .myFooter .information {
+      padding-left: 2px;
+      text-transform: uppercase;
+      font-size: 11px;
+      font-weight: 700; }
+    body #sticky-footer .myFooter .line {
+      border: 0.4px solid white;
+      opacity: 50%; }
