@@ -4,11 +4,15 @@
 <body>
     <%- include ("partial/navbar.ejs") %>
 
-    <div class="headerContainer">
+    <div class="categoryContainer">
+        <div class="categoryContainerHeader">
+            <h2><%= heading %></h2>
+        </div>
+        <div class="categoryContainerCategory">
+            <p><%= otherCategories[0] %></p>
+            <p><%= otherCategories[1] %></p>
+        </div>
 
-        <h2><%= heading %></h2>
-        <p><%= categoryInfo %></p>
-        
     </div>
 
     <% products.forEach((product) => { %>

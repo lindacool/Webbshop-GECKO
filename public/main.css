@@ -59,3 +59,27 @@ body {
   text-align: center;
   font-family: "spartan";
   padding: 8px; }
+
+body div {
+  font-family: 'Spartan', sans-serif; }
+
+body .categoryContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  margin: 30px 0; }
+  body .categoryContainer .categoryContainerHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100px; }
+  body .categoryContainer .categoryContainerCategory {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 90%;
+    height: 80px;
+    border-bottom: 1px solid #cecece; }
