@@ -1,6 +1,7 @@
 @import "mixins";
 
 body {
+    text-transform: uppercase;
     
     div {
         font-family: 'Spartan', sans-serif;
@@ -36,6 +37,7 @@ body {
 
             a:link {
                 color: inherit;
+
             }
             a:visited {
                 color: inherit;
@@ -45,16 +47,16 @@ body {
 
     .productContainer {
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-start;
         align-items: center;
         flex-direction: row;
         flex-wrap: wrap;
-        margin: 0 3% 50px 3%;
+        margin: 0 2% 50px 2%;
 
 
         .product {
-            width: 48%;
-            margin-bottom: 20px;
+            width: 46%;
+            margin: 0 2% 20px 2%;
 
             .productImage {
 
@@ -64,6 +66,7 @@ body {
             }
             .productInfo {
                 margin-top: 10px;
+                font-size: 0.7rem;
 
                 .productTitle {
                     display: flex;
@@ -72,7 +75,6 @@ body {
                     flex-direction: row;
                     flex-wrap: wrap;
                 
-
                     .title {
                         width: 75%;
                         white-space: nowrap;
@@ -94,8 +96,8 @@ body {
                 }
             }
             @include tablet {
-                width: 31%;
-
+                width: 30.33%;
+                margin: 0 1.5% 20px 1.5%;
             }
         }
     }
