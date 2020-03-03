@@ -1,40 +1,43 @@
 @import url("https://fonts.googleapis.com/css?family=Spartan:100,200,300,400,500,600,700,800,900&display=swap");
-<<<<<<< HEAD
 body {
   padding-bottom: 0; }
   body div {
     font-family: 'Spartan', sans-serif; }
-  body nav {
+  body .nav {
+    z-index: 999;
     width: 100%;
-    background: #f7f7f7;
-    z-index: 1;
-    position: fixed;
-    left: -100%;
-    transition: all 500ms linear;
-    font-family: 'Spartan', sans-serif; }
-    body nav .search {
+    position: absolute;
+    transform: translateX(-130%);
+    transition-timing-function: ease-in;
+    background-color: white;
+    transition: 1s; }
+    body .nav .search {
       width: 100%;
       padding: 10px; }
-      body nav .search .inputsearch {
+      body .nav .search .inputsearch {
         width: 90%;
         border: none;
         border-bottom: 1px solid #7f8375;
         background: #f7f7f7; }
-    body nav ul {
+    body .nav ul {
       width: 80%;
       margin: 0 auto;
       padding: 0; }
-      body nav ul li {
+      body .nav ul li {
         list-style: none;
         padding: 5px;
         color: #7f8375;
         text-decoration: none; }
-        body nav ul li a {
+        body .nav ul li a {
           color: #7f8375;
           text-decoration: none; }
-        body nav ul li :hover {
+        body .nav ul li :hover {
           color: black;
           text-decoration: none; }
+  body .navShow {
+    transition: 1s;
+    transform: translateX(0%);
+    transition-timing-function: ease-out; }
   body .toggle {
     width: 100%;
     padding: 10px 20px;
@@ -48,94 +51,6 @@ body {
   body .close {
     cursor: pointer;
     transform: rotate(45deg); }
-=======
-body div {
-  font-family: 'Spartan', sans-serif; }
-
-body .nav {
-  z-index: 999;
-  width: 100%;
-  position: absolute;
-  transform: translateX(-130%);
-  transition-timing-function: ease-in;
-  background-color: white;
-  transition: 1s; }
-  body .nav .search {
-    width: 100%;
-    padding: 10px; }
-    body .nav .search .inputsearch {
-      width: 90%;
-      border: none;
-      border-bottom: 1px solid #7f8375;
-      background: #f7f7f7; }
-  body .nav ul {
-    width: 80%;
-    margin: 0 auto;
-    padding: 0; }
-    body .nav ul li {
-      list-style: none;
-      padding: 5px;
-      color: #7f8375;
-      text-decoration: none; }
-      body .nav ul li a {
-        color: #7f8375;
-        text-decoration: none; }
-      body .nav ul li :hover {
-        color: black;
-        text-decoration: none; }
-
-body .navShow {
-  transition: 1s;
-  transform: translateX(0%);
-  transition-timing-function: ease-out; }
-
-body .toggle {
-  width: 100%;
-  padding: 10px 20px;
-  text-align: left;
-  background-color: bisque; }
-  body .toggle .hambutton {
-    border: none;
-    background: bisque; }
-
-body nav.active {
-  left: 0px; }
-
-body .close {
-  cursor: pointer;
-  transform: rotate(45deg); }
->>>>>>> e81456f4e3c47402c653f9014603c3ac965e66cb
-
-#sticky-footer {
-  padding: 0px;
-  margin-top: 10px; }
-  #sticky-footer .myFooter {
-    background-color: #7f8375;
-    opacity: 70%;
-    color: white;
-    letter-spacing: 3px;
-    padding-top: 70px;
-    padding-bottom: 50px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%; }
-    #sticky-footer .myFooter li {
-      list-style-type: none;
-      padding: 5px;
-      justify-content: left;
-      font-size: 13px;
-      font-weight: 100; }
-    #sticky-footer .myFooter ul {
-      padding-left: 2px; }
-    #sticky-footer .myFooter .information {
-      padding-left: 2px;
-      text-transform: uppercase;
-      font-size: 11px;
-      font-weight: 700; }
-    #sticky-footer .myFooter .line {
-      border: 0.4px solid white;
-      opacity: 50%; }
 
 .container-fluid #subscribebox {
   background-color: #7f8375;
@@ -201,30 +116,31 @@ body .productContainer {
 body #sticky-footer {
   padding: 0px;
   margin-top: 10px; }
-  body #sticky-footer .myFooter {
+  body #sticky-footer .container-fluid {
     background-color: #7f8375;
     opacity: 70%;
     color: white;
     letter-spacing: 3px;
     padding-top: 70px;
     padding-bottom: 50px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%; }
-    body #sticky-footer .myFooter li {
-      list-style-type: none;
-      padding: 5px;
-      justify-content: left;
-      font-size: 13px;
-      font-weight: 100; }
-    body #sticky-footer .myFooter ul {
-      padding-left: 2px; }
-    body #sticky-footer .myFooter .information {
-      padding-left: 2px;
-      text-transform: uppercase;
-      font-size: 11px;
-      font-weight: 700; }
-    body #sticky-footer .myFooter .line {
-      border: 0.4px solid white;
-      opacity: 50%; }
+    position: absolute; }
+    body #sticky-footer .container-fluid #footer-container {
+      flex: none;
+      padding-top: 10px;
+      padding-bottom: 20px; }
+      body #sticky-footer .container-fluid #footer-container li {
+        list-style-type: none;
+        padding: 5px;
+        justify-content: left;
+        font-size: 13px;
+        font-weight: 100; }
+      body #sticky-footer .container-fluid #footer-container ul {
+        padding-left: 2px; }
+      body #sticky-footer .container-fluid #footer-container .information {
+        padding-left: 2px;
+        text-transform: uppercase;
+        font-size: 11px;
+        font-weight: 700; }
+      body #sticky-footer .container-fluid #footer-container .line {
+        border: 0.4px solid white;
+        opacity: 50%; }
