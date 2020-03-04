@@ -156,6 +156,78 @@ body {
           width: 30.33%;
           margin: 0 1.5% 20px 1.5%; } }
 
+#detail-product-page {
+  font-family: 'Spartan', sans-serif;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; }
+  #detail-product-page #image-div-mobile {
+    display: flex;
+    justify-content: center;
+    width: 100%; }
+    #detail-product-page #image-div-mobile .image-container {
+      max-width: 1000px;
+      max-height: 800px; }
+      #detail-product-page #image-div-mobile .image-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; }
+    @media (min-width: 820px) {
+      #detail-product-page #image-div-mobile {
+        display: none; } }
+  #detail-product-page #image-div-desktop {
+    display: none;
+    justify-content: center;
+    flex-direction: column;
+    width: 50%; }
+    #detail-product-page #image-div-desktop .image-container {
+      width: 100%; }
+      #detail-product-page #image-div-desktop .image-container img {
+        width: 100%;
+        object-fit: cover; }
+    @media (min-width: 820px) {
+      #detail-product-page #image-div-desktop {
+        display: flex; } }
+  #detail-product-page #info-div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 96%;
+    margin: 0 2%;
+    border: 1px solid black; }
+    #detail-product-page #info-div .info-title-price-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      height: 40px; }
+    #detail-product-page #info-div .buttons-size-bag-container {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      height: 60px;
+      margin: 10px 0; }
+      #detail-product-page #info-div .buttons-size-bag-container button {
+        width: 45%;
+        height: 40px; }
+    #detail-product-page #info-div .color-container {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      height: 60px;
+      margin: 60px 0 0 0; }
+      #detail-product-page #info-div .color-container .color-picker {
+        width: 100%;
+        height: 40px; }
+    @media (min-width: 820px) {
+      #detail-product-page #info-div {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        width: 40%; } }
+
 body #sticky-footer {
   padding: 0px;
   margin-top: 10px; }
