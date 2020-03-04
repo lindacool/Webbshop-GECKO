@@ -154,7 +154,8 @@ body {
   .scrolling-wrapper .scroll-items {
     display: inline-block; }
     .scrolling-wrapper .scroll-items .product-image {
-      width: 220px; }
+      width: 45vw;
+      margin: 10px; }
       .scrolling-wrapper .scroll-items .product-image img {
         width: 100%; }
 
