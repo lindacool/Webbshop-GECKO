@@ -1,7 +1,11 @@
+@import "mixins";
+
 body {
+    text-transform: uppercase;
     
     div {
         font-family: 'Spartan', sans-serif;
+        letter-spacing: 2px;
     }
 
     .categoryContainer {
@@ -10,7 +14,7 @@ body {
         align-items: center;
         flex-direction: column;
         width: 100%;
-        margin: 30px 0;
+        margin: 30px 0 50px 0;
 
         .categoryContainerHeader {
             display: flex;
@@ -23,25 +27,42 @@ body {
                 font-size: 2rem;
             }
         }
-        .categoryContainerCategory {
+        .categoryContainerButtons {
             display: flex;
             justify-content: space-evenly;
             align-items: center;
-            width: 94%;
+            width: 80%;
             height: 80px;
             border-bottom: 1px solid rgb(206, 206, 206);
+
+            p {
+                width: 50%;
+                text-align: center;
+
+                a:link {
+                    color: inherit;
+    
+                }
+                a:visited {
+                    color: inherit;
+                }
+            }
+            
         }
     }
 
     .productContainer {
         display: flex;
-        justify-content: space-evenly;
+        justify-content: flex-start;
         align-items: center;
         flex-direction: row;
         flex-wrap: wrap;
+        margin: 0 2% 50px 2%;
+
 
         .product {
-            width: 45%;
+            width: 46%;
+            margin: 0 2% 20px 2%;
 
             .productImage {
 
@@ -49,31 +70,41 @@ body {
                     width: 100%;
                 }
             }
-            .productTitle {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                flex-direction: row;
-                flex-wrap: wrap;
+            .productInfo {
+                margin-top: 10px;
+                font-size: 0.7rem;
 
-                .title {
-                    width: 80%;
+                .productTitle {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                
+                    .title {
+                        width: 75%;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                    .colors {
+                        width: 20%;
+                        text-align: right;
+                    }
                 }
-                .colors {
-                    width: 20%;
+                .productPrice {
+                    width: 100%;
+
+                    .price {
+                        font-weight: 700;
+                        font-size: 80%;
+                    }
                 }
             }
-            .productPrice {
-                width: 100%;
-
-                .price {
-                    font-weight: 700;
-                    font-size: 80%;
-                }
+            @include tablet {
+                width: 30.33%;
+                margin: 0 1.5% 20px 1.5%;
             }
-            
         }
     }
-
-
 }

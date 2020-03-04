@@ -2,6 +2,13 @@
 <html lang="en">
     <%- include ("partial/header.ejs") %>
 <body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12" id="subscribebox">
+                SUBSCRIBE FOR 10% OFF
+            </div>
+        </div>
+    </div>
 <!-- Navbar -->
     <%- include ("partial/navbar.ejs") %>
 
@@ -10,7 +17,7 @@
         <div class="categoryContainerHeader">
             <h2><%= heading %></h2>
         </div>
-        <div class="categoryContainerCategory">
+        <div class="categoryContainerButtons">
             <p><a href="/<%= otherCategories[0] %>">Shop <%= otherCategories[0] %></a></p>
             <p><a href="/<%= otherCategories[1] %>">Shop <%= otherCategories[1] %></a></p>
         </div>
@@ -20,15 +27,18 @@
     <div class="productContainer">
         <% products.forEach((product) => { %>
             <div class="product">
+                
                 <div class="productImage">
                     <a href="/products/<%= product._id %>"><img src="<%= product.imgUrl %>" alt="productImage"></a>
                 </div>
-                <div class="productTitle">
-                    <span class="title"><%= product.title %></span>
-                    <span class="colors">colors</span>
-                </div>
-                <div class="productPrice">
-                    <span class="price"><%= product.price %></span>
+                <div class="productInfo">
+                    <div class="productTitle">
+                        <span class="title"><%= product.title %></span>
+                        <span class="colors">ooo</span>
+                    </div>
+                    <div class="productPrice">
+                        <span class="price"><%= product.price %> SEK</span>
+                    </div>
                 </div>
             </div>
         <% }) %>
@@ -36,7 +46,5 @@
 
     
 
-
-    <%- include ("partial/footer.ejs") %>
 </body>
 </html>
