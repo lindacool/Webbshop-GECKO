@@ -66,10 +66,10 @@ body {
     width: 100%;
     padding: 10px 20px;
     text-align: left;
-    background-color: bisque; }
+    background-color: white; }
     body .burgerContainer .hambutton {
       border: none;
-      background: bisque; }
+      background: white; }
   body nav.active {
     left: 0px; }
   body .close {
