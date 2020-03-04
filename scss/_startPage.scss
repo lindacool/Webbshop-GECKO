@@ -18,8 +18,26 @@
     overflow-x: scroll;
     overflow-y: hidden;
     white-space: nowrap;
+    
   
-    .new-arrival, .top-seller {
-      display: inline-block;
+    .scroll-items {
+    
+        display: inline-block;
+      .product-image {
+          width: 220px;
+          
+          img {
+              width: 100%;
+        }
+      }
+      .product-info {
+        .product-title {
+            .title {}
+            .color {}
+        }
+      }
+      .product-price {
+          .price {}
+      }
     }
   }
