@@ -158,32 +158,33 @@ body .productContainer {
         width: 30.33%;
         margin: 0 1.5% 20px 1.5%; } }
 
-body #sticky-footer {
-  padding: 0px;
-  margin-top: 10px; }
-  body #sticky-footer .myFooter {
-    background-color: #7f8375;
+html {
+  height: 100%; }
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  width: 100%; }
+  body footer {
+    background: #7f8375;
     color: white;
-    letter-spacing: 3px;
-    padding-top: 70px;
-    padding-bottom: 50px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%; }
-    body #sticky-footer .myFooter li {
-      list-style-type: none;
-      padding: 5px;
-      justify-content: left;
-      font-size: 13px;
-      font-weight: 100; }
-    body #sticky-footer .myFooter ul {
-      padding-left: 2px; }
-    body #sticky-footer .myFooter .information {
-      padding-left: 2px;
-      text-transform: uppercase;
-      font-size: 11px;
-      font-weight: 700; }
-    body #sticky-footer .myFooter .line {
-      border: 0.4px solid white;
-      opacity: 50%; }
+    margin-top: auto;
+    opacity: 80%;
+    padding-top: 50px;
+    letter-spacing: 3px; }
+  body .information {
+    font-size: 67%;
+    text-transform: uppercase;
+    font-weight: 500;
+    padding: 5px; }
+  body li {
+    font-weight: 100;
+    font-size: 85%;
+    list-style-type: none;
+    justify-content: left; }
+  body ul {
+    padding: 5px; }
+  body .line {
+    border: 0.4px solid white;
+    opacity: 50%; }
