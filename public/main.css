@@ -67,7 +67,9 @@ body {
     color: white;
     font-weight: 100; }
   body p {
-    text-align: center; }
+    text-align: center;
+    margin: 16px 16px;
+    font-weight: 100; }
 
 .opacity-cover {
   background-color: white;
