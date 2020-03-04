@@ -1,8 +1,63 @@
 @import url("https://fonts.googleapis.com/css?family=Spartan:100,200,300,400,500,600,700,800,900&display=swap");
+html {
+  height: 100%; }
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  width: 100%; }
+  body footer {
+    background: #7f8375;
+    color: white;
+    margin-top: auto;
+    opacity: 80%;
+    padding-top: 50px;
+    letter-spacing: 3px; }
+  body .information {
+    font-size: 67%;
+    text-transform: uppercase;
+    font-weight: 500;
+    padding: 5px; }
+  body li {
+    font-weight: 100;
+    font-size: 85%;
+    list-style-type: none;
+    justify-content: left; }
+  body ul {
+    padding: 5px; }
+  body .line {
+    border: 0.4px solid white;
+    opacity: 50%; }
+  body #icon-box {
+    background-color: #CECFCC;
+    justify-content: center;
+    color: white;
+    padding-top: 10px; }
+    body #icon-box #icon-link {
+      text-align: end;
+      margin: auto;
+      padding: 0; }
+    body #icon-box #brand {
+      text-transform: uppercase;
+      margin: auto;
+      font-weight: bold; }
+    body #icon-box p {
+      font-size: 10px;
+      font-weight: 100; }
+
+.opacity-cover {
+  background-color: white;
+  opacity: 60%;
+  z-index: 998;
+  position: absolute;
+  width: 100%;
+  height: 100%; }
+
 body {
   font-family: 'Spartan', sans-serif;
   padding-bottom: 0; }
-  body .navContainer {
+  body .nav-container {
     z-index: 999;
     width: 100%;
     position: absolute;
@@ -10,7 +65,7 @@ body {
     transition-timing-function: ease-in;
     background-color: white;
     transition: 1s; }
-    body .navContainer .searchbarContainer {
+    body .nav-container .searchbar-container {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -18,7 +73,7 @@ body {
       padding: 5px 20px;
       margin: 0 4%;
       border-bottom: 1px solid #7f8375; }
-      body .navContainer .searchbarContainer .searchIcon {
+      body .nav-container .searchbar-container .search-icon {
         background-image: url("../public/assets/searchicon.png");
         background-color: #cccccc;
         height: 30px;
@@ -26,55 +81,57 @@ body {
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover; }
-      body .navContainer .searchbarContainer .inputsearch {
+      body .nav-container .searchbar-container .input-search {
         width: 100%;
         border: none;
         background: white;
         padding: 20px 0 10px 40px; }
-    body .navContainer .about, body .navContainer .signIn, body .navContainer .menWomen {
+    body .nav-container .about, body .nav-container .sign-in, body .nav-container .men-women {
       width: 90%;
       margin: 50px auto;
       padding: 0; }
-      body .navContainer .about .freeShipping, body .navContainer .signIn .freeShipping, body .navContainer .menWomen .freeShipping {
+      body .nav-container .about .free-shipping, body .nav-container .sign-in .free-shipping, body .nav-container .men-women .free-shipping {
         width: 35%;
         margin-bottom: 40px;
         font-weight: bold; }
-      body .navContainer .about .fat, body .navContainer .signIn .fat, body .navContainer .menWomen .fat {
+      body .nav-container .about .fat, body .nav-container .sign-in .fat, body .nav-container .men-women .fat {
         font-weight: bold; }
-      body .navContainer .about .bottom, body .navContainer .signIn .bottom, body .navContainer .menWomen .bottom {
+      body .nav-container .about .bottom, body .nav-container .sign-in .bottom, body .nav-container .men-women .bottom {
         margin-bottom: 30px; }
-      body .navContainer .about li, body .navContainer .signIn li, body .navContainer .menWomen li {
+      body .nav-container .about li, body .nav-container .sign-in li, body .nav-container .men-women li {
         list-style: none;
         padding: 5px;
         color: #7f8375;
         text-decoration: none; }
-        body .navContainer .about li a, body .navContainer .signIn li a, body .navContainer .menWomen li a {
+        body .nav-container .about li a, body .nav-container .sign-in li a, body .nav-container .men-women li a {
           color: #7f8375;
           text-decoration: none; }
-        body .navContainer .about li :hover, body .navContainer .signIn li :hover, body .navContainer .menWomen li :hover {
+        body .nav-container .about li :hover, body .nav-container .sign-in li :hover, body .nav-container .men-women li :hover {
           color: black;
           text-decoration: none; }
-    body .navContainer .menWomen {
+    body .nav-container .men-women {
       border-bottom: 1px solid #7f8375;
       width: 92%;
       padding-bottom: 50px; }
-  body .navShow {
+  body .nav-show {
     transition: 1s;
     transform: translateX(0%);
     transition-timing-function: ease-out; }
-  body .burgerContainer {
+    @media (min-width: 820px) {
+      body .nav-show {
+        width: 70%; } }
+    @media (min-width: 1200px) {
+      body .nav-show {
+        width: 50%; } }
+  body .burger-container {
     width: 100%;
     padding: 10px 20px;
     text-align: left;
-    background-color: bisque; }
-    body .burgerContainer .hambutton {
+    background-color: white; }
+    body .burger-container .hamburger-button {
       border: none;
-      background: bisque; }
-  body nav.active {
-    left: 0px; }
-  body .close {
-    cursor: pointer;
-    transform: rotate(45deg); }
+      background: white;
+      margin-top: 18px; }
 
 .container-fluid #subscribebox {
   background-color: #7f8375;
@@ -84,6 +141,13 @@ body {
   padding: 8px;
   font-weight: 100;
   font-size: 80%; }
+
+.scrolling-wrapper {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap; }
+  .scrolling-wrapper .new-arrival {
+    display: inline-block; }
 
 #productPage {
   font-family: 'Spartan', sans-serif;
@@ -227,33 +291,3 @@ body {
         position: sticky;
         top: 0;
         width: 40%; } }
-
-body #sticky-footer {
-  padding: 0px;
-  margin-top: 10px; }
-  body #sticky-footer .myFooter {
-    background-color: #7f8375;
-    color: white;
-    letter-spacing: 3px;
-    padding-top: 70px;
-    padding-bottom: 50px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%; }
-    body #sticky-footer .myFooter li {
-      list-style-type: none;
-      padding: 5px;
-      justify-content: left;
-      font-size: 13px;
-      font-weight: 100; }
-    body #sticky-footer .myFooter ul {
-      padding-left: 2px; }
-    body #sticky-footer .myFooter .information {
-      padding-left: 2px;
-      text-transform: uppercase;
-      font-size: 11px;
-      font-weight: 700; }
-    body #sticky-footer .myFooter .line {
-      border: 0.4px solid white;
-      opacity: 50%; }
