@@ -1,10 +1,10 @@
 @import "mixins";
 
-body {
+#productPage {
+    font-family: 'Spartan', sans-serif;
+    text-transform: uppercase;
 
     .categoryContainer {
-        font-family: 'Spartan', sans-serif;
-        text-transform: uppercase;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -48,8 +48,6 @@ body {
     }
 
     .productContainer {
-        font-family: 'Spartan', sans-serif;
-        text-transform: uppercase;
         display: flex;
         justify-content: flex-start;
         align-items: center;
