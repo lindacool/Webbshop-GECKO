@@ -1,12 +1,8 @@
 body {
-    
+    font-family: 'Spartan', sans-serif;
     padding-bottom: 0;
 
-    div {
-        font-family: 'Spartan', sans-serif;
-    }
-
-    .nav {
+    .navContainer {
         z-index: 999;
         width: 100%;
         position: absolute;
@@ -15,23 +11,54 @@ body {
         background-color: white;
         transition: 1s;
         
-        .search {
-            width: 100%;
-            padding: 10px;
+        .searchbarContainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 92%;
+            padding: 5px 20px;
+            margin: 0 4%;
+            border-bottom: 1px solid #7f8375;
+
+            .searchIcon {
+                background-image: url("../public/assets/searchicon.png");
+                background-color: #cccccc;
+                height: 30px;
+                width: 30px;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
 
             .inputsearch {
-                width: 90%;
+                width: 100%;
                 border: none;
-                border-bottom: 1px solid #7f8375;
-                background: rgb(247, 247, 247);
+
+                background: white;
+                padding: 20px 0 10px 40px;
+
             }
         }
 
-        ul {
-            width: 80%;
-            margin: 0 auto;
+        .about, .signIn, .menWomen {
+            width: 90%;
+            margin: 50px auto;
             padding: 0;
+            
+            .freeShipping {
+                width: 35%;
+                margin-bottom: 40px;
+                font-weight: bold;
+            }
+
             // display: none;
+
+            .fat {
+                font-weight: bold;
+            }
+            .bottom {
+                margin-bottom: 30px;
+            }
 
             li {
                 list-style: none;
@@ -51,6 +78,12 @@ body {
                 }
             }
         }
+        .menWomen {
+            border-bottom: 1px solid #7f8375;
+            width: 92%;
+            padding-bottom: 50px;
+            // margin: 0 4%;
+        }
     }
     .navShow {
     
@@ -59,7 +92,7 @@ body {
         transition-timing-function: ease-out;
     }
 
-    .toggle {
+    .burgerContainer {
         width: 100%;
         padding: 10px 20px;
         text-align: left;

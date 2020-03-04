@@ -1,11 +1,10 @@
 $(document).ready(function () {
     
     $('.hambutton').on('click', function () {
-        if($(".nav").hasClass('navShow')) {
-            $(".nav").removeClass('navShow');
+        if($(".navContainer").hasClass('navShow')) {
+            $(".navContainer").removeClass('navShow');
         } else {
-            $(".nav").addClass('navShow');
-            
+            $(".navContainer").addClass('navShow');
         }
         
     })
