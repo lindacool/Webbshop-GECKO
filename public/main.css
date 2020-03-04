@@ -146,7 +146,7 @@ body {
   overflow-x: scroll;
   overflow-y: hidden;
   white-space: nowrap; }
-  .scrolling-wrapper .new-arrival {
+  .scrolling-wrapper .new-arrival, .scrolling-wrapper .top-seller {
     display: inline-block; }
 
 body .categoryContainer {
