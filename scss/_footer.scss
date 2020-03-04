@@ -41,6 +41,30 @@ body {
         border: 0.4px solid white;
         opacity: 50%;
     }
+
+    #icon-box {
+        background-color: #EADCCF;
+        justify-content: center;
+        color: white;
+        padding-top: 10px;
+
+        #icon-link {
+            text-align: end;
+            margin: auto;
+            padding: 0;
+        }
+
+        #brand {
+            text-transform: uppercase;
+            margin: auto;
+            font-weight: bold;
+        }
+
+        p {
+            font-size: 10px;
+            font-weight: 100;
+        }
+    }
     
 }
 
