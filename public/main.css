@@ -50,7 +50,7 @@ body {
   background-color: white;
   opacity: 60%;
   z-index: 998;
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%; }
 
@@ -60,11 +60,14 @@ body {
   body .nav-container {
     z-index: 999;
     width: 100%;
+    height: 95vh;
     position: absolute;
+    top: 35px;
     transform: translateX(-130%);
     transition-timing-function: ease-in;
     background-color: white;
-    transition: 1s; }
+    transition: 1s;
+    margin-top: 50px; }
     body .nav-container .searchbar-container {
       display: flex;
       justify-content: center;
@@ -127,7 +130,7 @@ body {
     width: 100%;
     padding: 10px 20px;
     text-align: left;
-    background-color: white; }
+    z-index: 1000; }
     body .burger-container .hamburger-button {
       border: none;
       background: white;
@@ -143,6 +146,8 @@ body {
   font-size: 80%; }
 
 .scrolling-wrapper {
+  display: flex;
+  flex-direction: row;
   overflow-x: scroll;
   overflow-y: hidden;
   white-space: nowrap; }

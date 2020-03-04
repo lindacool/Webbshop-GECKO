@@ -15,9 +15,9 @@
 
     
         <div class="scrolling-wrapper">
-            New Arrivals
+                <% startPageProducts.newArrivals.forEach(newArrival => { %>
             <div class="new-arrival">
-            <% startPageProducts.newArrivals.forEach(newArrival => { %>
+            
         
                 <div class="productImage">
                     <a href="/products/<%= newArrival._id %>"><img src="<%= newArrival.imgUrl %>" alt="productImage"></a>
@@ -29,6 +29,26 @@
                     </div>
                     <div class="productPrice">
                         <span class="price"><%= newArrival.price %> SEK</span>
+                    </div>
+                </div>
+            </div>
+                        <% }); %>
+        </div>
+        <div class="scrolling-wrapper">
+                <% startPageProducts.topSellers.forEach(topSeller => { %>
+            <div class="new-arrival">
+            
+        
+                <div class="productImage">
+                    <a href="/products/<%= topSeller._id %>"><img src="<%= topSeller.imgUrl %>" alt="productImage"></a>
+                </div>
+                <div class="productInfo">
+                    <div class="productTitle">
+                        <span class="title"><%= topSeller.title %></span>
+                        <span class="colors">ooo</span>
+                    </div>
+                    <div class="productPrice">
+                        <span class="price"><%= topSeller.price %> SEK</span>
                     </div>
                 </div>
             </div>
