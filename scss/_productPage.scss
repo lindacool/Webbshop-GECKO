@@ -1,14 +1,10 @@
 @import "mixins";
 
 body {
-    text-transform: uppercase;
-    
-    div {
-        font-family: 'Spartan', sans-serif;
-        letter-spacing: 2px;
-    }
 
     .categoryContainer {
+        font-family: 'Spartan', sans-serif;
+        text-transform: uppercase;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -52,6 +48,8 @@ body {
     }
 
     .productContainer {
+        font-family: 'Spartan', sans-serif;
+        text-transform: uppercase;
         display: flex;
         justify-content: flex-start;
         align-items: center;
