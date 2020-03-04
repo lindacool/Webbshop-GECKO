@@ -39,20 +39,21 @@
             <div class="new-arrival">
             
         
-                
-
-              </div>
-    </div>
-    <hr>
-    <div>
-        Top sellers
-        <br>
-        <%= startPageProducts.topSellers %>
-        <% }); %>
-    </div>
-
-
-
+                <div class="productImage">
+                    <a href="/products/<%= topSeller._id %>"><img src="<%= topSeller.imgUrl %>" alt="productImage"></a>
+                </div>
+                <div class="productInfo">
+                    <div class="productTitle">
+                        <span class="title"><%= topSeller.title %></span>
+                        <span class="colors">ooo</span>
+                    </div>
+                    <div class="productPrice">
+                        <span class="price"><%= topSeller.price %> SEK</span>
+                    </div>
+                </div>
+            </div>
+                        <% }); %>
+        </div>
     <%- include ("partial/footer.ejs") %>
 </body>
 
