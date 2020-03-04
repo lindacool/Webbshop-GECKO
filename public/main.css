@@ -259,8 +259,7 @@ body {
     flex-wrap: wrap;
     height: 100%;
     width: 96%;
-    margin: 0 2%;
-    border: 1px solid black; }
+    margin: 0 2%; }
     #detail-product-page #info-div .info-title-price-container {
       display: flex;
       justify-content: space-between;
@@ -289,5 +288,5 @@ body {
       #detail-product-page #info-div {
         position: -webkit-sticky;
         position: sticky;
-        top: 0;
+        top: 40%;
         width: 40%; } }
