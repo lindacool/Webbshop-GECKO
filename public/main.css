@@ -1,9 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Spartan:100,200,300,400,500,600,700,800,900&display=swap");
 body {
+  font-family: 'Spartan', sans-serif;
   padding-bottom: 0; }
-  body div {
-    font-family: 'Spartan', sans-serif; }
-  body .nav {
+  body .navContainer {
     z-index: 999;
     width: 100%;
     position: absolute;
@@ -11,39 +10,64 @@ body {
     transition-timing-function: ease-in;
     background-color: white;
     transition: 1s; }
-    body .nav .search {
-      width: 100%;
-      padding: 10px; }
-      body .nav .search .inputsearch {
-        width: 90%;
+    body .navContainer .searchbarContainer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 92%;
+      padding: 5px 20px;
+      margin: 0 4%;
+      border-bottom: 1px solid #7f8375; }
+      body .navContainer .searchbarContainer .searchIcon {
+        background-image: url("../public/assets/searchicon.png");
+        background-color: #cccccc;
+        height: 30px;
+        width: 30px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover; }
+      body .navContainer .searchbarContainer .inputsearch {
+        width: 100%;
         border: none;
-        border-bottom: 1px solid #7f8375;
-        background: #f7f7f7; }
-    body .nav ul {
-      width: 80%;
-      margin: 0 auto;
+        background: white;
+        padding: 20px 0 10px 40px; }
+    body .navContainer .about, body .navContainer .signIn, body .navContainer .menWomen {
+      width: 90%;
+      margin: 50px auto;
       padding: 0; }
-      body .nav ul li {
+      body .navContainer .about .freeShipping, body .navContainer .signIn .freeShipping, body .navContainer .menWomen .freeShipping {
+        width: 35%;
+        margin-bottom: 40px;
+        font-weight: bold; }
+      body .navContainer .about .fat, body .navContainer .signIn .fat, body .navContainer .menWomen .fat {
+        font-weight: bold; }
+      body .navContainer .about .bottom, body .navContainer .signIn .bottom, body .navContainer .menWomen .bottom {
+        margin-bottom: 30px; }
+      body .navContainer .about li, body .navContainer .signIn li, body .navContainer .menWomen li {
         list-style: none;
         padding: 5px;
         color: #7f8375;
         text-decoration: none; }
-        body .nav ul li a {
+        body .navContainer .about li a, body .navContainer .signIn li a, body .navContainer .menWomen li a {
           color: #7f8375;
           text-decoration: none; }
-        body .nav ul li :hover {
+        body .navContainer .about li :hover, body .navContainer .signIn li :hover, body .navContainer .menWomen li :hover {
           color: black;
           text-decoration: none; }
+    body .navContainer .menWomen {
+      border-bottom: 1px solid #7f8375;
+      width: 92%;
+      padding-bottom: 50px; }
   body .navShow {
     transition: 1s;
     transform: translateX(0%);
     transition-timing-function: ease-out; }
-  body .toggle {
+  body .burgerContainer {
     width: 100%;
     padding: 10px 20px;
     text-align: left;
     background-color: bisque; }
-    body .toggle .hambutton {
+    body .burgerContainer .hambutton {
       border: none;
       background: bisque; }
   body nav.active {
