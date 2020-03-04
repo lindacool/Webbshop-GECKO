@@ -16,18 +16,18 @@
     
         <div class="scrolling-wrapper">
                 <% startPageProducts.newArrivals.forEach(newArrival => { %>
-            <div class="new-arrival">
+            <div class="scroll-items">
             
         
-                <div class="productImage">
+                <div class="product-image">
                     <a href="/products/<%= newArrival._id %>"><img src="<%= newArrival.imgUrl %>" alt="productImage"></a>
                 </div>
-                <div class="productInfo">
-                    <div class="productTitle">
+                <div class="product-info">
+                    <div class="product-title">
                         <span class="title"><%= newArrival.title %></span>
                         <span class="colors">ooo</span>
                     </div>
-                    <div class="productPrice">
+                    <div class="product-price">
                         <span class="price"><%= newArrival.price %> SEK</span>
                     </div>
                 </div>
@@ -36,18 +36,18 @@
         </div>
         <div class="scrolling-wrapper">
                 <% startPageProducts.topSellers.forEach(topSeller => { %>
-            <div class="new-arrival">
+            <div class="scroll-items">
             
         
-                <div class="productImage">
+                <div class="product-image">
                     <a href="/products/<%= topSeller._id %>"><img src="<%= topSeller.imgUrl %>" alt="productImage"></a>
                 </div>
-                <div class="productInfo">
-                    <div class="productTitle">
+                <div class="product-info">
+                    <div class="product-title">
                         <span class="title"><%= topSeller.title %></span>
                         <span class="colors">ooo</span>
                     </div>
-                    <div class="productPrice">
+                    <div class="product-price">
                         <span class="price"><%= topSeller.price %> SEK</span>
                     </div>
                 </div>
