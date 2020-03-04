@@ -176,8 +176,12 @@ body {
   overflow-x: scroll;
   overflow-y: hidden;
   white-space: nowrap; }
-  .scrolling-wrapper .new-arrival, .scrolling-wrapper .top-seller {
+  .scrolling-wrapper .scroll-items {
     display: inline-block; }
+    .scrolling-wrapper .scroll-items .product-image {
+      width: 220px; }
+      .scrolling-wrapper .scroll-items .product-image img {
+        width: 100%; }
 
 #productPage {
   font-family: 'Spartan', sans-serif;
