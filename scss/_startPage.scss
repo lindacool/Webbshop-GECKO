@@ -13,11 +13,13 @@
 
 
 .scrolling-wrapper {
+    display:flex;
+    flex-direction: row;
     overflow-x: scroll;
     overflow-y: hidden;
     white-space: nowrap;
   
-    .new-arrival {
+    .new-arrival, .top-seller {
       display: inline-block;
     }
   }

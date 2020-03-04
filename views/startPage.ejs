@@ -13,35 +13,33 @@
     
     <%- include ("partial/navbar.ejs") %>
 
-    <div>
-                <div class="scrolling-wrapper">
-        
-        New Arrivals
-        <br>
-        <% startPageProducts.newArrivals.forEach(newArrival => { %>
-            
-
-
-
+    
+        <div class="scrolling-wrapper">
+                <% startPageProducts.newArrivals.forEach(newArrival => { %>
             <div class="new-arrival">
-                
-                    <div class="productImage">
-                        <a href="/products/<%= newArrival._id %>"><img src="<%= newArrival.imgUrl %>" alt="productImage"></a>
-                    </div>
-                    <div class="productInfo">
-                        <div class="productTitle">
-                            <span class="title"><%= newArrival.title %></span>
-                            <span class="colors">ooo</span>
-                        </div>
-                        <div class="productPrice">
-                            <span class="price"><%= newArrival.price %> SEK</span>
-                        </div>
-                    </div>
-            </div>
-       <% }); %>
-
-    </div>
+            
         
+                <div class="productImage">
+                    <a href="/products/<%= newArrival._id %>"><img src="<%= newArrival.imgUrl %>" alt="productImage"></a>
+                </div>
+                <div class="productInfo">
+                    <div class="productTitle">
+                        <span class="title"><%= newArrival.title %></span>
+                        <span class="colors">ooo</span>
+                    </div>
+                    <div class="productPrice">
+                        <span class="price"><%= newArrival.price %> SEK</span>
+                    </div>
+                </div>
+            </div>
+                        <% }); %>
+        </div>
+        <div class="scrolling-wrapper">
+                <% startPageProducts.topSellers.forEach(topSeller => { %>
+            <div class="new-arrival">
+            
+        
+<<<<<<< HEAD
                 
 
               </div>
@@ -55,6 +53,23 @@
 
 
 
+=======
+                <div class="productImage">
+                    <a href="/products/<%= topSeller._id %>"><img src="<%= topSeller.imgUrl %>" alt="productImage"></a>
+                </div>
+                <div class="productInfo">
+                    <div class="productTitle">
+                        <span class="title"><%= topSeller.title %></span>
+                        <span class="colors">ooo</span>
+                    </div>
+                    <div class="productPrice">
+                        <span class="price"><%= topSeller.price %> SEK</span>
+                    </div>
+                </div>
+            </div>
+                        <% }); %>
+        </div>
+>>>>>>> 6a80154f174d2126d557d0cb2e856f1fdb8cc6bd
     <%- include ("partial/footer.ejs") %>
 </body>
 
