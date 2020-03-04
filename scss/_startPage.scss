@@ -9,3 +9,15 @@
         font-size: 80%;
     }
 }
+
+
+
+.scrolling-wrapper {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+  
+    .new-arrival {
+      display: inline-block;
+    }
+  }

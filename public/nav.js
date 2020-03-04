@@ -1,10 +1,12 @@
 $(document).ready(function () {
     
-    $('.hambutton').on('click', function () {
-        if($(".navContainer").hasClass('navShow')) {
-            $(".navContainer").removeClass('navShow');
+    $('.hamburger-button').on('click', function () {
+        if($(".nav-container").hasClass('nav-show')) {
+            $(".nav-container").removeClass('nav-show');
+            $('.cover').removeClass('opacity-cover');
         } else {
-            $(".navContainer").addClass('navShow');
+            $(".nav-container").addClass('nav-show');
+            $('.cover').addClass('opacity-cover');
         }
         
     })
