@@ -1,7 +1,7 @@
 const {User, validateUser} = require("../model/userModel");
 const express = require("express");
 const router = express.Router();
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
 
 const saltRounds = 10;
 
@@ -13,8 +13,12 @@ router.get("/register", (req, res) => {
 
 router.post("/register", async (req, res) => {
 
+    const salt = await bcrypt.genSaltSync(10);
+    const hashPassword = await bcrypt.hash(req.body.password, salt)
     // Joi validering
     const { error } = validateUser(req.body);
+
+    console.log(hashPassword);
 
     if (error) {
         return res.status(400).send(error.details[0].message)
@@ -32,7 +36,7 @@ router.post("/register", async (req, res) => {
         firstName: req.body.firstName,
         surname: req.body.firstName,
         email: req.body.email,
-        password: req.body.password
+        password: hashPassword
     });
     await user.save();
 
