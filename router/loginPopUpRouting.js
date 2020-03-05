@@ -34,7 +34,7 @@ router.post("/register", async (req, res) => {
     // Skapa nya användare
     user = new User( {
         firstName: req.body.firstName,
-        surname: req.body.firstName,
+        surName: req.body.surName,
         email: req.body.email,
         password: hashPassword
     });
