@@ -36,20 +36,34 @@
 
     <!-- product info -->
     <div id="info-div">
-        <div class="info-title-price-container">
-            <span>
-                <%= clickedProduct.title %>
-            </span>
-            <span>
-                <%= clickedProduct.price %>
-            </span>
-        </div>
-        <div class="buttons-size-bag-container">
-            <button class="choose-size">Choose size +</button>
-            <button class="add-to-bag">Add to bad</button>
-        </div>
+        
+        
         <div class="color-container">
-            <button class="color-picker">Choose color</button>
+            <button class="color-picker"><span>Choose color</span><span>+</span></button>
+        </div>
+        <div class="size-container">
+            <span class="size-header">Size</span>
+            <button>XS</button>
+            <button>S</button>
+            <button>M</button>
+            <button>L</button>
+            <button>XL</button>
+            <span class="size-header">Size guide</span>
+        </div>
+
+        <div class="sticky">
+            <div class="info-title-price-container">
+                <span>
+                    <%= clickedProduct.title %>
+                </span>
+                <span class="price">
+                    <%= clickedProduct.price %> SEK
+                </span>
+            </div>
+            <div class="buttons-size-bag-container">
+                <button class="choose-size">Choose size +</button>
+                <button class="add-to-bag">Add to bag</button>
+            </div>
         </div>
     
     </div>
