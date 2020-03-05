@@ -1,0 +1,183 @@
+@import "mixins";
+
+#detail-product-page {
+    font-family: 'Spartan', sans-serif;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    button {
+        text-transform: uppercase;
+        font-size: 0.7rem;
+    }
+
+    // Image mobile
+    #image-div-mobile {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+
+        .image-container {
+            max-width: 1000px;
+            max-height: 800px;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        @include tablet {
+            display: none;
+        }
+    }
+    // Image desktop
+    #image-div-desktop {
+        display: none;
+        justify-content: center;
+        flex-direction: column;
+        width: 50%;
+        margin: 10px 0 0 0;
+
+        .image-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin: 4px 0;
+
+            img {
+                width: 90%;
+            }
+        }
+        @include tablet {
+            display: flex;
+        }
+    }
+
+    // Div containing product information
+    #info-div {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        height: 100%;
+        width: 94%;
+        margin: 0 3%;
+
+        .sticky {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            border-top: 1px solid rgb(225, 225, 225);
+            padding: 0 10px;
+            background-color: white;
+            position: sticky;
+            bottom: 0;
+            left: 0;
+
+            .info-title-price-container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                margin: 20px 0;
+    
+                span {
+                    width: 100%;
+                }
+                .price {
+                    text-align: end;
+                    font-size: 0.8rem;
+                    font-weight: 700;
+                }
+    
+                @include tablet {
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    justify-content: flex-start;
+                    margin: 0 0 20px 0;
+                }
+            }
+    
+            .buttons-size-bag-container {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                height: 60px;
+    
+                button {
+                    width: 45%;
+                    height: 40px;
+                    border-color: rgb(225, 225, 225);
+                }
+                .choose-size {
+                    background-color: white;
+                }
+                .add-to-bag {
+                    background-color:#7f8375;
+                    color: white;
+                }
+            }
+
+            @include tablet {
+                position: relative;
+            }
+            
+        }
+        
+
+        .color-container {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            height: 60px;
+            margin: 80px 0 0 0;
+
+            .color-picker {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                height: 40px;
+                background-color: white;
+                border-color: rgb(225, 225, 225);
+            }
+        }
+
+        .size-container {
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 100%;
+            margin: 40px 0;
+
+            .size-header {
+                width: 100%;
+                text-align: center;
+                margin: 15px 0;
+                font-size: 0.8rem;
+            }
+
+            button {
+                width: 40px;
+                height: 40px;
+                margin: 0 5px;
+                background-color: white;
+                border-color: rgb(225, 225, 225);
+            }
+        }
+
+
+        @include tablet {
+            position: -webkit-sticky;
+            position: sticky;
+            width: 48%;
+            top: 120px;
+            margin: 10px 2% 0 0;
+        }
+    }
+
+    
+}
+
+//webkit sticky
+//Lägg till desktopbilderna som none tills att man går över till desktop

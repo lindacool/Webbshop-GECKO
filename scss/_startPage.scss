@@ -13,11 +13,33 @@
 
 
 .scrolling-wrapper {
+    display:flex;
+    flex-direction: row;
     overflow-x: scroll;
     overflow-y: hidden;
     white-space: nowrap;
+    
   
-    .new-arrival {
-      display: inline-block;
+    .scroll-items {
+    
+        display: inline-block;
+      .product-image {
+          width: 45vw;
+          margin: 10px;
+          
+          img {
+              
+              width: 100%;
+        }
+      }
+      .product-info {
+        .product-title {
+            .title {}
+            .color {}
+        }
+      }
+      .product-price {
+          .price {}
+      }
     }
   }

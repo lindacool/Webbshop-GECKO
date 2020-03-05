@@ -1,14 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
+    <%- include ("partial/header.ejs") %>
 <body>
-    <div>
-        <p><%= clickedProduct %></p>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12" id="subscribebox">
+                SUBSCRIBE FOR 10% OFF
+            </div>
+        </div>
     </div>
+<!-- Navbar -->
+    <%- include ("partial/navbar.ejs") %>
+
+<!-- Product -->
+    
+<section id="detail-product-page">
+    <!-- image mobile -->
+    <div id="image-div-mobile">
+        <div class="image-container">
+            <img src="<%= clickedProduct.imgUrl %>" alt="product-image">
+        </div>
+    </div>
+    <!-- image desktop -->
+    <div id="image-div-desktop">
+        <div class="image-container">
+            <img src="<%= clickedProduct.imgUrl %>" alt="product-image">
+        </div>
+        <div class="image-container">
+            <img src="<%= clickedProduct.imgUrl %>" alt="product-image">
+        </div>
+        <div class="image-container">
+            <img src="<%= clickedProduct.imgUrl %>" alt="product-image">
+        </div>
+    </div>
+
+    <!-- product info -->
+    <div id="info-div">
+        
+        
+        <div class="color-container">
+            <button class="color-picker"><span>Choose color</span><span>+</span></button>
+        </div>
+        <div class="size-container">
+            <span class="size-header">Size</span>
+            <button>XS</button>
+            <button>S</button>
+            <button>M</button>
+            <button>L</button>
+            <button>XL</button>
+            <span class="size-header">Size guide</span>
+        </div>
+
+        <div class="sticky">
+            <div class="info-title-price-container">
+                <span>
+                    <%= clickedProduct.title %>
+                </span>
+                <span class="price">
+                    <%= clickedProduct.price %> SEK
+                </span>
+            </div>
+            <div class="buttons-size-bag-container">
+                <button class="choose-size">Choose size +</button>
+                <button class="add-to-bag">Add to bag</button>
+            </div>
+        </div>
+    
+    </div>
+
+
+
+
+</section>
+
 </body>
 </html>
