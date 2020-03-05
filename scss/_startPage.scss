@@ -3,7 +3,21 @@
         background-color: #7f8375;
         color: white;
         text-align: center;
-        font-family: "spartan";
+        font-family: 'Spartan', sans-serif;
         padding: 8px;
+        font-weight: 100;
+        font-size: 80%;
     }
 }
+
+
+
+.scrolling-wrapper {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+  
+    .new-arrival {
+      display: inline-block;
+    }
+  }

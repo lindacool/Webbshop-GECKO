@@ -1,6 +1,13 @@
 $(document).ready(function () {
     
-    $('.hambutton').on('click', function () {
-        $("nav").slideToggle();
+    $('.hamburger-button').on('click', function () {
+        if($(".nav-container").hasClass('nav-show')) {
+            $(".nav-container").removeClass('nav-show');
+            $('.cover').removeClass('opacity-cover');
+        } else {
+            $(".nav-container").addClass('nav-show');
+            $('.cover').addClass('opacity-cover');
+        }
+        
     })
 });
