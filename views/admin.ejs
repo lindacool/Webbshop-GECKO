@@ -5,11 +5,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="../public/main.css" />
+    <script src="../public/admin.js"></script>
+
 </head>
 <body>
     
+    <div class="create-new-product-form">
+
+        <div class="create-new-product-form-header"><h2>Create new product</h2></div>
+
+        <form action="/admin" class="createproduct" method="post">
+
+            <div class="form-group">
+                <label for="title">Product title</label>
+                <input class="form-control" type="text" name="title"/>
+            </div>
+
+            <div class="form-group">
+                <label for="imgUrl">Image URL</label>
+                <input class="form-control" type="text" name="imgUrl"/>
+            </div>
+
+            <div class="form-group">
+                <label for="price">Price</label>
+                <input class="form-control" type="text" name="price"/>
+            </div>
+
+            <div class="form-group">
+                <label for="description">Description</label>
+                <textarea rows="4" cols="50" class="form-control" type="text" name="description"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="size">Size</label>
+                <input class="form-control" type="text" name="size"/>
+            </div>
+            
+            <div class="form-check">
+                <label class="form-check-label" for="newArrival">New arrival: </label>
+                <input class="form-check-input" type="checkbox" name="newArrival">
+            </div>
+
+            <div class="form-check">
+                <label class="form-check-label" for="topSeller">Top seller: </label>
+                <input class="form-check-input" type="checkbox" name="topSeller">
+            </div>
+
+            <div class="form-check">
+                <label class="form-check-label" for="male">Male: </label>
+                <input class="form-check-input" type="checkbox" name="male">
+            </div>
+
+            <div class="form-check">
+                <label class="form-check-label" for="female">Female: </label>
+                <input class="form-check-input" type="checkbox" name="female">
+            </div>
+            <div class="form-button-container">
+                <button type="submit" class="btn btn-dark">Create product</button>
+            </div>
+            
+        </form>
+    </div>
 
 
+<!-- 
     <form action="/admin" class="createproduct" method="post">
 
         <input type="text" name="title" placeholder="title" />
@@ -32,18 +93,22 @@
 
         <button type="submit">Create product</button>
 
-    </form>
+    </form> -->
 
 
-    <div>
+    <div class="all-products">
+        <div class="all-products-header"><h2>All products in database</h2></div>
         <% products.forEach((product) => {  %>
-            <div>
+            <div class="product">
                 <form action="/edit/<%= product._id %>" method="POST">
-                    <p>Title: <input name="title" type="text" value="<%= product.title %>"></p>
-                    <p>imgUrl: <input name="imgUrl" type="text" value="<%= product.imgUrl %>"></p>
-                    <p>Price: <input name="price" type="text" value="<%= product.price %>"></p>
-                    <p>Description: <input name="description" type="text" value="<%= product.description %>"></p>
-                    <p>Size: <input name="size" type="text" value="<%= product.size %>"></p>
+                    <div class="admin-image-container">
+                        <img src="<%= product.imgUrl %>" alt="">
+                    </div>
+                    <p>Title: <input class="text-input" name="title" type="text" value="<%= product.title %>"></p>
+                    <p>imgUrl: <input class="text-input" name="imgUrl" type="text" value="<%= product.imgUrl %>"></p>
+                    <p>Price: <input class="text-input" name="price" type="text" value="<%= product.price %>"></p>
+                    <p>Description: <input class="text-input" name="description" type="text" value="<%= product.description %>"></p>
+                    <p>Size: <input class="text-input" name="size" type="text" value="<%= product.size %>"></p>
                     <p>New arrival: <input name="newArrival" type="checkbox" <% if(product.newArrival){%>
                         checked 
                         <%} %> ></p>
@@ -56,10 +121,8 @@
                     <p>Female: <input name="female" type="checkbox" <% if(product.female){%>
                         checked 
                         <%} %> ></p>
-                    <button type="submit">Edit product</button>
+                    <p class="edit-product-button-container"><button class="btn btn-dark" type="submit">Update product</button></p>
                 </form>
-                <hr>
-                <br>
             </div>
      <%   }); %>
     </div>
