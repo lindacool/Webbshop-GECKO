@@ -184,6 +184,87 @@ body {
       .scrolling-wrapper .scroll-items .product-image img {
         width: 100%; }
 
+.create-new-product-form {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 96%;
+  margin: 20px 2%;
+  border-bottom: 1px solid #CECFCC; }
+  .create-new-product-form .create-new-product-form-header {
+    width: 100%; }
+    .create-new-product-form .create-new-product-form-header h2 {
+      text-align: center;
+      margin: 0 0 20px 0; }
+  .create-new-product-form form {
+    width: 60%;
+    margin: 0 0 40px 0; }
+    .create-new-product-form form .form-check {
+      width: 100%;
+      padding: 0; }
+      .create-new-product-form form .form-check input {
+        margin-left: 10px; }
+      .create-new-product-form form .form-check input:checked {
+        color: #7f8375;
+        background-color: #7f8375; }
+    .create-new-product-form form .form-button-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%; }
+      .create-new-product-form form .form-button-container button {
+        margin: 10px 0;
+        background-color: #7f8375;
+        border-color: white; }
+
+.all-products {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 96%;
+  margin: 30px 2%; }
+  .all-products .all-products-header {
+    width: 100%; }
+    .all-products .all-products-header h2 {
+      text-align: center;
+      margin: 20px 0; }
+  .all-products .hide-product {
+    height: 300px;
+    overflow: hidden; }
+  .all-products .product {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 44%;
+    border: 1px solid #CECFCC;
+    border-radius: 5px;
+    margin-bottom: 20px; }
+    @media (min-width: 820px) {
+      .all-products .product {
+        width: 30%; } }
+    @media (min-width: 1200px) {
+      .all-products .product {
+        width: 23%; } }
+    .all-products .product .admin-image-container {
+      width: 100%; }
+      .all-products .product .admin-image-container img {
+        width: 40%;
+        margin: 16px 0 0 16px;
+        border: 1px solid #CECFCC; }
+    .all-products .product p {
+      text-align: left;
+      font-weight: 400; }
+      .all-products .product p .text-input {
+        width: 100%;
+        font-weight: 200; }
+    .all-products .product .edit-product-button-container {
+      text-align: center; }
+      .all-products .product .edit-product-button-container button {
+        background-color: #7f8375;
+        border-color: white; }
+
 #productPage {
   font-family: 'Spartan', sans-serif;
   text-transform: uppercase; }
