@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include ("partial/header.ejs") %>
+<%- include ("partial/header.ejs") %>
+
 <body>
     <div class="container-fluid">
         <div class="row">
@@ -9,11 +10,11 @@
             </div>
         </div>
     </div>
-<!-- Navbar -->
+    <!-- Navbar -->
     <%- include ("partial/navbar.ejs") %>
 
     <section id="productPage">
-<!-- Categories -->
+        <!-- Categories -->
         <div class="categoryContainer">
             <div class="categoryContainerHeader">
                 <h2><%= heading %></h2>
@@ -24,31 +25,57 @@
             </div>
         </div>
 
-<!-- Products -->
+        <!-- Products -->
 
         <div class="productContainer">
             <% products.forEach((product) => { %>
-                <div class="product">
-                    
-                    <div class="productImage">
-                        <a href="/products/<%= product._id %>"><img src="<%= product.imgUrl %>" alt="productImage"></a>
+            <div class="product">
+
+                <div class="productImage">
+                    <a href="/products/<%= product._id %>"><img src="<%= product.imgUrl %>" alt="productImage"></a>
+                </div>
+                <div class="productInfo">
+                    <div class="productTitle">
+                        <span class="title"><%= product.title %></span>
+                        <span class="colors">ooo</span>
                     </div>
-                    <div class="productInfo">
-                        <div class="productTitle">
-                            <span class="title"><%= product.title %></span>
-                            <span class="colors">ooo</span>
-                        </div>
-                        <div class="productPrice">
-                            <span class="price"><%= product.price %> SEK</span>
-                        </div>
+                    <div class="productPrice">
+                        <span class="price"><%= product.price %> SEK</span>
                     </div>
                 </div>
+            </div>
             <% }) %>
         </div>
 
     </section>
+    <% if(comments.length >=1) { %>
 
-    
+
+
+
+
+    <div class="pagination">
+        <% if(currentPage !==1 && previousPage !==1) { %>
+        <a href="/products/?<%=page=1 %>">1</a>
+        <% } %>
+        <% if(hasPreviousPage) {  %>
+        <a href="/products/?page=<%=previousPage %>"> <%= previousPage %> </a>
+        <% } %>
+        <a href="/products/?page=<%=currentPage %>"> <%= currentPage %> </a>
+        <% if(hasNextPage) {  %>
+        <a href="/products/?page=<%=nextPage %>"> <%= nextPage %> </a>
+        <% } %>
+        <% if(lastPage !==currentPage && nextPage !==lastPage) {  %>
+        <a href="/products/?page=<%=lastPage%>"> <%= lastPage %> </a>
+        <% } %>
+
+        <% }%>
+
+    </div>
+
+    </div>
+
 
 </body>
+
 </html>
