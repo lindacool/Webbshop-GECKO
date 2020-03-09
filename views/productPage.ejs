@@ -28,19 +28,20 @@
         <!-- Products -->
 
         <div class="productContainer">
-            <% products.forEach((product) => { %>
+            <% productsShow.forEach((Item_per_page) => { %>
             <div class="product">
 
                 <div class="productImage">
-                    <a href="/products/<%= product._id %>"><img src="<%= product.imgUrl %>" alt="productImage"></a>
+                    <a href="/products/<%= Item_per_page._id %>"><img src="<%= Item_per_page.imgUrl %>"
+                            alt="productImage"></a>
                 </div>
                 <div class="productInfo">
                     <div class="productTitle">
-                        <span class="title"><%= product.title %></span>
+                        <span class="title"><%= Item_per_page.title %></span>
                         <span class="colors">ooo</span>
                     </div>
                     <div class="productPrice">
-                        <span class="price"><%= product.price %> SEK</span>
+                        <span class="price"><%= Item_per_page.price %> SEK</span>
                     </div>
                 </div>
             </div>
@@ -48,32 +49,11 @@
         </div>
 
     </section>
-    <% if(comments.length >=1) { %>
 
+    <% for( let i = 1; i < totalPages +1; i++ ) { %>
+    <a href="/products/?page=<%=i%>"><%=i%></a>
 
-
-
-
-    <div class="pagination">
-        <% if(currentPage !==1 && previousPage !==1) { %>
-        <a href="/products/?<%=page=1 %>">1</a>
-        <% } %>
-        <% if(hasPreviousPage) {  %>
-        <a href="/products/?page=<%=previousPage %>"> <%= previousPage %> </a>
-        <% } %>
-        <a href="/products/?page=<%=currentPage %>"> <%= currentPage %> </a>
-        <% if(hasNextPage) {  %>
-        <a href="/products/?page=<%=nextPage %>"> <%= nextPage %> </a>
-        <% } %>
-        <% if(lastPage !==currentPage && nextPage !==lastPage) {  %>
-        <a href="/products/?page=<%=lastPage%>"> <%= lastPage %> </a>
-        <% } %>
-
-        <% }%>
-
-    </div>
-
-    </div>
+    <% } %>
 
 
 </body>

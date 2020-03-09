@@ -1,85 +1,63 @@
-const express = require('express');
-const Product = require('../model/productModel');
+const express = require("express");
+const Product = require("../model/productModel");
 
 const router = express.Router();
 
-
-
-router.get('/products', async (req, res) => {
-
+router.get("/products", async (req, res) => {
     const products = await Product.find();
     const heading = "Unisex";
     const otherCategories = ["men", "women"];
-    // pagination
-    const Item_per_page = 2;
 
-    // sida nummer 
+    // pagination
+    const Item_per_page = 3;
+    const totalPages = products.length / Item_per_page;
+
+    // sida nummer
     const page = +req.query.page || 1;
 
-    let totalComment;
-
-    const commentsCount = await Product.find()
-        .countDocuments()
-    console.log(commentsCount);
-
-    totalComment = commentsCount;
+    const productCount = await Product.find().countDocuments();
+    console.log(productCount);
 
     //HÄmtar alla comments
-    const comments = await Product.find()
+    const productsShow = await Product.find()
         .skip((page - 1) * Item_per_page)
-        .limit(Item_per_page)
+        .limit(Item_per_page);
 
-
-    res.render('productPage', {
-        products,
+    res.render("productPage", {
         heading,
+        products,
         otherCategories,
-        comments,
-        totalComment,
+        productsShow,
+        totalPages
+    });
+});
 
-        hasNextPage: totalComment > Item_per_page * page,
-
-        hasPreviousPage: page > 1,
-        nextPage: page + 1,
-        previousPage: page - 1,
-        currentPage: page,
-        lastPage: Math.ceil(totalComment / Item_per_page)
-
-    }); //skickar med alla produkter
-
-
-})
-
-
-
-router.get('/women', async (req, res) => {
+router.get("/women", async (req, res) => {
     const products = await Product.find({
         female: true
     });
     const heading = "Women";
     const otherCategories = ["products", "men"];
 
-    res.render('productPage', {
+    res.render("productPage", {
         products,
         heading,
         otherCategories
     }); //skickar med alla kvinno-produkter
-})
+});
 
-router.get('/men', async (req, res) => {
+router.get("/men", async (req, res) => {
     const products = await Product.find({
         male: true
     });
     const heading = "Men";
     const otherCategories = ["products", "women"];
 
-    res.render('productPage', {
+    res.render("productPage", {
         products,
         heading,
         otherCategories
-    }) //skickar med alla man-produkter
-})
-
-
+    }); //skickar med alla man-produkter
+});
 
 module.exports = router;
