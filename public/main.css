@@ -553,3 +553,7 @@ body {
     @media (min-width: 820px) {
       #detail-product-page .mobile-sticky {
         position: relative; } }
+
+#checkout-container {
+  display: flex;
+  justify-content: center; }
