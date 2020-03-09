@@ -277,22 +277,29 @@ body {
     margin: 30px 0 50px 0; }
     #productPage .categoryContainer .categoryContainerHeader {
       display: flex;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
+      flex-direction: row;
+      flex-wrap: wrap;
       width: 100%;
       height: 100px; }
       #productPage .categoryContainer .categoryContainerHeader h2 {
-        font-size: 2rem; }
+        font-size: 2rem;
+        width: 100%;
+        text-align: center; }
+      #productPage .categoryContainer .categoryContainerHeader p {
+        width: 60%;
+        height: auto;
+        font-size: 0.7rem; }
     #productPage .categoryContainer .categoryContainerButtons {
       display: flex;
-      justify-content: space-evenly;
+      justify-content: center;
       align-items: center;
       width: 80%;
-      height: 80px;
-      border-bottom: 1px solid #cecece; }
+      margin-top: 60px; }
       #productPage .categoryContainer .categoryContainerButtons p {
-        width: 50%;
-        text-align: center; }
+        text-align: center;
+        margin: 0 80px; }
         #productPage .categoryContainer .categoryContainerButtons p a:link {
           color: inherit; }
         #productPage .categoryContainer .categoryContainerButtons p a:visited {

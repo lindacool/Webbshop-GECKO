@@ -14,26 +14,35 @@
 
         .categoryContainerHeader {
             display: flex;
-            justify-content: center;
             align-items: center;
+            justify-content: center;
+            flex-direction: row;
+            flex-wrap: wrap;
             width: 100%;
             height: 100px;
 
             h2 {
                 font-size: 2rem;
+                width: 100%;
+                text-align: center;
+            }
+            p {
+                width: 60%;
+                height: auto;
+                font-size: 0.7rem;
             }
         }
         .categoryContainerButtons {
             display: flex;
-            justify-content: space-evenly;
+            justify-content: center;
             align-items: center;
             width: 80%;
-            height: 80px;
-            border-bottom: 1px solid rgb(206, 206, 206);
+            margin-top: 60px;
+
 
             p {
-                width: 50%;
                 text-align: center;
+                margin: 0 80px;
 
                 a:link {
                     color: inherit;
