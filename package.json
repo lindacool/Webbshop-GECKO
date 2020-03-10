@@ -24,6 +24,8 @@
   "dependencies": {
     "bcrypt": "^4.0.1",
     "bcryptjs": "^2.4.3",
+    "c": "^0.1.0",
+    "cookie-parser": "^1.4.4",
     "css": "^2.2.4",
     "ejs": "^3.0.1",
     "express": "^4.17.1",

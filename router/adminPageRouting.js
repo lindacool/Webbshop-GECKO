@@ -1,16 +1,17 @@
 const express = require ('express');
 const Product = require('../model/productModel');
+const verifyToken = require('../router/verifyToken');
 
 
 const router = express.Router();
 
 
-router.get('/admin', async (req, res)=>{
+router.get('/admin', verifyToken, async (req, res)=>{
     const products = await Product.find();
     res.render('admin', {products}) //skickar med alla produkter
 })
 
-router.post('/admin', async (req, res)=>{
+router.post('/admin', verifyToken, async (req, res)=>{
 
 
     const product = new Product({
@@ -34,7 +35,7 @@ router.post('/admin', async (req, res)=>{
 });
 
 // Edit product
-router.post("/edit/:id", async (req, res) => {
+router.post("/edit/:id", verifyToken, async (req, res) => {
 
     await Product.updateOne( {_id: req.params.id}, {
         $set: {

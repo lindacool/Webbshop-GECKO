@@ -7,8 +7,10 @@ const productPageRouter = require("./router/productPageRouting");
 const adminPageRouter = require("./router/adminPageRouting");
 const detailProductPageRouter = require("./router/detailProductPageRouting");
 const loginPopUpRouter = require("./router/loginPopUpRouting");
+const loginAdminRouter = require("./router/loginAdminRouting");
 const sassMiddleware = require("node-sass-middleware");
 const path = require("path");
+const cookieParser = require("cookie-parser");
 const app = express();
 
 app.set("view engine", "ejs");
@@ -18,13 +20,15 @@ app.use(
     extended: false
   })
 );
+app.use(cookieParser());
 
 app.use(
   productPageRouter,
   startPageRouter,
   adminPageRouter,
   detailProductPageRouter,
-  loginPopUpRouter
+  loginPopUpRouter,
+  loginAdminRouter
 );
 app.use(
   sassMiddleware({
