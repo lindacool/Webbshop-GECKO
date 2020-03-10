@@ -29,20 +29,20 @@
         <!-- Products -->
 
         <div class="productContainer">
-            <% productsShow.forEach((Item_per_page) => { %>
+            <% productsShow.forEach((product) => { %>
             <div class="product">
 
                 <div class="productImage">
-                    <a href="/products/<%= Item_per_page._id %>"><img src="<%= Item_per_page.imgUrl %>"
+                    <a href="/products/<%= product._id %>"><img src="<%= product.imgUrl %>"
                             alt="productImage"></a>
                 </div>
                 <div class="productInfo">
                     <div class="productTitle">
-                        <span class="title"><%= Item_per_page.title %></span>
+                        <span class="title"><%= product.title %></span>
                         <span class="colors">ooo</span>
                     </div>
                     <div class="productPrice">
-                        <span class="price"><%= Item_per_page.price %> SEK</span>
+                        <span class="price"><%= product.price%> SEK</span>
                     </div>
                 </div>
             </div>
@@ -51,11 +51,14 @@
 
     </section>
 
-    <% for( let i = 1; i < totalPages +1; i++ ) { %>
+    <div class="show-more">
+        <% if(totalPages !== itemsToShow/itemPerPage ) { %>
+            <a href="/<%=route%>/?page=<%=(itemsToShow/itemPerPage) + 1%>">Show more</a>
+        <% } else { %>
+            <a href="/<%=route%>/?page=1">Show less</a>
+        <% } %>
+    </div>
 
-    <a href="/products/?page=<%=i%>"><%=i%></a>
-
-    <% } %>
 
 
 </body>

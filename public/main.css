@@ -300,6 +300,9 @@ body {
       #productPage .categoryContainer .categoryContainerButtons p {
         text-align: center;
         margin: 0 80px; }
+        #productPage .categoryContainer .categoryContainerButtons p a:hover {
+          text-decoration: none;
+          font-weight: 500; }
         #productPage .categoryContainer .categoryContainerButtons p a:link {
           color: inherit; }
         #productPage .categoryContainer .categoryContainerButtons p a:visited {
@@ -342,6 +345,12 @@ body {
         #productPage .productContainer .product {
           width: 30.33%;
           margin: 0 1.5% 20px 1.5%; } }
+
+.show-more {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 30px 0; }
 
 #detail-product-page {
   font-family: 'Spartan', sans-serif;

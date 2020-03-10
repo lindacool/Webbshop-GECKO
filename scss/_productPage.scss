@@ -44,9 +44,12 @@
                 text-align: center;
                 margin: 0 80px;
 
+                a:hover {
+                    text-decoration: none;
+                    font-weight: 500;
+                }
                 a:link {
                     color: inherit;
-    
                 }
                 a:visited {
                     color: inherit;
@@ -112,4 +115,14 @@
             }
         }
     }
+
+    
+}
+
+.show-more {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+
 }
