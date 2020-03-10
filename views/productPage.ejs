@@ -49,15 +49,17 @@
             <% }) %>
         </div>
 
+        <div class="show-more">
+            <% if(totalPages !== itemsToShow/itemPerPage ) { %>
+                <a href="/<%=route%>/?page=<%=(itemsToShow/itemPerPage) + 1%>">Show more</a>
+            <% } else { %>
+                <a href="/<%=route%>/?page=1">Show less</a>
+            <% } %>
+        </div>
+
     </section>
 
-    <div class="show-more">
-        <% if(totalPages !== itemsToShow/itemPerPage ) { %>
-            <a href="/<%=route%>/?page=<%=(itemsToShow/itemPerPage) + 1%>">Show more</a>
-        <% } else { %>
-            <a href="/<%=route%>/?page=1">Show less</a>
-        <% } %>
-    </div>
+    
 
 
 

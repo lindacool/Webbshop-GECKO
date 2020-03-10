@@ -7,10 +7,24 @@
     <title>Document</title>
 </head>
 <body>
-    
-    <div>
-        Hello, <%= user.firstName %>
-    </div>
+    <h2>Log in</h2>
+    <form action="/login" method="POST">
+        <input type="email" name="loginEmail">
+        <input type="password" name="loginPassword">
+        <button type="submit">Log in</button>
+    </form>
+
+    <h4><a href="/loginadmin">Log in as Admin</a></h4>
+
+    <h2>Register</h2>
+    <form action="" method="POST">
+        <input type="text" name="firstName" placeholder="firstname">
+        <input type="text" name="surName" placeholder="surname">
+        <input type="email" name="email" placeholder="email">
+        <input type="password" name="password" placeholder="password">
+        <button type="submit">Sign up</button>
+    </form>
+
 
 </body>
 </html>
