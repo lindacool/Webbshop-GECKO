@@ -13,8 +13,8 @@ router.get("/loginadmin", async (req, res) => {
     res.render("loginAdmin", { errorMessage });
 
 });
-
-router.post("/registeradmin", async (req, res) => {
+// Is verifyToken needed here? For security reasons
+router.post("/registeradmin", verifyToken, async (req, res) => {
 
     const salt = await bcrypt.genSaltSync(10);
     const hashPassword = await bcrypt.hash(req.body.password, salt)
