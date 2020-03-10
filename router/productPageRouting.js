@@ -19,7 +19,7 @@ router.get("/products", async (req, res) => {
     const productCount = await Product.find().countDocuments();
     console.log(productCount);
 
-    //HÄmtar alla comments
+
     const productsShow = await Product.find()
         .skip((page - 1) * Item_per_page)
         .limit(Item_per_page);
@@ -42,11 +42,28 @@ router.get("/women", async (req, res) => {
     const headingDescription = "Women are the best, consectetur adipiscing elit. Cras blandit mauris risus, ornare porta neque eleifend sit amet. Vestibulum eleifend.";
     const otherCategories = ["products", "men"];
 
+    // pagination
+    const Item_per_page = 3;
+    const totalPages = products.length / Item_per_page;
+
+    // sida nummer
+    const page = +req.query.page || 1;
+
+    const productCount = await Product.find().countDocuments();
+    console.log(productCount);
+
+    
+    const productsShow = await Product.find({female: true})
+        .skip((page - 1) * Item_per_page)
+        .limit(Item_per_page);
+
     res.render("productPage", {
         products,
         heading,
         headingDescription,
-        otherCategories
+        otherCategories,
+        productsShow,
+        totalPages
     }); //skickar med alla kvinno-produkter
 });
 
@@ -58,11 +75,28 @@ router.get("/men", async (req, res) => {
     const headingDescription = "Our mens collection are fabulous, consectetur adipiscing elit. Cras blandit mauris risus, ornare porta neque eleifend sit amet. Vestibulum eleifend.";
     const otherCategories = ["products", "women"];
 
+    // pagination
+    const Item_per_page = 3;
+    const totalPages = products.length / Item_per_page;
+
+    // sida nummer
+    const page = +req.query.page || 1;
+
+    const productCount = await Product.find().countDocuments();
+    console.log(productCount);
+
+    
+    const productsShow = await Product.find({male: true})
+        .skip((page - 1) * Item_per_page)
+        .limit(Item_per_page);
+
     res.render("productPage", {
         products,
         heading,
         headingDescription,
-        otherCategories
+        otherCategories,
+        productsShow,
+        totalPages
     }); //skickar med alla man-produkter
 });
 
