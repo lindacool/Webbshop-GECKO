@@ -8,21 +8,23 @@ router.get("/products", async (req, res) => {
     const heading = "Unisex";
     const headingDescription = "Check out our Unisex collection, consectetur adipiscing elit. Cras blandit mauris risus, ornare porta neque eleifend sit amet. Vestibulum eleifend.";
     const otherCategories = ["men", "women"];
+    const route = "products";
 
     // pagination
-    const Item_per_page = 3;
-    const totalPages = products.length / Item_per_page;
+    const itemPerPage = 3;
+    const totalPages = Math.ceil(products.length / itemPerPage);
 
     // sida nummer
     const page = +req.query.page || 1;
 
-    const productCount = await Product.find().countDocuments();
-    console.log(productCount);
+    const itemsToShow = itemPerPage * page;
 
+    // const productsShow = await Product.find()
+    //     .skip((page - 1) * itemPerPage)
+    //     .limit(itemPerPage);
 
     const productsShow = await Product.find()
-        .skip((page - 1) * Item_per_page)
-        .limit(Item_per_page);
+        .limit(itemsToShow);
 
     res.render("productPage", {
         heading,
@@ -30,7 +32,10 @@ router.get("/products", async (req, res) => {
         headingDescription,
         otherCategories,
         productsShow,
-        totalPages
+        totalPages,
+        itemPerPage,
+        itemsToShow,
+        route
     });
 });
 
@@ -41,21 +46,19 @@ router.get("/women", async (req, res) => {
     const heading = "Women";
     const headingDescription = "Women are the best, consectetur adipiscing elit. Cras blandit mauris risus, ornare porta neque eleifend sit amet. Vestibulum eleifend.";
     const otherCategories = ["products", "men"];
+    const route = "women";
 
     // pagination
-    const Item_per_page = 3;
-    const totalPages = products.length / Item_per_page;
+    const itemPerPage = 3;
+    const totalPages = Math.ceil(products.length / itemPerPage);
 
     // sida nummer
     const page = +req.query.page || 1;
 
-    const productCount = await Product.find().countDocuments();
-    console.log(productCount);
-
+    const itemsToShow = itemPerPage * page;
     
     const productsShow = await Product.find({female: true})
-        .skip((page - 1) * Item_per_page)
-        .limit(Item_per_page);
+        .limit(itemsToShow);
 
     res.render("productPage", {
         products,
@@ -63,7 +66,10 @@ router.get("/women", async (req, res) => {
         headingDescription,
         otherCategories,
         productsShow,
-        totalPages
+        totalPages,
+        itemPerPage,
+        itemsToShow,
+        route
     }); //skickar med alla kvinno-produkter
 });
 
@@ -74,21 +80,20 @@ router.get("/men", async (req, res) => {
     const heading = "Men";
     const headingDescription = "Our mens collection are fabulous, consectetur adipiscing elit. Cras blandit mauris risus, ornare porta neque eleifend sit amet. Vestibulum eleifend.";
     const otherCategories = ["products", "women"];
+    const route = "men";
 
     // pagination
-    const Item_per_page = 3;
-    const totalPages = products.length / Item_per_page;
+    const itemPerPage = 3;
+    const totalPages = Math.ceil(products.length / itemPerPage);
+    
 
     // sida nummer
     const page = +req.query.page || 1;
 
-    const productCount = await Product.find().countDocuments();
-    console.log(productCount);
-
+    const itemsToShow = itemPerPage * page;
     
     const productsShow = await Product.find({male: true})
-        .skip((page - 1) * Item_per_page)
-        .limit(Item_per_page);
+        .limit(itemsToShow);
 
     res.render("productPage", {
         products,
@@ -96,8 +101,11 @@ router.get("/men", async (req, res) => {
         headingDescription,
         otherCategories,
         productsShow,
-        totalPages
-    }); //skickar med alla man-produkter
+        totalPages,
+        itemPerPage,
+        itemsToShow,
+        route
+    });
 });
 
 module.exports = router;
