@@ -1,0 +1,45 @@
+.container-fluid {
+    #subscribebox {
+        background-color: #7f8375;
+        color: white;
+        text-align: center;
+        font-family: 'Spartan', sans-serif;
+        padding: 8px;
+        font-weight: 100;
+        font-size: 80%;
+    }
+}
+
+
+
+.scrolling-wrapper {
+    display:flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    
+  
+    .scroll-items {
+    
+        display: inline-block;
+      .product-image {
+          width: 45vw;
+          margin: 10px;
+          
+          img {
+              
+              width: 100%;
+        }
+      }
+      .product-info {
+        .product-title {
+            .title {}
+            .color {}
+        }
+      }
+      .product-price {
+          .price {}
+      }
+    }
+  }

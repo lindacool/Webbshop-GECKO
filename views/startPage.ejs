@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include ("partial/header.ejs") %>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12" id="subscribebox">
+                SUBSCRIBE FOR 10% OFF
+            </div>
+        </div>
+    </div>
+    
+    <%- include ("partial/navbar.ejs") %>
+
+    
+        <div class="scrolling-wrapper">
+                <% startPageProducts.newArrivals.forEach(newArrival => { %>
+            <div class="scroll-items">
+            
+        
+                <div class="product-image">
+                    <a href="/products/<%= newArrival._id %>"><img src="<%= newArrival.imgUrl %>" alt="productImage"></a>
+                </div>
+                <div class="product-info">
+                    <div class="product-title">
+                        <span class="title"><%= newArrival.title %></span>
+                        <span class="colors">ooo</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="price"><%= newArrival.price %> SEK</span>
+                    </div>
+                </div>
+            </div>
+                        <% }); %>
+        </div>
+        <div class="scrolling-wrapper">
+                <% startPageProducts.topSellers.forEach(topSeller => { %>
+            <div class="scroll-items">
+            
+        
+                <div class="product-image">
+                    <a href="/products/<%= topSeller._id %>"><img src="<%= topSeller.imgUrl %>" alt="productImage"></a>
+                </div>
+                <div class="product-info">
+                    <div class="product-title">
+                        <span class="title"><%= topSeller.title %></span>
+                        <span class="colors">ooo</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="price"><%= topSeller.price %> SEK</span>
+                    </div>
+                </div>
+            </div>
+                        <% }); %>
+        </div>
+    <%- include ("partial/footer.ejs") %>
+</body>
+
+
+</html>
