@@ -83,6 +83,8 @@ body {
   font-family: 'Spartan', sans-serif;
   padding-bottom: 0; }
   body .nav-container {
+    font-family: 'Spartan', sans-serif;
+    visibility: hidden;
     z-index: 999;
     width: 100%;
     height: 95vh;
@@ -114,35 +116,51 @@ body {
         border: none;
         background: white;
         padding: 20px 0 10px 40px; }
-    body .nav-container .about, body .nav-container .sign-in, body .nav-container .men-women {
+    body .nav-container .about,
+    body .nav-container .sign-in,
+    body .nav-container .men-women {
       width: 90%;
       margin: 50px auto;
       padding: 0; }
-      body .nav-container .about .free-shipping, body .nav-container .sign-in .free-shipping, body .nav-container .men-women .free-shipping {
+      body .nav-container .about .free-shipping,
+      body .nav-container .sign-in .free-shipping,
+      body .nav-container .men-women .free-shipping {
         width: 35%;
         margin-bottom: 40px;
         font-weight: bold; }
-      body .nav-container .about .fat, body .nav-container .sign-in .fat, body .nav-container .men-women .fat {
+      body .nav-container .about .fat,
+      body .nav-container .sign-in .fat,
+      body .nav-container .men-women .fat {
         font-weight: bold; }
-      body .nav-container .about .bottom, body .nav-container .sign-in .bottom, body .nav-container .men-women .bottom {
+      body .nav-container .about .bottom,
+      body .nav-container .sign-in .bottom,
+      body .nav-container .men-women .bottom {
         margin-bottom: 30px; }
-      body .nav-container .about li, body .nav-container .sign-in li, body .nav-container .men-women li {
+      body .nav-container .about li,
+      body .nav-container .sign-in li,
+      body .nav-container .men-women li {
         list-style: none;
         padding: 5px;
-        color: #7f8375;
+        color: black;
         text-decoration: none; }
-        body .nav-container .about li a, body .nav-container .sign-in li a, body .nav-container .men-women li a {
-          color: #7f8375;
-          text-decoration: none; }
-        body .nav-container .about li :hover, body .nav-container .sign-in li :hover, body .nav-container .men-women li :hover {
+        body .nav-container .about li a,
+        body .nav-container .sign-in li a,
+        body .nav-container .men-women li a {
           color: black;
           text-decoration: none; }
+        body .nav-container .about li :hover,
+        body .nav-container .sign-in li :hover,
+        body .nav-container .men-women li :hover {
+          color: #7f8375;
+          text-decoration: none;
+          font-weight: 900; }
     body .nav-container .men-women {
       border-bottom: 1px solid #7f8375;
       width: 92%;
       padding-bottom: 50px; }
   body .nav-show {
-    transition: 1s;
+    visibility: visible;
+    transition: 0.5s;
     transform: translateX(0%);
     transition-timing-function: ease-out; }
     @media (min-width: 820px) {
