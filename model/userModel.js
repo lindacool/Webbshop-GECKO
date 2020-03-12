@@ -25,8 +25,11 @@ const userSchema = new mongoose.Schema({
         required: true,
         minlength: 8,
         maxlength: 200
+    },
+        resetToken: String,
+        expirationToken: Date
     }
-});
+);
 
 const User = mongoose.model("User", userSchema);
 
