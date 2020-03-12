@@ -1,24 +1,16 @@
-<<<<<<< HEAD
-const {User, validateUser} = require("../model/userModel");
-=======
 const {
     User,
     validateUser
 } = require("../model/userModel");
 
->>>>>>> e0c86e0dcc829f2e71cd414b7f38827af3e28393
 const express = require("express");
 const router = express.Router();
 const bcrypt = require("bcryptjs");
 const jwt = require('jsonwebtoken');
-<<<<<<< HEAD
-const verifyToken = require("./verifyToken")
-=======
 const verifyToken = require("./verifyToken");
 const config = require("../config/config");
 const nodemailer = require("nodemailer");
 const sendGridTransport = require("nodemailer-sendgrid-transport");
->>>>>>> e0c86e0dcc829f2e71cd414b7f38827af3e28393
 
 
 
@@ -28,8 +20,6 @@ router.get("/login", (req, res) => {
 
 });
 
-<<<<<<< HEAD
-=======
 const transport = nodemailer.createTransport(sendGridTransport({
     auth: {
         api_key: config.mail
@@ -37,19 +27,14 @@ const transport = nodemailer.createTransport(sendGridTransport({
 }))
 
 
->>>>>>> e0c86e0dcc829f2e71cd414b7f38827af3e28393
 router.post("/register", async (req, res) => {
 
     const salt = await bcrypt.genSaltSync(10);
     const hashPassword = await bcrypt.hash(req.body.password, salt)
     // Joi validering
-<<<<<<< HEAD
-    const { error } = validateUser(req.body);
-=======
     const {
         error
     } = validateUser(req.body);
->>>>>>> e0c86e0dcc829f2e71cd414b7f38827af3e28393
 
     console.log(hashPassword);
 
@@ -58,24 +43,16 @@ router.post("/register", async (req, res) => {
     };
 
     // Kolla om användare redan finns
-<<<<<<< HEAD
-    let user = await User.findOne( {email: req.body.email} );
-=======
     let user = await User.findOne({
         email: req.body.email
     });
->>>>>>> e0c86e0dcc829f2e71cd414b7f38827af3e28393
 
     if (user) {
         return res.status(400).send("User already exists");
     };
 
     // Skapa nya användare
-<<<<<<< HEAD
-    user = new User( {
-=======
     user = new User({
->>>>>>> e0c86e0dcc829f2e71cd414b7f38827af3e28393
         firstName: req.body.firstName,
         surName: req.body.surName,
         email: req.body.email,
@@ -83,16 +60,6 @@ router.post("/register", async (req, res) => {
     });
     await user.save();
 
-<<<<<<< HEAD
-    res.render("login", {user});
-
-});
-
-router.post("/login", async (req, res) => {
-
-    const user = await User.findOne({ email: req.body.loginEmail });
-    
-=======
     transport.sendMail({
         to: user.email,
         from: "<no-reply>customerservice@gecko.com",
@@ -135,20 +102,15 @@ router.post("/login", async (req, res) => {
         email: req.body.loginEmail
     });
 
->>>>>>> e0c86e0dcc829f2e71cd414b7f38827af3e28393
     if (!user) return res.redirect("/login")
 
     const validUser = await bcrypt.compare(req.body.loginPassword, user.password)
 
     if (!validUser) return res.redirect("/login")
 
-<<<<<<< HEAD
-    jwt.sign({ user }, "secretkey", (err, token) => {
-=======
     jwt.sign({
         user
     }, "secretkey", (err, token) => {
->>>>>>> e0c86e0dcc829f2e71cd414b7f38827af3e28393
         if (err) res.redirect("/login")
 
         if (token) {
@@ -156,14 +118,10 @@ router.post("/login", async (req, res) => {
             const cookie = req.cookies.jsonwebtoken;
             if (!cookie) {
 
-<<<<<<< HEAD
-                res.cookie('jsonwebtoken', token, { maxAge: 3600000, httpOnly: true });
-=======
                 res.cookie('jsonwebtoken', token, {
                     maxAge: 3600000,
                     httpOnly: true
                 });
->>>>>>> e0c86e0dcc829f2e71cd414b7f38827af3e28393
             }
         }
         res.redirect("/products")
@@ -171,11 +129,7 @@ router.post("/login", async (req, res) => {
 });
 
 // Logout
-<<<<<<< HEAD
-router.get("/logout", (req, res)=>{
-=======
 router.get("/logout", (req, res) => {
->>>>>>> e0c86e0dcc829f2e71cd414b7f38827af3e28393
     res.clearCookie("jsonwebtoken").redirect("/products")
 })
 
