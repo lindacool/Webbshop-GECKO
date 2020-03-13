@@ -1,4 +1,4 @@
-const express = require ('express');
+const express = require('express');
 const Product = require('../model/productModel');
 const verifyToken = require('../router/verifyToken');
 
@@ -6,12 +6,14 @@ const verifyToken = require('../router/verifyToken');
 const router = express.Router();
 
 
-router.get('/admin', verifyToken, async (req, res)=>{
+router.get('/admin', verifyToken, async (req, res) => {
     const products = await Product.find();
-    res.render('admin', {products}) //skickar med alla produkter
+    res.render('admin', {
+        products
+    }) //skickar med alla produkter
 })
 
-router.post('/admin', verifyToken, async (req, res)=>{
+router.post('/admin', verifyToken, async (req, res) => {
 
 
     const product = new Product({
@@ -25,8 +27,8 @@ router.post('/admin', verifyToken, async (req, res)=>{
         male: req.body.male = Boolean(req.body.male),
         female: req.body.female = Boolean(req.body.female)
     })
-    await product.save( (error, succes)=>{
-        if(error) {
+    await product.save((error, succes) => {
+        if (error) {
             res.send(error.message)
         }
     })
@@ -37,7 +39,9 @@ router.post('/admin', verifyToken, async (req, res)=>{
 // Edit product
 router.post("/edit/:id", verifyToken, async (req, res) => {
 
-    await Product.updateOne( {_id: req.params.id}, {
+    await Product.updateOne({
+        _id: req.params.id
+    }, {
         $set: {
             title: req.body.title,
             imgUrl: req.body.imgUrl,
@@ -50,9 +54,10 @@ router.post("/edit/:id", verifyToken, async (req, res) => {
             female: req.body.female = Boolean(req.body.female)
         }
     });
-    
+
     res.redirect("/admin");
-    
+
 });
+
 
 module.exports = router;

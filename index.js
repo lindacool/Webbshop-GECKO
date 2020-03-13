@@ -9,11 +9,13 @@ const detailProductPageRouter = require("./router/detailProductPageRouting");
 const loginRouter = require("./router/loginRouting");
 const loginAdminRouter = require("./router/loginAdminRouting");
 const registerRouter = require('./router/registerRouting');
+const adminUserRouter = require("./router/adminUserRouting");
 const resetPasswordRouter = require('./router/resetPasswordRouting')
 const sassMiddleware = require("node-sass-middleware");
 const path = require("path");
 const cookieParser = require("cookie-parser");
 const app = express();
+
 
 app.set("view engine", "ejs");
 
@@ -32,6 +34,7 @@ app.use(
   adminPageRouter,
   detailProductPageRouter,
   loginRouter,
+  adminUserRouter,
   loginAdminRouter
 );
 app.use(

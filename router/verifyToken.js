@@ -8,6 +8,7 @@ module.exports = (req, res, next)=>{
   if(token) {
     //decode token och user info
     const user = jwt.verify(token, "secretkey");
+    
     console.log("user info" , user);
     req.user = user;
     next();
@@ -15,6 +16,8 @@ module.exports = (req, res, next)=>{
   else {
     res.send("You are not authorised");
   }
+
+
 }
 //req.cookies.jsonwebtoken
   // kollar om användare har cookies 

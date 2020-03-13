@@ -12,6 +12,12 @@ const config = require("../config/config");
 const nodemailer = require("nodemailer");
 const sendGridTransport = require("nodemailer-sendgrid-transport");
 
+const transport = nodemailer.createTransport(sendGridTransport({
+    auth: {
+        api_key: config.mail
+    }
+}))
+
 
 // återställer lösenordet. 
 router.get("/reset", (req, res) => {
