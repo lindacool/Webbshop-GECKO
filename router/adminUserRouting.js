@@ -49,7 +49,7 @@ router.post("/adminUser/:id", verifyToken, async (req, res) => {
             // surName: req.body.surName,
             // email: req.body.email,
             // password: req.body.password,
-            admin: req.body.admin = Boolean(req.body.admin)
+            isAdmin: req.body.isAdmin = Boolean(req.body.isAdmin)
         }
     });
     if (user.isAdmin === true) {
