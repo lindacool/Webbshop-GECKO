@@ -58,7 +58,8 @@ router.route("/register")
         });
         await user.save();
 
-        await transport.sendMail({
+
+        transport.sendMail({
             to: "ottenby123@gmail.com",
             from: "<no-reply>customerservice@gecko.com",
             subject: "Login succeeded",
