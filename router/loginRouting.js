@@ -54,7 +54,7 @@ router.post("/login", async (req, res) => {
                 });
             }
         }
-        res.redirect("/products")
+        res.redirect("/")
     })
 });
 
