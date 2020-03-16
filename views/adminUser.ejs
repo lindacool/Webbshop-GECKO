@@ -3,9 +3,12 @@
 <%- include ("partial/header.ejs") %>
 
 <body>
-    <%- include ("partial/logout.ejs") %>
+    <%- include ("partial/navbar") %>
+    <%- include ("partial/logout") %>
 
     <div class="create-new-product-form">
+
+       <% users.forEach(user=>{ %>
 
        
 
@@ -28,9 +31,9 @@
 
             <div>Admin: <input name="isAdmin" type="checkbox" <% if(user.isAdmin){%> checked <%} %>>
             </div>
-
+       <% }) %>
         </form>
     </div>
 
-
+    <%- include ("partial/footer") %>
 </html>

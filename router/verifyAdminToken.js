@@ -7,7 +7,6 @@ module.exports = (req, res, next) => {
   if (token) {
     //decode token och user info
     const admin = jwt.verify(token, "secretkey");
-    console.log("user info", admin);
     req.isAdmin = admin;
     next();
   } else {

@@ -87,7 +87,6 @@ body {
     visibility: hidden;
     z-index: 999;
     width: 100%;
-    height: 95vh;
     position: absolute;
     top: 35px;
     transform: translateX(-130%);
@@ -95,27 +94,6 @@ body {
     background-color: white;
     transition: 1s;
     margin-top: 50px; }
-    body .nav-container .searchbar-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 92%;
-      padding: 5px 20px;
-      margin: 0 4%;
-      border-bottom: 1px solid #7f8375; }
-      body .nav-container .searchbar-container .search-icon {
-        background-image: url("../public/assets/searchicon.png");
-        background-color: #cccccc;
-        height: 30px;
-        width: 30px;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover; }
-      body .nav-container .searchbar-container .input-search {
-        width: 100%;
-        border: none;
-        background: white;
-        padding: 20px 0 10px 40px; }
     body .nav-container .about,
     body .nav-container .sign-in,
     body .nav-container .men-women {
@@ -171,13 +149,44 @@ body {
         width: 50%; } }
   body .burger-container {
     width: 100%;
-    padding: 10px 20px;
-    text-align: left;
-    z-index: 1000; }
+    display: flex;
+    flex-direction: row;
+    z-index: 1000;
+    justify-content: space-between; }
+    body .burger-container .logo {
+      background-image: url("../public/assets/Logo-gecko.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 40px;
+      width: 60px; }
+    body .burger-container .wishlistandcart .cart {
+      background-image: url("../public/assets/cart.png");
+      height: 20px;
+      width: 20px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat; }
+    body .burger-container .wishlistandcart .wishlist {
+      background-image: url("../public/assets/heart.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 20px;
+      width: 20px; }
+    body .burger-container .searchbar-container {
+      display: flex; }
+      body .burger-container .searchbar-container .search-icon {
+        background-image: url("../public/assets/searchicon.png");
+        background-color: #cccccc;
+        height: 25px;
+        width: 25px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover; }
     body .burger-container .hamburger-button {
       border: none;
-      background: white;
-      margin-top: 18px; }
+      background: white; }
 
 .container-fluid #subscribebox {
   background-color: #7f8375;

@@ -11,16 +11,15 @@ const router = express.Router();
 
 
 router.get('/adminUser', verifyToken, async (req, res) => {
-    //const user = await User.findOne();
-    const user = req.user
-console.log(req.user.user.isAdmin)
+
+    // const user = await req.user
+    const users = await User.find();
+
     if (req.user.user.isAdmin === true) {
-        res.render('adminUser.ejs', user) 
+        res.render('adminUser.ejs', {users}) 
     } else {
         res.send("not ok")
     }
-
-
 })
 
 
@@ -40,10 +39,6 @@ router.post("/adminUser/:id", verifyToken, async (req, res) => {
     });
 
 });
-router.get("/secret", verifyToken, (req, res) => {
-    console.log("is comming from verify", req.user)
-    if (req.user.user.isAdmin === true) return res.send("You are admin")
-    return res.send("You are not authorised")
-})
+
 
 module.exports = router;
