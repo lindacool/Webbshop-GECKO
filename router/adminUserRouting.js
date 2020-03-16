@@ -9,34 +9,20 @@ const {
 const router = express.Router();
 //för att kunna lägga till att anvöndare är Admin
 
+
 router.get('/adminUser', verifyToken, async (req, res) => {
-    const user = await User.find();
-    res.render('adminUser.ejs', {
-        user
-    })
+    //const user = await User.findOne();
+    const user = req.user
+console.log(req.user.user.isAdmin)
+    if (req.user.user.isAdmin === true) {
+        res.render('adminUser.ejs', user) 
+    } else {
+        res.send("not ok")
+    }
+
+
 })
 
-// router.post('/adminUser', verifyToken, async (req, res) => {
-
-
-//     const user = new User({
-//         firstName: req.body.firstName,
-//         surName: req.body.surName,
-//         email: req.body.email,
-//         password: req.body.password,
-//         admin: req.body.admin = Boolean(req.body.admin)
-//         // resetToken: req.body.resetToken,
-//         // expirationToken: req.body.expirationToken,
-
-//     })
-//     await user.save((error, succes) => {
-//         if (error) {
-//             res.send(error.message)
-//         }
-//     })
-
-//     res.redirect('adminUser')
-// });
 
 // Edit product
 router.post("/adminUser/:id", verifyToken, async (req, res) => {
@@ -52,11 +38,7 @@ router.post("/adminUser/:id", verifyToken, async (req, res) => {
             isAdmin: req.body.isAdmin = Boolean(req.body.isAdmin)
         }
     });
-    if (user.isAdmin === true) {
-        res.redirect("/adminUser");
-    } else {
-        res.send("not ok")
-    }
+
 });
 router.get("/secret", verifyToken, (req, res) => {
     console.log("is comming from verify", req.user)
