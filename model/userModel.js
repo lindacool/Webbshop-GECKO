@@ -1,7 +1,8 @@
 const mongoose = require("mongoose");
 const joi = require("joi");
+const Schema = require("mongoose").Schema;
 
-const userSchema = new mongoose.Schema({
+const userSchema = new Schema({
         firstName: {
             type: String,
             required: true,
@@ -33,10 +34,20 @@ const userSchema = new mongoose.Schema({
 
         },
         resetToken: String,
-        expirationToken: Date
+        expirationToken: Date,
+        wishList: [{
+            productId: {
+                type: mongoose.Schema.Types.ObjectId,
+                ref: "Product"
+            }
+        }]
     }
 
 );
+
+userSchema.methods.addToWishList = function(product){
+    this.wishList.push({})
+}
 
 const User = mongoose.model("User", userSchema);
 
