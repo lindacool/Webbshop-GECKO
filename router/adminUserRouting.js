@@ -16,27 +16,6 @@ router.get('/adminUser', verifyToken, async (req, res) => {
     })
 })
 
-// router.post('/adminUser', verifyToken, async (req, res) => {
-
-
-//     const user = new User({
-//         firstName: req.body.firstName,
-//         surName: req.body.surName,
-//         email: req.body.email,
-//         password: req.body.password,
-//         admin: req.body.admin = Boolean(req.body.admin)
-//         // resetToken: req.body.resetToken,
-//         // expirationToken: req.body.expirationToken,
-
-//     })
-//     await user.save((error, succes) => {
-//         if (error) {
-//             res.send(error.message)
-//         }
-//     })
-
-//     res.redirect('adminUser')
-// });
 
 // Edit product
 router.post("/adminUser/:id", verifyToken, async (req, res) => {
