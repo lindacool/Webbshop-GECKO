@@ -42,7 +42,7 @@ router.post('/admin', verifyToken, async (req, res) => {
     res.redirect('admin')
 });
 
-// Edit product
+
 router.post("/edit/:id", verifyToken, async (req, res) => {
 
     await Product.updateOne({

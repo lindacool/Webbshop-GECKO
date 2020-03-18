@@ -42,11 +42,11 @@ const userSchema = new Schema({
             }
         }]
     }
-
 );
 
 userSchema.methods.addToWishList = function(product){
-    this.wishList.push({})
+    this.wishList.push({productId: product._id})
+    return this.save();
 }
 
 const User = mongoose.model("User", userSchema);
@@ -63,8 +63,6 @@ function validateUser(user) {
 
     return joi.validate(user, schema);
 }
-
-
 
 module.exports.User = User;
 module.exports.validateUser = validateUser;

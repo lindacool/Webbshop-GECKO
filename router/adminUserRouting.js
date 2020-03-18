@@ -14,7 +14,6 @@ router.get('/adminUser', verifyToken, async (req, res) => {
 
     // const user = await req.user
     const users = await User.find();
-
     if (req.user.user.isAdmin === true) {
         res.render('adminUser.ejs', {users}) 
     } else {
@@ -24,9 +23,9 @@ router.get('/adminUser', verifyToken, async (req, res) => {
 
 
 // Edit product
-router.post("/adminUser/:id", verifyToken, async (req, res) => {
+router.post("/editUser/:id", verifyToken, async (req, res) => {
 
-    await user.updateOne({
+    await User.updateOne({
         _id: req.params.id
     }, {
         $set: {
@@ -37,6 +36,7 @@ router.post("/adminUser/:id", verifyToken, async (req, res) => {
             isAdmin: req.body.isAdmin = Boolean(req.body.isAdmin)
         }
     });
+    res.redirect('/adminUser');
 
 });
 
