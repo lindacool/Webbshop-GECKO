@@ -10,7 +10,8 @@ const loginRouter = require("./router/loginRouting");
 const loginAdminRouter = require("./router/loginAdminRouting");
 const registerRouter = require('./router/registerRouting');
 const adminUserRouter = require("./router/adminUserRouting");
-const resetPasswordRouter = require('./router/resetPasswordRouting')
+const userProfileRouter = require('./router/userProfileRouting');
+const resetPasswordRouter = require('./router/resetPasswordRouting');
 const sassMiddleware = require("node-sass-middleware");
 const path = require("path");
 const cookieParser = require("cookie-parser");
@@ -35,7 +36,8 @@ app.use(
   detailProductPageRouter,
   loginRouter,
   adminUserRouter,
-  loginAdminRouter
+  loginAdminRouter,
+  userProfileRouter
 );
 app.use(
   sassMiddleware({
