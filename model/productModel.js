@@ -36,6 +36,11 @@ const productSchema = new mongoose.Schema( {
     },
     female: {
         type: Boolean
+    },
+    user: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "User",
+        required: true
     }
 
 })

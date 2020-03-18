@@ -3,13 +3,13 @@ const jwt = require("jsonwebtoken");
 module.exports = (req, res, next)=>{
 
   const token = req.cookies.jsonwebtoken;
-  console.log(token);
+  
   
   if(token) {
     //decode token och user info
     const user = jwt.verify(token, "secretkey");
     
-    console.log("user info" , user);
+   // console.log("user info" , user);
     req.user = user;
     next();
   }

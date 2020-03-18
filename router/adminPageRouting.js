@@ -8,9 +8,15 @@ const router = express.Router();
 
 router.get('/admin', verifyToken, async (req, res) => {
     const products = await Product.find();
-    res.render('admin', {
-        products
-    }) //skickar med alla produkter
+
+    
+   // const user = await req.user
+
+    if (req.user.user.isAdmin === true) {
+        res.render('admin.ejs', {products}) 
+    } else {
+        res.send("not ok")
+    }
 })
 
 router.post('/admin', verifyToken, async (req, res) => {
