@@ -46,15 +46,24 @@ const userSchema = new Schema({
 
 // Function that adds product to wishlist
 userSchema.methods.addToWishlist = function(product){
+
+    // Push the clicked product to the user wishlist
     this.wishlist.push({productId: product._id})
     return this.save();
 }
 
 // Function that removes product to wishlist
 userSchema.methods.removeFromWishlist = function(productId){
-    this.wishlist.splice({productId: product._id})
+
+    const restOfProducts = this.wishlist.filter( (product)=> {
+         return product.productId.toString() != productId.toString()
+    })
+
+    // Overwrites the old wishlist with the newly created list which does not contain the removed product
+    this.wishlist = restOfProducts;
+
     return this.save();
-}
+};
 
 
 

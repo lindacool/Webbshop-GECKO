@@ -1,6 +1,9 @@
 <% user.wishlist.forEach( (product) => { %>
 
     <li>
+        <%= product.productId._id %>
+    </li>
+    <li>
         <%= product.productId.title %>
     </li>
     <li>
@@ -9,7 +12,7 @@
     <li>
         <%= product.productId.description %>
     </li>
-
+    <a href="/deleteWishlist/<%= product.productId._id %>">Delete</a>
     <br>
     <hr>
     <br>

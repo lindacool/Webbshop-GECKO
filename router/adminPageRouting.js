@@ -12,7 +12,7 @@ router.get('/admin', verifyToken, async (req, res) => {
     
    // const user = await req.user
 
-    if (req.user.user.isAdmin === true) {
+    if (req.body.user.isAdmin === true) {
         res.render('admin.ejs', {products}) 
     } else {
         res.send("not ok")

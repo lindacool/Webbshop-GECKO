@@ -14,7 +14,7 @@ router.get('/adminUser', verifyToken, async (req, res) => {
 
     // const user = await req.user
     const users = await User.find();
-    if (req.user.user.isAdmin === true) {
+    if (req.body.user.isAdmin === true) {
         res.render('adminUser.ejs', {users}) 
     } else {
         res.send("not ok")

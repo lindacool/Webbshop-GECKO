@@ -8,19 +8,36 @@ const {
 
 router.get("/wishlist/:id", verifyToken, async (req, res) => {
 
-    const product = await Product.findOne({_id: req.params.id}).populate("user")
+    const product = await Product.findOne({_id: req.params.id}).populate("user");
 
     const user = await User.findOne({
-        _id: req.user.user._id
+        _id: req.body.user._id
     }).populate("wishlist.productId");
 
     await user.addToWishlist(product);
     
-    res.render("wishlist", {user});
-    console.log(user);
-    
+    res.redirect("/wishlist");
 
-})
+});
+
+router.get("/deleteWishlist/:id", verifyToken, async (req, res) => {
+
+    const user = await User.findOne({_id: req.body.user._id});
+    user.removeFromWishlist(req.params.id);
+
+    res.redirect('/wishlist');
+
+});
+
+router.get("/wishlist", verifyToken, async (req, res) => {
+
+    const user = await User.findOne({
+        _id: req.body.user._id
+    }).populate("wishlist.productId");
+
+    res.render('wishlist', {user});
+
+});
 
 
 module.exports = router;
