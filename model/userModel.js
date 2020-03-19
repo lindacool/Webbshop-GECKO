@@ -35,7 +35,7 @@ const userSchema = new Schema({
         },
         resetToken: String,
         expirationToken: Date,
-        wishList: [{
+        wishlist: [{
             productId: {
                 type: mongoose.Schema.Types.ObjectId,
                 ref: "Product"
@@ -44,10 +44,19 @@ const userSchema = new Schema({
     }
 );
 
-userSchema.methods.addToWishList = function(product){
-    this.wishList.push({productId: product._id})
+// Function that adds product to wishlist
+userSchema.methods.addToWishlist = function(product){
+    this.wishlist.push({productId: product._id})
     return this.save();
 }
+
+// Function that removes product to wishlist
+userSchema.methods.removeFromWishlist = function(productId){
+    this.wishlist.splice({productId: product._id})
+    return this.save();
+}
+
+
 
 const User = mongoose.model("User", userSchema);
 

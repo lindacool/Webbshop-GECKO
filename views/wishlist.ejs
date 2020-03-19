@@ -1,0 +1,19 @@
+<% user.wishlist.forEach( (product) => { %>
+
+    <li>
+        <%= product.productId.title %>
+    </li>
+    <li>
+        <%= product.productId.price %>
+    </li>
+    <li>
+        <%= product.productId.description %>
+    </li>
+
+    <br>
+    <hr>
+    <br>
+
+<% }) %>
+
+
