@@ -50,6 +50,7 @@ userSchema.methods.addToWishlist = function(product){
     // Push the clicked product to the user wishlist
     this.wishlist.push({productId: product._id})
     return this.save();
+    
 }
 
 // Function that removes product to wishlist
