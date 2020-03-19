@@ -8,12 +8,12 @@ const {
 
 router.get("/wishlist/:id", verifyToken, async (req, res) => {
 
-    const product = await Product.findOne({
-        _id: req.params.id
-    })
+    const product = await Product.findOne({_id: req.params.id}).populate("user")
+
+    console.log("product with user population", product)
 
     const user = await User.findOne({
-        _id: req.user.user._id
+        _id: req.body.user._id
     })
 
     await user.addToWishList(product)
