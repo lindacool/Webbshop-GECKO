@@ -55,6 +55,7 @@ userSchema.methods.addToWishlist = function(product){
 // Function that removes product to wishlist
 userSchema.methods.removeFromWishlist = function(productId){
 
+    // Creates a new list which contains all products except the removed one
     const restOfProducts = this.wishlist.filter( (product)=> {
          return product.productId.toString() != productId.toString()
     })
