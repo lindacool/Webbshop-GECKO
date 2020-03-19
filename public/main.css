@@ -292,17 +292,17 @@ body {
         background-color: #7f8375;
         border-color: white; }
 
-#productPage {
+#product-page {
   font-family: 'Spartan', sans-serif;
   text-transform: uppercase; }
-  #productPage .categoryContainer {
+  #product-page .category-container {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     width: 100%;
     margin: 30px 0 50px 0; }
-    #productPage .categoryContainer .categoryContainerHeader {
+    #product-page .category-container .category-containerHeader {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -310,69 +310,76 @@ body {
       flex-wrap: wrap;
       width: 100%;
       height: 100px; }
-      #productPage .categoryContainer .categoryContainerHeader h2 {
+      #product-page .category-container .category-containerHeader h2 {
         font-size: 2rem;
         width: 100%;
         text-align: center; }
-      #productPage .categoryContainer .categoryContainerHeader p {
+      #product-page .category-container .category-containerHeader p {
         width: 60%;
         height: auto;
         font-size: 0.7rem; }
-    #productPage .categoryContainer .categoryContainerButtons {
+    #product-page .category-container .category-container-buttons {
       display: flex;
       justify-content: center;
       align-items: center;
       width: 80%;
       margin-top: 60px; }
-      #productPage .categoryContainer .categoryContainerButtons p {
+      #product-page .category-container .category-container-buttons p {
         text-align: center;
         margin: 0 80px; }
-        #productPage .categoryContainer .categoryContainerButtons p a:hover {
+        #product-page .category-container .category-container-buttons p a:hover {
           text-decoration: none;
           font-weight: 500; }
-        #productPage .categoryContainer .categoryContainerButtons p a:link {
+        #product-page .category-container .category-container-buttons p a:link {
           color: inherit; }
-        #productPage .categoryContainer .categoryContainerButtons p a:visited {
+        #product-page .category-container .category-container-buttons p a:visited {
           color: inherit; }
-  #productPage .productContainer {
+  #product-page .product-container {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
     margin: 0 2% 50px 2%; }
-    #productPage .productContainer .product {
+    #product-page .product-container .product {
       width: 46%;
       margin: 0 2% 20px 2%; }
-      #productPage .productContainer .product .productImage img {
+      #product-page .product-container .product .product-image img {
         width: 100%; }
-      #productPage .productContainer .product .productInfo {
+      #product-page .product-container .product .product-info {
         margin-top: 10px;
         font-size: 0.7rem; }
-        #productPage .productContainer .product .productInfo .productTitle {
+        #product-page .product-container .product .product-info .product-title {
           display: flex;
           justify-content: space-between;
           align-items: center;
           flex-direction: row;
           flex-wrap: wrap; }
-          #productPage .productContainer .product .productInfo .productTitle .title {
+          #product-page .product-container .product .product-info .product-title .title {
             width: 75%;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis; }
-          #productPage .productContainer .product .productInfo .productTitle .colors {
+          #product-page .product-container .product .product-info .product-title .colors {
             width: 20%;
             text-align: right; }
-        #productPage .productContainer .product .productInfo .productPrice {
-          width: 100%; }
-          #productPage .productContainer .product .productInfo .productPrice .price {
+        #product-page .product-container .product .product-info .product-price {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          flex-direction: row;
+          flex-wrap: wrap; }
+          #product-page .product-container .product .product-info .product-price .price {
             font-weight: 700;
             font-size: 80%; }
+          #product-page .product-container .product .product-info .product-price .wish-list img {
+            height: 16px; }
       @media (min-width: 820px) {
-        #productPage .productContainer .product {
+        #product-page .product-container .product {
           width: 30.33%;
           margin: 0 1.5% 20px 1.5%; } }
-  #productPage .show-more {
+  #product-page .show-more {
     width: 100%;
     display: flex;
     justify-content: center;

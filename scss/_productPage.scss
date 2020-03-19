@@ -1,10 +1,10 @@
 @import "mixins";
 
-#productPage {
+#product-page {
     font-family: 'Spartan', sans-serif;
     text-transform: uppercase;
 
-    .categoryContainer {
+    .category-container {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -12,7 +12,7 @@
         width: 100%;
         margin: 30px 0 50px 0;
 
-        .categoryContainerHeader {
+        .category-containerHeader {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -32,7 +32,7 @@
                 font-size: 0.7rem;
             }
         }
-        .categoryContainerButtons {
+        .category-container-buttons {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -59,7 +59,7 @@
         }
     }
 
-    .productContainer {
+    .product-container {
         display: flex;
         justify-content: flex-start;
         align-items: center;
@@ -72,17 +72,17 @@
             width: 46%;
             margin: 0 2% 20px 2%;
 
-            .productImage {
+            .product-image {
 
                 img {
                     width: 100%;
                 }
             }
-            .productInfo {
+            .product-info {
                 margin-top: 10px;
                 font-size: 0.7rem;
 
-                .productTitle {
+                .product-title {
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
@@ -100,12 +100,23 @@
                         text-align: right;
                     }
                 }
-                .productPrice {
+                .product-price {
                     width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    flex-direction: row;
+                    flex-wrap: wrap;
 
                     .price {
                         font-weight: 700;
                         font-size: 80%;
+                    }
+                    .wish-list {
+                        
+                        img {
+                            height: 16px;
+                        }
                     }
                 }
             }

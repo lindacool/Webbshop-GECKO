@@ -13,14 +13,14 @@
     <%- include ("partial/navbar.ejs") %>
     <%- include ("partial/logout") %>
 
-    <section id="productPage">
+    <section id="product-page">
         <!-- Categories -->
-        <div class="categoryContainer">
-            <div class="categoryContainerHeader">
+        <div class="category-container">
+            <div class="category-container-header">
                 <h2><%= heading %></h2>
                 <p><%= headingDescription %></p>
             </div>
-            <div class="categoryContainerButtons">
+            <div class="category-container-buttons">
                 <p><a href="/<%= otherCategories[0] %>">Shop <%= otherCategories[0] %></a></p>
                 <p><a href="/<%= otherCategories[1] %>">Shop <%= otherCategories[1] %></a></p>
             </div>
@@ -28,22 +28,22 @@
 
         <!-- Products -->
 
-        <div class="productContainer">
+        <div class="product-container">
             <% productsShow.forEach((product) => { %>
             <div class="product">
 
-                <div class="productImage">
+                <div class="product-image">
                     <a href="/products/<%= product._id %>"><img src="<%= product.imgUrl %>"
-                            alt="productImage"></a>
+                            alt="product-image"></a>
                 </div>
-                <div class="productInfo">
-                    <div class="productTitle">
+                <div class="product-info">
+                    <div class="product-title">
                         <span class="title"><%= product.title %></span>
                         <span class="colors">ooo</span>
                     </div>
-                    <div class="productPrice">
+                    <div class="product-price">
                         <span class="price"><%= product.price%> SEK</span>
-                        <a href="/wishlist/<%=product._id %>"> <img src="../public/assets/heart.png" /></a> 
+                        <span class="wish-list"><a href="/wishlist/<%=product._id %>"> <img src="../public/assets/heart.png"/></a></span>
                     </div>
                 </div>
             </div>
