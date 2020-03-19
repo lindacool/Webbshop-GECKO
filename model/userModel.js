@@ -47,16 +47,31 @@ const userSchema = new Schema({
 // Function that adds product to wishlist
 userSchema.methods.addToWishlist = function(product){
 
-    // Push the clicked product to the user wishlist
-    this.wishlist.push({productId: product._id})
-    return this.save();
+    // Will track if product exists in wishlist
+    let exists = false;
+
+    // Loop through the wishlist and sets exists = true if the clicked product already exists
+    for (let i = 0; i < this.wishlist.length; i++) {
+        if (this.wishlist[i].productId._id.toString() == product._id.toString()) {
+            exists = true;
+        }
+    }
+
+    // Push the clicked product to the user wishlist if the product does not already exist
+    if (!exists) {
+        this.wishlist.push({productId: product._id})
+    }
     
+    return this.save();
+
 }
 
 // Function that removes product to wishlist
 userSchema.methods.removeFromWishlist = function(productId){
 
     // Creates a new list which contains all products except the removed one
+    
+
     const restOfProducts = this.wishlist.filter( (product)=> {
          return product.productId.toString() != productId.toString()
     })
