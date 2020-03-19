@@ -7,17 +7,20 @@
     <%- include ("partial/logout") %>
 
     <div class="create-new-product-form">
-
-       <% users.forEach(user=>{ %>
-
-       
-
         <div class="create-new-product-form-header">
             <h2>Edit user</h2>
         </div>
-        <form action="/adminUser" method="post">
+
+       <% users.forEach((user) => { %>
+
+       
+
+       
+        <form action="/editUser/<%= user._id %>" method="post">
             <div class="form-group">
                 <%= user.firstName %>
+
+                <%= user._id %>
 
             </div>
 
@@ -31,8 +34,13 @@
 
             <div>Admin: <input name="isAdmin" type="checkbox" <% if(user.isAdmin){%> checked <%} %>>
             </div>
-       <% }) %>
+       
+            <button class="btn btn-dark" type="submit">
+            Update User
+            </button>
         </form>
+        <% }) %>
+        
     </div>
 
     <%- include ("partial/footer") %>

@@ -12,7 +12,7 @@ router.get('/admin', verifyToken, async (req, res) => {
     
    // const user = await req.user
 
-    if (req.user.user.isAdmin === true) {
+    if (req.body.user.isAdmin === true) {
         res.render('admin.ejs', {products}) 
     } else {
         res.send("not ok")
@@ -42,7 +42,7 @@ router.post('/admin', verifyToken, async (req, res) => {
     res.redirect('admin')
 });
 
-// Edit product
+
 router.post("/edit/:id", verifyToken, async (req, res) => {
 
     await Product.updateOne({

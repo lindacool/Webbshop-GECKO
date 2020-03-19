@@ -10,7 +10,7 @@ module.exports = (req, res, next)=>{
     const user = jwt.verify(token, "secretkey");
     
    // console.log("user info" , user);
-    req.user = user;
+    req.body = user;
     next();
   }
   else {

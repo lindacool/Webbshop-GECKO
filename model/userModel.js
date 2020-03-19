@@ -35,19 +35,39 @@ const userSchema = new Schema({
         },
         resetToken: String,
         expirationToken: Date,
-        wishList: [{
+        wishlist: [{
             productId: {
                 type: mongoose.Schema.Types.ObjectId,
                 ref: "Product"
             }
         }]
     }
-
 );
 
-userSchema.methods.addToWishList = function(product){
-    this.wishList.push({})
+// Function that adds product to wishlist
+userSchema.methods.addToWishlist = function(product){
+
+    // Push the clicked product to the user wishlist
+    this.wishlist.push({productId: product._id})
+    return this.save();
+    
 }
+
+// Function that removes product to wishlist
+userSchema.methods.removeFromWishlist = function(productId){
+
+    // Creates a new list which contains all products except the removed one
+    const restOfProducts = this.wishlist.filter( (product)=> {
+         return product.productId.toString() != productId.toString()
+    })
+
+    // Overwrites the old wishlist with the newly created list which does not contain the removed product
+    this.wishlist = restOfProducts;
+
+    return this.save();
+};
+
+
 
 const User = mongoose.model("User", userSchema);
 
@@ -63,8 +83,6 @@ function validateUser(user) {
 
     return joi.validate(user, schema);
 }
-
-
 
 module.exports.User = User;
 module.exports.validateUser = validateUser;
