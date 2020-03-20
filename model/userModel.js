@@ -40,6 +40,20 @@ const userSchema = new Schema({
                 type: mongoose.Schema.Types.ObjectId,
                 ref: "Product"
             }
+        }],
+        cart: [{
+            productId: {
+                type: mongoose.Schema.Types.ObjectId,
+                ref: "Product"
+            },
+            chosenSize: {
+                type: String,
+                required: true
+            },
+            quantity: {
+                type: Number,
+                required: true
+            }
         }]
     }
 );
@@ -81,6 +95,7 @@ userSchema.methods.removeFromWishlist = function(productId){
 
     return this.save();
 };
+
 
 
 

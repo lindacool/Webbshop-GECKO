@@ -39,5 +39,20 @@ router.get("/wishlist", verifyToken, async (req, res) => {
 
 });
 
+// Påbörjad
+router.get("/cart/:id", verifyToken, async (req, res) => {
+
+    const product = await Product.findOne({_id: req.params.id}).populate("user");
+
+    const user = await User.findOne({
+        _id: req.body.user._id
+    }).populate("cart.productId");
+
+    await user.addToWishlist(product);
+    
+    res.redirect("/cart");
+
+});
+
 
 module.exports = router;
