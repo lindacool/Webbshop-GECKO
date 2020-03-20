@@ -16,9 +16,75 @@
 
 <!-- Checkout -->
     
-<section id="checkout-container">
+<section id="checkout-body">
 
+    <div class="header-container">
+        <span>shopping bag items (obs denna visar för tillfället wishlist)</span>
+    </div>
 
+    <div class="all-products-container">
+    
+        <% user.wishlist.forEach( (product) => { %>
+
+        <div class="product-container">
+
+            <div class="image-container">
+                <img src="<%= product.productId.imgUrl %>" alt="">
+            </div>
+
+            <div class="info-container">
+                <div class="title-container container">
+                    <span><%= product.productId.title %></span>
+                </div>
+                <div class="price-container container">
+                    <span><%= product.productId.price %> SEK</span>
+                </div>
+                <div class="size-container container">
+                    <span>Size</span>
+                    <span>M</span>
+                </div>
+                <div class="color-container container">
+                    <span>Color</span>
+                    <span>Blue</span>
+                </div>
+                <div class="quantity-container container">
+                    <span>Quantity</span>
+                    <span>+ / -</span>
+                </div>
+            </div>
+
+            <div class="total-item-price-container">
+                <span>X</span>
+                <span>299 SEK</span>
+            </div>
+        </div>
+
+        <% }) %>
+    </div>
+
+    <div class="order-info-container">
+
+        <div class="order-value-container info-container">
+            <span>Order value</span>
+            <span>2599 SEK</span>
+        </div>
+        <div class="delivery-container info-container">
+            <span>Delivery</span>
+            <span>Free</span>
+        </div>
+        <div class="promotion-container info-container">
+            <span>Got a promotion code?</span>
+        </div>
+        <div class="total-price-container info-container">
+            <span>TOTAL</span>
+            <span>2599 SEK</span>
+        </div>
+        <div class="checkout-button-container">
+            <button>Proceed to checkout</button>
+        </div>
+        
+
+    </div>
     
 
 </section>
