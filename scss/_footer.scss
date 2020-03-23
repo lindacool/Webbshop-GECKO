@@ -10,12 +10,12 @@ body {
     width: 100%;
 
     footer {
-    background:#7f8375;
-    color: white;
-    margin-top: auto;
-    opacity: 80%;
-    padding-top: 50px;
-    letter-spacing: 3px;
+        background: #7f8375;
+        color: white;
+        margin-top: auto;
+        opacity: 80%;
+        padding-top: 50px;
+        letter-spacing: 3px;
 
     }
 
@@ -32,7 +32,7 @@ body {
         list-style-type: none;
         justify-content: left;
     }
-    
+
     ul {
         padding: 5px;
     }
@@ -98,10 +98,8 @@ body {
     }
 
     p {
-        text-align: center;
         margin: 16px 16px;
         font-weight: 100;
     }
-    
-}
 
+}
