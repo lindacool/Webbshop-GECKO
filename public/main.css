@@ -748,3 +748,13 @@ body {
         color: white;
         border-color: #e1e1e1;
         text-transform: uppercase; }
+
+#back-to-top-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  border: solid 1px gray;
+  cursor: pointer;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out; }
