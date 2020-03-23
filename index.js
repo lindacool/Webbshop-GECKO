@@ -6,6 +6,7 @@ const startPageRouter = require("./router/startPageRouting");
 const productPageRouter = require("./router/productPageRouting");
 const adminPageRouter = require("./router/adminPageRouting");
 const detailProductPageRouter = require("./router/detailProductPageRouting");
+const checkoutPageRouter = require("./router/checkoutPageRouting");
 const loginRouter = require("./router/loginRouting");
 const loginAdminRouter = require("./router/loginAdminRouting");
 const registerRouter = require('./router/registerRouting');
@@ -37,7 +38,8 @@ app.use(
   loginRouter,
   adminUserRouter,
   loginAdminRouter,
-  userProfileRouter
+  userProfileRouter,
+  checkoutPageRouter
 );
 app.use(
   sassMiddleware({

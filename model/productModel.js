@@ -21,10 +21,6 @@ const productSchema = new mongoose.Schema( {
         required: true,
         minLength: 5
     },
-    size: {
-        type: String,
-        required: true
-    },
     newArrival: {
         type: Boolean
     },

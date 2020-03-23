@@ -302,7 +302,7 @@ body {
     flex-direction: column;
     width: 100%;
     margin: 30px 0 50px 0; }
-    #product-page .category-container .category-containerHeader {
+    #product-page .category-container .category-container-header {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -310,11 +310,11 @@ body {
       flex-wrap: wrap;
       width: 100%;
       height: 100px; }
-      #product-page .category-container .category-containerHeader h2 {
+      #product-page .category-container .category-container-header h2 {
         font-size: 2rem;
         width: 100%;
         text-align: center; }
-      #product-page .category-container .category-containerHeader p {
+      #product-page .category-container .category-container-header p {
         width: 60%;
         height: auto;
         font-size: 0.7rem; }
@@ -596,6 +596,84 @@ body {
       #detail-product-page .mobile-sticky {
         position: relative; } }
 
-#checkout-container {
+#checkout-body {
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  flex-direction: column;
+  width: 90%;
+  margin: 60px 5% 0 5%; }
+  #checkout-body .header-container {
+    width: 100%;
+    border-bottom: 1px solid #e1e1e1;
+    padding: 10px 0; }
+    #checkout-body .header-container span {
+      text-transform: uppercase; }
+  #checkout-body .all-products-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column; }
+    #checkout-body .all-products-container .product-container {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      padding: 20px 0;
+      border-bottom: 1px solid #e1e1e1;
+      font-size: 0.9rem; }
+      #checkout-body .all-products-container .product-container .image-container {
+        width: 30%;
+        margin: 0 0 30px 0; }
+        #checkout-body .all-products-container .product-container .image-container img {
+          width: 90%; }
+      #checkout-body .all-products-container .product-container .info-container {
+        width: 50%;
+        display: flex;
+        flex-direction: column; }
+        #checkout-body .all-products-container .product-container .info-container .container {
+          padding: 6px 0; }
+          #checkout-body .all-products-container .product-container .info-container .container span {
+            margin-right: 25px; }
+        #checkout-body .all-products-container .product-container .info-container .title-container {
+          text-transform: uppercase;
+          padding: 0;
+          font-size: 1rem; }
+        #checkout-body .all-products-container .product-container .info-container .price-container {
+          text-transform: uppercase;
+          padding: 0;
+          margin-bottom: 30px;
+          font-size: 1rem; }
+        #checkout-body .all-products-container .product-container .info-container .quantity-container {
+          margin-top: 20px; }
+      #checkout-body .all-products-container .product-container .total-item-price-container {
+        width: 20%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: right;
+        text-transform: uppercase;
+        font-size: 1rem; }
+  #checkout-body .order-info-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0; }
+    #checkout-body .order-info-container .info-container {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 10px 0; }
+    #checkout-body .order-info-container .total-price-container {
+      border-top: 1px solid #e1e1e1;
+      padding: 20px 0;
+      margin-top: 10px; }
+    #checkout-body .order-info-container .checkout-button-container {
+      text-align: center;
+      margin: 20px 0; }
+      #checkout-body .order-info-container .checkout-button-container button {
+        width: 60%;
+        height: 40px;
+        background-color: #7f8375;
+        color: white;
+        border-color: #e1e1e1;
+        text-transform: uppercase; }
