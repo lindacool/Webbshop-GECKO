@@ -204,7 +204,55 @@ body {
   font-family: 'Spartan', sans-serif;
   padding: 8px;
   font-weight: 100;
-  font-size: 80%; }
+  font-size: 80%;
+  text-transform: uppercase; }
+
+.start-container .welcome-img {
+  background-image: url("../public/assets/men_hoodie_white.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 720px; }
+
+.start-container .gecko-info {
+  display: flex;
+  align-items: center;
+  flex-direction: column; }
+  .start-container .gecko-info .gecko-news {
+    font-family: 'Spartan', sans-serif;
+    font-weight: 100;
+    font-size: 80%;
+    text-transform: uppercase; }
+  .start-container .gecko-info .shop-women {
+    width: 50%;
+    margin: 10px;
+    padding: 5px;
+    background-color: white;
+    border: none;
+    font-family: 'Spartan', sans-serif;
+    text-transform: uppercase;
+    font-weight: 100;
+    font-size: 80%; }
+  .start-container .gecko-info .shop-men {
+    width: 50%;
+    padding: 5px;
+    background-color: white;
+    border: none;
+    font-family: 'Spartan', sans-serif;
+    text-transform: uppercase;
+    font-weight: 100;
+    font-size: 80%; }
+
+.new-arrival p {
+  text-transform: uppercase;
+  font-weight: 100;
+  font-size: 100%; }
+
+.top-seller p {
+  text-transform: uppercase;
+  font-weight: 100;
+  font-size: 100%; }
 
 .scrolling-wrapper {
   display: flex;
@@ -219,6 +267,20 @@ body {
       margin: 10px; }
       .scrolling-wrapper .scroll-items .product-image img {
         width: 100%; }
+
+.gecko-store {
+  margin: 10px;
+  font-family: 'Spartan', sans-serif; }
+  .gecko-store p {
+    text-transform: uppercase;
+    font-weight: 200;
+    font-size: 150%; }
+  .gecko-store .gecko-text {
+    text-align: center;
+    font-family: 'Spartan', sans-serif;
+    margin: 5px;
+    font-weight: 100;
+    font-size: 100%; }
 
 .create-new-product-form {
   display: flex;
