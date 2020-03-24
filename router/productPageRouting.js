@@ -11,7 +11,7 @@ router.get("/products", async (req, res) => {
     const route = "products";
 
     // pagination
-    const itemPerPage = 3;
+    const itemPerPage = 6;
     const totalPages = Math.ceil(products.length / itemPerPage);
 
     // sida nummer
