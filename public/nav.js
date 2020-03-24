@@ -8,7 +8,6 @@ $(document).ready(function () {
         } else {
             $(".nav-container").addClass('nav-show');
             $('.cover').addClass('opacity-cover');
-            $('start-container').css('overflow', 'hidden');
         }
 
     })
