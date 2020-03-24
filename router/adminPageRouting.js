@@ -20,8 +20,6 @@ router.get('/admin', verifyToken, async (req, res) => {
 })
 
 router.post('/createProduct', verifyToken, async (req, res) => {
-
-    console.log(req.body);
     
     const product = new Product({
         title: req.body.title,
@@ -35,17 +33,6 @@ router.post('/createProduct', verifyToken, async (req, res) => {
         male: req.body.male = Boolean(req.body.male),
         female: req.body.female = Boolean(req.body.female),
         user: req.user.user._id
-        // title: "hej",
-        // imgUrl: "hej",
-        // imgUrlTwo: "hej",
-        // imgUrlThree: "hej",
-        // price: 100,
-        // description: "hej",
-        // newArrival: req.body.newArrival = Boolean(req.body.newArrival),
-        // topSeller: req.body.topSeller = Boolean(req.body.topSeller),
-        // male: req.body.male = Boolean(req.body.male),
-        // female: req.body.female = Boolean(req.body.female),
-        // user: req.body.user._id
     });
 
     await product.save((error, succes) => {

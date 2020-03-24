@@ -1,11 +1,17 @@
 #back-to-top-btn {
     // display: none;
     position: fixed;
+    border: none;
+    border-radius: 50%;
+    background-color: #949988;
     bottom: 20px;
     right: 20px;
     z-index: 1000;
-    border: solid 1px gray;
     cursor: pointer;
-    transition-duration: 0.2s;
-    transition-timing-function: ease-in-out;
+    scroll-behavior: smooth;
+    bottom: 3vh;
+    width: 30px;
+    height: 30px;
+    color: white;
+
 }
