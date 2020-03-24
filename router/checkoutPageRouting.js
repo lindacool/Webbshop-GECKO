@@ -11,7 +11,7 @@ router.get("/checkout", verifyToken, async (req, res) => {
 
     const user = await User.findOne({
         _id: req.body.user._id
-    }).populate("wishlist.productId");
+    }).populate("cart.productId");
 
     res.render('checkout', {user});
     

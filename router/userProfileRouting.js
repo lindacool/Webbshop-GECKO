@@ -6,40 +6,6 @@ const {
     User
 } = require("../model/userModel");
 
-router.get("/wishlist/:id", verifyToken, async (req, res) => {
-
-    const product = await Product.findOne({_id: req.params.id}).populate("user");
-
-    const user = await User.findOne({
-        _id: req.body.user._id
-    }).populate("wishlist.productId");
-
-    await user.addToWishlist(product);
-    
-    res.redirect("/wishlist");
-
-});
-
-router.get("/deleteWishlist/:id", verifyToken, async (req, res) => {
-
-    const user = await User.findOne({_id: req.body.user._id});
-    user.removeFromWishlist(req.params.id);
-
-    res.redirect('/wishlist');
-
-});
-
-router.get("/wishlist", verifyToken, async (req, res) => {
-
-    const user = await User.findOne({
-        _id: req.body.user._id
-    }).populate("wishlist.productId");
-
-    res.render('wishlist', {user});
-
-});
-
-// Påbörjad
 router.get("/cart/:id", verifyToken, async (req, res) => {
 
     const product = await Product.findOne({_id: req.params.id}).populate("user");
@@ -48,11 +14,32 @@ router.get("/cart/:id", verifyToken, async (req, res) => {
         _id: req.body.user._id
     }).populate("cart.productId");
 
-    await user.addToWishlist(product);
+    await user.addToCart(product);
     
     res.redirect("/cart");
 
 });
+
+router.get("/deleteCart/:id", verifyToken, async (req, res) => {
+
+    const user = await User.findOne({_id: req.body.user._id});
+    user.removeFromCart(req.params.id);
+
+    res.redirect('/cart');
+
+});
+
+router.get("/cart", verifyToken, async (req, res) => {
+
+    const user = await User.findOne({
+        _id: req.body.user._id
+    }).populate("cart.productId");
+
+    res.render('cart', {user});
+
+});
+
+
 
 
 module.exports = router;
