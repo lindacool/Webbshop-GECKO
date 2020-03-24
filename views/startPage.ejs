@@ -15,18 +15,16 @@
     <%- include ("partial/logout") %>
 
     <div class="start-container">
-        <div class="welcome-img">
-            <div class="img">
-            </div>
-            <div class="gecko-info">
-                <div class="gecko-news">
-                    <h1>gecko news</h1>
-                    <p>100% organic cotton</p>
-                </div>
-                <button class="shop-women">shop women</button>
-                <button class="shop-men">shop men</button>
-            </div>
+        <div class="welcome-img"></div>
+        <div class="gecko-info">
+            <h1>gecko news</h1>
+            <span>100% organic cotton</span>
+
+            <button class="shop-women">shop women</button>
+            <button class="shop-men">shop men</button>
+
         </div>
+        <div class="opacity"></div>
     </div>
 
     <div class="new-arrival">
@@ -43,7 +41,7 @@
             <div class="product-info">
                 <div class="product-title">
                     <span class="title"><%= newArrival.title %></span>
-                    <span class="colors">ooo</span>
+                    <span class="colors"></span>
                 </div>
                 <div class="product-price">
                     <span class="price"><%= newArrival.price %> SEK</span>
@@ -66,7 +64,7 @@
             <div class="product-info">
                 <div class="product-title">
                     <span class="title"><%= topSeller.title %></span>
-                    <span class="colors">ooo</span>
+                    <span class="colors"></span>
                 </div>
                 <div class="product-price">
                     <span class="price"><%= topSeller.price %> SEK</span>
