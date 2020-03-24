@@ -15,13 +15,13 @@ body {
     padding-top: 50px;
     letter-spacing: 3px; }
   body .information {
-    font-size: 67%;
+    font-size: 60%;
     text-transform: uppercase;
     font-weight: 500;
     padding: 5px; }
   body li {
     font-weight: 100;
-    font-size: 85%;
+    font-size: 65%;
     list-style-type: none;
     justify-content: left; }
   body ul {
@@ -52,23 +52,31 @@ body {
     width: 300px;
     padding: 30px;
     padding-bottom: 70px; }
+    body .sign-up-wrapper span {
+      font-size: 12px; }
   body h4 {
     text-transform: uppercase;
     font-size: 140%;
     font-weight: 800;
-    letter-spacing: 3px; }
+    letter-spacing: 3px;
+    margin-bottom: 10px; }
   body .sign-up {
-    width: 100%;
-    height: 45px;
+    width: 70%;
+    height: 30px;
     font-weight: 100;
-    font-size: 14px; }
+    font-size: 12px;
+    margin-top: 20px; }
   body #subscribe {
     background-color: #7f8375;
     color: white;
-    font-weight: 100; }
+    font-weight: 100;
+    font-size: 14px;
+    width: 40%;
+    height: 30px; }
   body p {
     margin: 16px 16px;
-    font-weight: 100; }
+    font-weight: 100;
+    font-size: 12px; }
 
 .opacity-cover {
   background-color: white;
@@ -88,11 +96,11 @@ body {
     width: 100%;
     position: absolute;
     top: 35px;
-    transform: translateX(-130%);
+    transform: translateX(-140%);
     transition-timing-function: ease-in;
     background-color: white;
     transition: 1s;
-    margin-top: 50px; }
+    margin-top: 60px; }
     body .nav-container .about,
     body .nav-container .sign-in,
     body .nav-container .men-women {
@@ -140,7 +148,8 @@ body {
     transition: 0.5s;
     transform: translateX(0%);
     transition-timing-function: ease-out;
-    z-index: 2000; }
+    z-index: 2000;
+    margin-top: 60px; }
     @media (min-width: 820px) {
       body .nav-show {
         width: 70%; } }
@@ -188,7 +197,8 @@ body {
       height: 20px;
       width: 20px;
       margin: 10px 0 10px;
-      padding-left: 10px; }
+      padding-left: 10px;
+      margin-left: 3px; }
     body .wishlistandcart .wishlist {
       background-image: url("../public/assets/heart.png");
       background-size: cover;
@@ -540,7 +550,15 @@ body {
     width: 100%;
     display: flex;
     justify-content: center;
-    margin: 30px 0; }
+    margin: 30px 0;
+    font-size: 12px; }
+    #product-page .show-more a:hover {
+      text-decoration: none;
+      font-weight: 600; }
+    #product-page .show-more a:link {
+      color: inherit; }
+    #product-page .show-more a:visited {
+      color: inherit; }
 
 #detail-product-page {
   font-family: 'Spartan', sans-serif;
@@ -836,10 +854,15 @@ body {
 
 #back-to-top-btn {
   position: fixed;
+  border: none;
+  border-radius: 50%;
+  background-color: #949988;
   bottom: 20px;
   right: 20px;
   z-index: 1000;
-  border: solid 1px gray;
   cursor: pointer;
-  transition-duration: 0.2s;
-  transition-timing-function: ease-in-out; }
+  scroll-behavior: smooth;
+  bottom: 3vh;
+  width: 30px;
+  height: 30px;
+  color: white; }
