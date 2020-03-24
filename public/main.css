@@ -574,13 +574,14 @@ body {
     justify-content: center;
     width: 100%;
     position: relative; }
-    #detail-product-page #image-div-mobile .arrow {
+    #detail-product-page #image-div-mobile .dots {
       text-align: center;
       position: absolute;
       bottom: 0;
-      color: whitesmoke; }
+      color: whitesmoke;
+      margin-bottom: 20px;
+      font-size: x-large; }
     #detail-product-page #image-div-mobile .image-container {
-      display: flex;
       flex-direction: row;
       overflow-x: scroll;
       overflow-y: hidden;
