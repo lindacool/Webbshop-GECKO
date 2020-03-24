@@ -302,15 +302,36 @@ body {
         margin: 12px 0px 12px 9px; }
   * .gecko-store {
     margin: 10px; }
-    * .gecko-store p {
+    * .gecko-store .gecko-store-img {
+      background-image: url("../public/assets/geckostore.png");
+      width: 100%;
+      height: 500px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+    * .gecko-store .gecko-title {
       text-transform: uppercase;
       font-weight: 200;
       font-size: 150%; }
     * .gecko-store .gecko-text {
       text-align: center;
-      margin: 5px;
       font-weight: 100;
-      font-size: 100%; }
+      font-size: 100%;
+      margin: 30px; }
+  * .women {
+    background-image: url("../public/assets/women_crewneck_black.jpeg");
+    width: 100%;
+    height: 800px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; }
+  * .men {
+    background-image: url("../public/assets/men_tshirt_green.jpeg");
+    width: 100%;
+    height: 800px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; }
 
 .create-new-product-form {
   display: flex;
