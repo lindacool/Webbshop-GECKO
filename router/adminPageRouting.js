@@ -27,11 +27,11 @@ router.post('/admin', verifyToken, async (req, res) => {
         imgUrl: req.body.imgUrl,
         price: req.body.price,
         description: req.body.description,
-        size: req.body.size,
         newArrival: req.body.newArrival = Boolean(req.body.newArrival),
         topSeller: req.body.topSeller = Boolean(req.body.topSeller),
         male: req.body.male = Boolean(req.body.male),
-        female: req.body.female = Boolean(req.body.female)
+        female: req.body.female = Boolean(req.body.female),
+        user: req.body.user._id
     })
     await product.save((error, succes) => {
         if (error) {

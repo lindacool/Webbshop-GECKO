@@ -35,11 +35,6 @@
                 <textarea rows="4" cols="50" class="form-control" type="text" name="description"></textarea>
             </div>
 
-            <div class="form-group">
-                <label for="size">Size</label>
-                <input class="form-control" type="text" name="size" />
-            </div>
-
             <div class="form-check">
                 <label class="form-check-label" for="newArrival">New arrival: </label>
                 <input class="form-check-input" type="checkbox" name="newArrival">
@@ -66,6 +61,10 @@
         </form>
     </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> a153e1301876d2d7abbaad05e447c68c87639a3a
     <div class="all-products">
         <div class="all-products-header">
             <h2>All products in database</h2>
@@ -81,12 +80,12 @@
                 <p>Price: <input class="text-input" name="price" type="text" value="<%= product.price %>"></p>
                 <p>Description: <input class="text-input" name="description" type="text"
                         value="<%= product.description %>"></p>
-                <p>Size: <input class="text-input" name="size" type="text" value="<%= product.size %>"></p>
                 <p>New arrival: <input name="newArrival" type="checkbox" <% if(product.newArrival){%> checked <%} %>>
                 </p>
                 <p>Top seller: <input name="topSeller" type="checkbox" <% if(product.topSeller){%> checked <%} %>></p>
                 <p>Male: <input name="male" type="checkbox" <% if(product.male){%> checked <%} %>></p>
                 <p>Female: <input name="female" type="checkbox" <% if(product.female){%> checked <%} %>></p>
+           
                 <p class="edit-product-button-container"><button class="btn btn-dark" type="submit">Update
                         product</button></p>
             </form>
