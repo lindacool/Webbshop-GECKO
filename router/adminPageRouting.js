@@ -25,6 +25,8 @@ router.post('/admin', verifyToken, async (req, res) => {
     const product = new Product({
         title: req.body.title,
         imgUrl: req.body.imgUrl,
+        imgUrl2: req.body.imgUrl2,
+        imgUrl3: req.body.imgUrl3,
         price: req.body.price,
         description: req.body.description,
         newArrival: req.body.newArrival = Boolean(req.body.newArrival),
@@ -51,6 +53,8 @@ router.post("/edit/:id", verifyToken, async (req, res) => {
         $set: {
             title: req.body.title,
             imgUrl: req.body.imgUrl,
+            imgUrl2: req.body.imgUrl2,
+            imgUrl2: req.body.imgUrl3,
             price: req.body.price,
             description: req.body.description,
             size: req.body.size,
