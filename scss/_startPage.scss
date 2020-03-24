@@ -26,32 +26,64 @@
       top: 0;
       left: 0;
       width: 100%;
-      height: 100%;
+      height: 100vh;
       background-color: black;
 
     }
 
-    .welcome-img {
+    .welcome-container {
+
       display: flex;
-      position: absolute;
+      position: relative;
       align-items: center;
       justify-content: center;
-      background-image: url("../public/assets/men_hoodie_white.jpeg");
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      top: 0;
-      left: 0;
       width: 100%;
-      height: 100%;
-      z-index: 1;
+      height: 100vh;
+
+      .welcome-img-one {
+        background-image: url("../public/assets/men_hoodie_white.jpeg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+
+
+        @include tablet {
+          width: 50%;
+
+        }
+      }
+
+      .welcome-img-two {
+        background-image: url("../public/assets/");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 50%;
+        height: 100%;
+        z-index: 1;
+        display: none;
+
+
+        @include tablet {
+          display: block;
+
+        }
+      }
+
+
+
+      @include desktop {}
     }
 
     .gecko-info {
       display: flex;
-      position: relative;
+      position: absolute;
       align-items: center;
-      transform: translateY(180%);
+      transform: translateY(30%);
       flex-direction: column;
       z-index: 1000;
 
