@@ -12,7 +12,7 @@ router.get('/admin', verifyToken, async (req, res) => {
     
    // const user = await req.user
 
-    if (req.body.user.isAdmin === true) {
+    if (req.user.user.isAdmin === true) {
         res.render('admin.ejs', {products}) 
     } else {
         res.send("not ok")
@@ -21,7 +21,8 @@ router.get('/admin', verifyToken, async (req, res) => {
 
 router.post('/createProduct', verifyToken, async (req, res) => {
 
-
+    console.log(req.body);
+    
     const product = new Product({
         title: req.body.title,
         imgUrl: req.body.imgUrl,
@@ -33,7 +34,7 @@ router.post('/createProduct', verifyToken, async (req, res) => {
         topSeller: req.body.topSeller = Boolean(req.body.topSeller),
         male: req.body.male = Boolean(req.body.male),
         female: req.body.female = Boolean(req.body.female),
-        user: req.body.user._id
+        user: req.user.user._id
         // title: "hej",
         // imgUrl: "hej",
         // imgUrlTwo: "hej",

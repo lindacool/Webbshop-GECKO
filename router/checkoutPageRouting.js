@@ -10,7 +10,7 @@ const router = express.Router();
 router.get("/checkout", verifyToken, async (req, res) => {
 
     const user = await User.findOne({
-        _id: req.body.user._id
+        _id: req.user.user._id
     }).populate("cart.productId");
 
     res.render('checkout', {user});

@@ -11,7 +11,7 @@ router.get("/cart/:id", verifyToken, async (req, res) => {
     const product = await Product.findOne({_id: req.params.id}).populate("user");
 
     const user = await User.findOne({
-        _id: req.body.user._id
+        _id: req.user.user._id
     }).populate("cart.productId");
 
     await user.addToCart(product);
@@ -22,7 +22,7 @@ router.get("/cart/:id", verifyToken, async (req, res) => {
 
 router.get("/deleteCart/:id", verifyToken, async (req, res) => {
 
-    const user = await User.findOne({_id: req.body.user._id});
+    const user = await User.findOne({_id: req.user.user._id});
     user.removeFromCart(req.params.id);
 
     res.redirect('/cart');
@@ -32,7 +32,7 @@ router.get("/deleteCart/:id", verifyToken, async (req, res) => {
 router.get("/cart", verifyToken, async (req, res) => {
 
     const user = await User.findOne({
-        _id: req.body.user._id
+        _id: req.user.user._id
     }).populate("cart.productId");
 
     res.render('cart', {user});
