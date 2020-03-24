@@ -14,50 +14,28 @@
     <%- include ("partial/navbar") %>
 
 
-
     <!-- Product -->
 
     <section id="detail-product-page">
         <!-- image mobile -->
         <div id="image-div-mobile">
+                <i class=" dots fas fa-ellipsis-h"></i>
             <div class="image-container">
                 <img src="<%= clickedProduct.imgUrl %>" alt="product-image">
-            </div>
-        </div>
-        <!-- image desktop -->
-        <div id="image-div-desktop">
-            <div class="image-container">
-                <img src="<%= clickedProduct.imgUrl %>" alt="product-image">
-            </div>
-            <div class="image-container">
-                <img src="<%= clickedProduct.imgUrlTwo %>" alt="product-image">
-            </div>
-            <div class="image-container">
+                <img src="<%= clickedProduct.imgUrlTwo %>" alt="product-image" class="middle-picture">
                 <img src="<%= clickedProduct.imgUrlThree %>" alt="product-image">
             </div>
         </div>
-
-
-
-        <!-- Product -->
-
-        <section id="detail-product-page">
-            <!-- image mobile -->
-            <div id="image-div-mobile">
-                <div class="image-container">
-                    <img src="<%= clickedProduct.imgUrl %>" alt="product-image">
-                </div>
-            </div>
             <!-- image desktop -->
             <div id="image-div-desktop">
                 <div class="image-container">
                     <img src="<%= clickedProduct.imgUrl %>" alt="product-image">
                 </div>
                 <div class="image-container">
-                    <img src="<%= clickedProduct.imgUrl2 %>" alt="product-image">
+                    <img src="<%= clickedProduct.imgUrlTwo %>" alt="product-image">
                 </div>
                 <div class="image-container">
-                    <img src="<%= clickedProduct.imgUrl3 %>" alt="product-image">
+                    <img src="<%= clickedProduct.imgUrlThree %>" alt="product-image">
                 </div>
             </div>
 
@@ -88,6 +66,13 @@
                     <button>M</button>
                     <button>L</button>
                     <button>XL</button>
+                    <select id="" name="size">
+                            <option value="xs">XS</option>
+                            <option value="s">S</option>
+                            <option value="m">M</option>
+                            <option value="l">L</option>
+                            <option value="xl">XL</option>
+                          </select>
                 </div>
 
                 <div class="desktop-bag">
