@@ -13,30 +13,6 @@
     <!-- Navbar -->
     <%- include ("partial/navbar") %>
  
-    <%- include ("partial/logout") %>
-
-<!-- Product -->
-    
-<section id="detail-product-page">
-    <!-- image mobile -->
-    <div id="image-div-mobile">
-        <div class="image-container">
-            <img src="<%= clickedProduct.imgUrl %>" alt="product-image">
-        </div>
-    </div>
-    <!-- image desktop -->
-    <div id="image-div-desktop">
-        <div class="image-container">
-            <img src="<%= clickedProduct.imgUrl %>" alt="product-image">
-        </div>
-        <div class="image-container">
-            <img src="<%= clickedProduct.imgUrlTwo %>" alt="product-image">
-        </div>
-        <div class="image-container">
-            <img src="<%= clickedProduct.imgUrlThree %>" alt="product-image">
-        </div>
-    </div>
-
 
 
     <!-- Product -->
@@ -44,8 +20,11 @@
     <section id="detail-product-page">
         <!-- image mobile -->
         <div id="image-div-mobile">
+            <span class="arrow">bajs</span>
             <div class="image-container">
                 <img src="<%= clickedProduct.imgUrl %>" alt="product-image">
+                <img src="<%= clickedProduct.imgUrlTwo %>" alt="product-image" class="middle-picture">
+                <img src="<%= clickedProduct.imgUrlThree %>" alt="product-image">
             </div>
         </div>
         <!-- image desktop -->
@@ -54,10 +33,10 @@
                 <img src="<%= clickedProduct.imgUrl %>" alt="product-image">
             </div>
             <div class="image-container">
-                <img src="<%= clickedProduct.imgUrl2 %>" alt="product-image">
+                <img src="<%= clickedProduct.imgUrlTwo %>" alt="product-image">
             </div>
             <div class="image-container">
-                <img src="<%= clickedProduct.imgUrl3 %>" alt="product-image">
+                <img src="<%= clickedProduct.imgUrlThree %>" alt="product-image">
             </div>
         </div>
 
