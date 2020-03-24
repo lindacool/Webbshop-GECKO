@@ -249,7 +249,7 @@ body {
           * .start-container .welcome-container .welcome-img-one {
             width: 50%; } }
       * .start-container .welcome-container .welcome-img-two {
-        background-image: url("../public/assets/");
+        background-image: url("../public/assets/men_hoodie_white.jpeg");
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
