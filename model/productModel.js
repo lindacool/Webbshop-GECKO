@@ -12,13 +12,13 @@ const productSchema = new mongoose.Schema( {
         minLength: 2,
         
     },
-    imgUrl2: {
+    imgUrlTwo: {
         type: String,
         required: true,
         minLength: 2,
         
     },
-    imgUrl3: {
+    imgUrlThree: {
         type: String,
         required: true,
         minLength: 2,

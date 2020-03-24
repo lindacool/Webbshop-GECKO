@@ -14,7 +14,7 @@ router.get('/adminUser', verifyToken, async (req, res) => {
 
     // const user = await req.user
     const users = await User.find();
-    if (req.body.user.isAdmin === true) {
+    if (req.user.user.isAdmin === true) {
         res.render('adminUser.ejs', {users}) 
     } else {
         res.send("not ok")
@@ -33,7 +33,7 @@ router.post("/editUser/:id", verifyToken, async (req, res) => {
             // surName: req.body.surName,
             // email: req.body.email,
             // password: req.body.password,
-            isAdmin: req.body.isAdmin = Boolean(req.body.isAdmin)
+            isAdmin: req.user.isAdmin = Boolean(req.body.isAdmin)
         }
     });
     res.redirect('/adminUser');
