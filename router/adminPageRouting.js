@@ -33,7 +33,7 @@ router.post('/admin', verifyToken, async (req, res) => {
         topSeller: req.body.topSeller = Boolean(req.body.topSeller),
         male: req.body.male = Boolean(req.body.male),
         female: req.body.female = Boolean(req.body.female),
-        user: req.body.user._id
+        user: req.body.user._id = {}
     })
     await product.save((error, succes) => {
         if (error) {
