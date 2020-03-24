@@ -1,16 +1,9 @@
 $(document).ready(function () {
 
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 40) {
-            $('#back-to-top-btn').fadeIn()
-        } else {
-            $('#back-to-top-btn').fadeOut()
-        }
+    $("#back-to-top-btn").on("click", function () {
+        var y = $(window).scrollTop(); //your current y position on the page
+        $(window).scrollTop(0);
     });
 
-    $('#back-to-top-btn').click(function () {
-        $('body').animate({
-            scrollTop: 0
-        }, 800);
-    });
+
 });

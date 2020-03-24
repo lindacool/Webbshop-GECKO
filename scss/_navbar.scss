@@ -19,11 +19,11 @@ body {
         // height: 95vh;
         position: absolute;
         top: 35px;
-        transform: translateX(-130%);
+        transform: translateX(-140%);
         transition-timing-function: ease-in;
         background-color: white;
         transition: 1s;
-        margin-top: 50px;
+        margin-top: 60px;
 
 
 
@@ -84,6 +84,7 @@ body {
         transform: translateX(0%);
         transition-timing-function: ease-out;
         z-index: 2000;
+        margin-top: 60px;
 
         // opacity: unset;
         @include tablet {
@@ -153,6 +154,7 @@ body {
             width: 20px;
             margin: 10px 0 10px;
             padding-left: 10px;
+            margin-left: 3px;
         }
 
         .wishlist {
