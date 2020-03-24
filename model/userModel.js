@@ -35,63 +35,54 @@ const userSchema = new Schema({
         },
         resetToken: String,
         expirationToken: Date,
-        wishlist: [{
-            productId: {
-                type: mongoose.Schema.Types.ObjectId,
-                ref: "Product"
-            }
-        }],
         cart: [{
             productId: {
                 type: mongoose.Schema.Types.ObjectId,
                 ref: "Product"
             },
-            chosenSize: {
-                type: String,
-                required: true
-            },
-            quantity: {
+            amount: {
                 type: Number,
-                required: true
+                default: 1
             }
-        }]
+        }],
     }
 );
 
-// Function that adds product to wishlist
-userSchema.methods.addToWishlist = function(product){
+// Function that adds product to cart
+userSchema.methods.addToCart = function(product){
 
-    // Will track if product exists in wishlist
+    // Will track if product exists in cart
     let exists = false;
 
-    // Loop through the wishlist and sets exists = true if the clicked product already exists
-    for (let i = 0; i < this.wishlist.length; i++) {
-        if (this.wishlist[i].productId._id.toString() == product._id.toString()) {
+    // Loop through the cart and sets exists = true if the clicked product already exists
+    for (let i = 0; i < this.cart.length; i++) {
+        if (this.cart[i].productId._id.toString() == product._id.toString()) {
             exists = true;
+            this.cart[i].amount ++;
         }
     }
 
-    // Push the clicked product to the user wishlist if the product does not already exist
+    // Push the clicked product to the user cart if the product does not already exist
     if (!exists) {
-        this.wishlist.push({productId: product._id})
+        this.cart.push({productId: product._id});
     }
     
     return this.save();
 
 }
 
-// Function that removes product to wishlist
-userSchema.methods.removeFromWishlist = function(productId){
+// Function that removes product to cart
+userSchema.methods.removeFromCart = function(productId){
 
     // Creates a new list which contains all products except the removed one
     
 
-    const restOfProducts = this.wishlist.filter( (product)=> {
+    const restOfProducts = this.cart.filter( (product)=> {
          return product.productId.toString() != productId.toString()
     })
 
-    // Overwrites the old wishlist with the newly created list which does not contain the removed product
-    this.wishlist = restOfProducts;
+    // Overwrites the old cart with the newly created list which does not contain the removed product
+    this.cart = restOfProducts;
 
     return this.save();
 };
