@@ -12,6 +12,30 @@
     </div>
     <!-- Navbar -->
     <%- include ("partial/navbar") %>
+ 
+    <%- include ("partial/logout") %>
+
+<!-- Product -->
+    
+<section id="detail-product-page">
+    <!-- image mobile -->
+    <div id="image-div-mobile">
+        <div class="image-container">
+            <img src="<%= clickedProduct.imgUrl %>" alt="product-image">
+        </div>
+    </div>
+    <!-- image desktop -->
+    <div id="image-div-desktop">
+        <div class="image-container">
+            <img src="<%= clickedProduct.imgUrl %>" alt="product-image">
+        </div>
+        <div class="image-container">
+            <img src="<%= clickedProduct.imgUrlTwo %>" alt="product-image">
+        </div>
+        <div class="image-container">
+            <img src="<%= clickedProduct.imgUrlThree %>" alt="product-image">
+        </div>
+    </div>
 
 
 
