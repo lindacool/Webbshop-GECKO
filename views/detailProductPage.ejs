@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include ("partial/header.ejs") %>
+<%- include ("partial/header.ejs") %>
+
 <body>
     <div class="container-fluid">
         <div class="row">
@@ -9,98 +10,99 @@
             </div>
         </div>
     </div>
-<!-- Navbar -->
+    <!-- Navbar -->
     <%- include ("partial/navbar") %>
- 
-    <%- include ("partial/logout") %>
 
-<!-- Product -->
-    
-<section id="detail-product-page">
-    <!-- image mobile -->
-    <div id="image-div-mobile">
-        <div class="image-container">
-            <img src="<%= clickedProduct.imgUrl %>" alt="product-image">
-        </div>
-    </div>
-    <!-- image desktop -->
-    <div id="image-div-desktop">
-        <div class="image-container">
-            <img src="<%= clickedProduct.imgUrl %>" alt="product-image">
-        </div>
-        <div class="image-container">
-            <img src="<%= clickedProduct.imgUrl2 %>" alt="product-image">
-        </div>
-        <div class="image-container">
-            <img src="<%= clickedProduct.imgUrl3 %>" alt="product-image">
-        </div>
-    </div>
 
-    <!-- product info -->
-    <div id="info-div">
 
-        <div class="desktop-title-price">
-            <span>
-                <%= clickedProduct.title %>
-            </span>
-            <span class="desktop-price">
-                <%= clickedProduct.price %> SEK
-            </span>
+    <!-- Product -->
+
+    <section id="detail-product-page">
+        <!-- image mobile -->
+        <div id="image-div-mobile">
+            <div class="image-container">
+                <img src="<%= clickedProduct.imgUrl %>" alt="product-image">
+            </div>
+        </div>
+        <!-- image desktop -->
+        <div id="image-div-desktop">
+            <div class="image-container">
+                <img src="<%= clickedProduct.imgUrl %>" alt="product-image">
+            </div>
+            <div class="image-container">
+                <img src="<%= clickedProduct.imgUrl2 %>" alt="product-image">
+            </div>
+            <div class="image-container">
+                <img src="<%= clickedProduct.imgUrl3 %>" alt="product-image">
+            </div>
         </div>
 
-        <div class="fabric-container">
-            <span>organic cotton</span>
-        </div>
-        
-        <div class="color-container">
-            <span class="color-header">color</span>
-            <button class="color-picker"><span>choose color</span><span>+</span></button>
-        </div>
-        <div class="size-container">
-            <span class="size-header">size</span>
+        <!-- product info -->
+        <div id="info-div">
+
+            <div class="desktop-title-price">
+                <span>
+                    <%= clickedProduct.title %>
+                </span>
+                <span class="desktop-price">
+                    <%= clickedProduct.price %> SEK
+                </span>
+            </div>
+
+            <div class="fabric-container">
+                <span>organic cotton</span>
+            </div>
+
+            <div class="color-container">
+                <span class="color-header">color</span>
+                <button class="color-picker"><span>choose color</span><span>+</span></button>
+            </div>
+            <div class="size-container">
+                <span class="size-header">size</span>
                 <button>XS</button>
                 <button>S</button>
                 <button>M</button>
                 <button>L</button>
                 <button>XL</button>
-        </div>
-
-        <div class="desktop-bag">
-            <a href="/cart/<%=clickedProduct._id%>"><button>add to bag</button></a>
-        </div>
-
-        <div class="product-description">
-            <div class="description-header">
-                <div><span>description</span> - delivery & payment - details</div>
             </div>
-            <div class="description">
-                <%= clickedProduct.description %>
+
+            <div class="desktop-bag">
+                <a href="/cart/<%=clickedProduct._id%>"><button>add to bag</button></a>
+            </div>
+
+            <div class="product-description">
+                <div class="description-header">
+                    <div><span>description</span> - delivery & payment - details</div>
+                </div>
+                <div class="description">
+                    <%= clickedProduct.description %>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Sticky div that only appears in mobile -->
+        <div class="mobile-sticky">
+            <div class="info-title-price-container">
+                <span>
+                    <%= clickedProduct.title %>
+                </span>
+                <span class="price">
+                    <%= clickedProduct.price %> SEK
+                </span>
+            </div>
+            <div class="buttons-about-bag-container">
+                <button class="choose-size">product info +</button>
+                <a href="/cart/<%=clickedProduct._id%>"><button class="add-to-bag">add to bag</button></a>
             </div>
         </div>
 
-    </div>
 
-    <!-- Sticky div that only appears in mobile -->
-    <div class="mobile-sticky">
-        <div class="info-title-price-container">
-            <span>
-                <%= clickedProduct.title %>
-            </span>
-            <span class="price">
-                <%= clickedProduct.price %> SEK
-            </span>
-        </div>
-        <div class="buttons-about-bag-container">
-            <button class="choose-size">product info +</button>
-            <a href="/cart/<%=clickedProduct._id%>"><button class="add-to-bag">add to bag</button></a>
-        </div>
-    </div>
+    </section>
 
-
-</section>
-
-<%- include ("partial/footer.ejs") %>
+    <%- include ("partial/footer.ejs") %>
 
 
 </body>
+
 </html>

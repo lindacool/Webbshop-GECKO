@@ -5,7 +5,7 @@
 <body>
 
     <%- include ("partial/navbar") %>
-    <%- include ("partial/logout") %>
+
 
     <div class="create-new-product-form">
 
@@ -83,8 +83,10 @@
                 </div>
                 <p>Title: <input class="text-input" name="title" type="text" value="<%= product.title %>"></p>
                 <p>imgUrl: <input class="text-input" name="imgUrl" type="text" value="<%= product.imgUrl %>"></p>
-                <p>imgUrl 2: <input class="text-input" name="imgUrlTwo" type="text" value="<%= product.imgUrlTwo %>"></p>
-                <p>imgUrl 3: <input class="text-input" name="imgUrlThree" type="text" value="<%= product.imgUrlThree %>"></p>
+                <p>imgUrl 2: <input class="text-input" name="imgUrlTwo" type="text" value="<%= product.imgUrlTwo %>">
+                </p>
+                <p>imgUrl 3: <input class="text-input" name="imgUrlThree" type="text"
+                        value="<%= product.imgUrlThree %>"></p>
                 <p>Price: <input class="text-input" name="price" type="text" value="<%= product.price %>"></p>
                 <p>Description: <input class="text-input" name="description" type="text"
                         value="<%= product.description %>"></p>
@@ -93,7 +95,7 @@
                 <p>Top seller: <input name="topSeller" type="checkbox" <% if(product.topSeller){%> checked <%} %>></p>
                 <p>Male: <input name="male" type="checkbox" <% if(product.male){%> checked <%} %>></p>
                 <p>Female: <input name="female" type="checkbox" <% if(product.female){%> checked <%} %>></p>
-           
+
                 <p class="edit-product-button-container"><button class="btn btn-dark" type="submit">Update
                         product</button></p>
             </form>
