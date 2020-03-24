@@ -12,6 +12,18 @@ const productSchema = new mongoose.Schema( {
         minLength: 2,
         
     },
+    imgUrlTwo: {
+        type: String,
+        required: true,
+        minLength: 2,
+        
+    },
+    imgUrlThree: {
+        type: String,
+        required: true,
+        minLength: 2,
+        
+    },
     price: {
         type: Number,
         required: true

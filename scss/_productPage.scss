@@ -26,12 +26,14 @@
                 width: 100%;
                 text-align: center;
             }
+
             p {
                 width: 60%;
                 height: auto;
                 font-size: 0.7rem;
             }
         }
+
         .category-container-buttons {
             display: flex;
             justify-content: center;
@@ -48,14 +50,16 @@
                     text-decoration: none;
                     font-weight: 500;
                 }
+
                 a:link {
                     color: inherit;
                 }
+
                 a:visited {
                     color: inherit;
                 }
             }
-            
+
         }
     }
 
@@ -78,6 +82,7 @@
                     width: 100%;
                 }
             }
+
             .product-info {
                 margin-top: 10px;
                 font-size: 0.7rem;
@@ -88,18 +93,20 @@
                     align-items: center;
                     flex-direction: row;
                     flex-wrap: wrap;
-                
+
                     .title {
                         width: 75%;
                         white-space: nowrap;
                         overflow: hidden;
                         text-overflow: ellipsis;
                     }
+
                     .colors {
                         width: 20%;
                         text-align: right;
                     }
                 }
+
                 .product-price {
                     width: 100%;
                     display: flex;
@@ -112,14 +119,16 @@
                         font-weight: 700;
                         font-size: 80%;
                     }
+
                     .wish-list {
-                        
+
                         img {
                             height: 16px;
                         }
                     }
                 }
             }
+
             @include tablet {
                 width: 30.33%;
                 margin: 0 1.5% 20px 1.5%;
@@ -132,8 +141,21 @@
         display: flex;
         justify-content: center;
         margin: 30px 0;
-    
-    }
-    
-}
+        font-size: 12px;
 
+        a:hover {
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        a:link {
+            color: inherit;
+        }
+
+        a:visited {
+            color: inherit;
+        }
+
+    }
+
+}

@@ -15,13 +15,13 @@ body {
     padding-top: 50px;
     letter-spacing: 3px; }
   body .information {
-    font-size: 67%;
+    font-size: 60%;
     text-transform: uppercase;
     font-weight: 500;
     padding: 5px; }
   body li {
     font-weight: 100;
-    font-size: 85%;
+    font-size: 65%;
     list-style-type: none;
     justify-content: left; }
   body ul {
@@ -52,23 +52,31 @@ body {
     width: 300px;
     padding: 30px;
     padding-bottom: 70px; }
+    body .sign-up-wrapper span {
+      font-size: 12px; }
   body h4 {
     text-transform: uppercase;
     font-size: 140%;
     font-weight: 800;
-    letter-spacing: 3px; }
+    letter-spacing: 3px;
+    margin-bottom: 10px; }
   body .sign-up {
-    width: 100%;
-    height: 45px;
+    width: 70%;
+    height: 30px;
     font-weight: 100;
-    font-size: 14px; }
+    font-size: 12px;
+    margin-top: 20px; }
   body #subscribe {
     background-color: #7f8375;
     color: white;
-    font-weight: 100; }
+    font-weight: 100;
+    font-size: 14px;
+    width: 40%;
+    height: 30px; }
   body p {
     margin: 16px 16px;
-    font-weight: 100; }
+    font-weight: 100;
+    font-size: 12px; }
 
 .opacity-cover {
   background-color: white;
@@ -88,11 +96,11 @@ body {
     width: 100%;
     position: absolute;
     top: 35px;
-    transform: translateX(-130%);
+    transform: translateX(-140%);
     transition-timing-function: ease-in;
     background-color: white;
     transition: 1s;
-    margin-top: 50px; }
+    margin-top: 60px; }
     body .nav-container .about,
     body .nav-container .sign-in,
     body .nav-container .men-women {
@@ -139,7 +147,9 @@ body {
     visibility: visible;
     transition: 0.5s;
     transform: translateX(0%);
-    transition-timing-function: ease-out; }
+    transition-timing-function: ease-out;
+    z-index: 2000;
+    margin-top: 60px; }
     @media (min-width: 820px) {
       body .nav-show {
         width: 70%; } }
@@ -167,7 +177,7 @@ body {
         background-color: #cccccc;
         height: 25px;
         width: 25px;
-        margin: 10px 0 10px; }
+        margin: 5px 0 10px; }
   body .logo {
     background-image: url("../public/assets/Logo-gecko.png");
     background-size: cover;
@@ -187,7 +197,8 @@ body {
       height: 20px;
       width: 20px;
       margin: 10px 0 10px;
-      padding-left: 10px; }
+      padding-left: 10px;
+      margin-left: 3px; }
     body .wishlistandcart .wishlist {
       background-image: url("../public/assets/heart.png");
       background-size: cover;
@@ -203,9 +214,9 @@ body {
     background-color: #7f8375;
     color: white;
     text-align: center;
-    padding: 8px;
+    padding: 12px;
     font-weight: 100;
-    font-size: 80%;
+    font-size: 70%;
     text-transform: uppercase; }
   * .start-container {
     position: relative;
@@ -253,7 +264,7 @@ body {
         letter-spacing: 2px;
         margin-bottom: 10px; }
       * .start-container .gecko-info .shop-women {
-        width: 50%;
+        width: 200px;
         margin: 10px;
         padding: 7px;
         background-color: white;
@@ -262,7 +273,8 @@ body {
         font-weight: 400;
         font-size: 60%; }
       * .start-container .gecko-info .shop-men {
-        width: 50%;
+        width: 200px;
+        margin: 10px;
         padding: 7px;
         background-color: white;
         border: none;
@@ -273,12 +285,12 @@ body {
     text-transform: uppercase;
     font-weight: 300;
     font-size: 90%;
-    margin: 30px 0px 10px 9px; }
+    margin: 30px 0px 10px 0px; }
   * .top-seller p {
     text-transform: uppercase;
     font-weight: 300;
     font-size: 90%;
-    margin: 30px 0px 10px 9px; }
+    margin: 30px 0px 10px 0px; }
   * .scrolling-wrapper {
     display: flex;
     flex-direction: row;
@@ -289,28 +301,82 @@ body {
       display: inline-block; }
       * .scrolling-wrapper .scroll-items .product-image {
         width: 45vw;
-        margin: 10px; }
+        margin-right: 20px; }
         * .scrolling-wrapper .scroll-items .product-image img {
           width: 100%; }
       * .scrolling-wrapper .scroll-items .title {
         font-size: 85%;
         font-weight: 200;
-        margin: 15px 0px 15px 9px; }
+        margin: 15px 0px 15px 0px; }
       * .scrolling-wrapper .scroll-items .price {
         font-size: 70%;
         font-weight: 600;
-        margin: 12px 0px 12px 9px; }
-  * .gecko-store {
-    margin: 10px; }
-    * .gecko-store p {
-      text-transform: uppercase;
-      font-weight: 200;
-      font-size: 150%; }
-    * .gecko-store .gecko-text {
+        margin: 12px 0px 12px 0px; }
+  * .gecko-store .gecko-store-img {
+    background-image: url("../public/assets/geckostore.png");
+    width: 100%;
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; }
+  * .gecko-store .gecko-title {
+    text-transform: uppercase;
+    font-weight: 200;
+    font-size: 150%; }
+  * .gecko-store .gecko-text {
+    text-align: center;
+    font-weight: 100;
+    font-size: 100%; }
+  * .category-img {
+    display: flex;
+    align-items: center;
+    flex-direction: column; }
+    * .category-img .women {
+      background-image: url("../public/assets/women_crewneck_black.jpeg");
+      width: 100%;
+      height: 800px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin: 20px 0px 20px 0px;
+      position: relative;
+      z-index: 1; }
+      * .category-img .women .shop-women {
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 200px;
+        margin: 10px;
+        padding: 7px;
+        background-color: white;
+        border: none;
+        text-transform: uppercase;
+        font-weight: 400;
+        font-size: 60%; }
+    * .category-img .men {
+      background-image: url("../public/assets/men_tshirt_green.jpeg");
+      width: 100%;
+      height: 800px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative; }
+    * .category-img .shop-men {
       text-align: center;
-      margin: 5px;
-      font-weight: 100;
-      font-size: 100%; }
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 200px;
+      margin: 10px;
+      padding: 7px;
+      background-color: white;
+      border: none;
+      text-transform: uppercase;
+      font-weight: 400;
+      font-size: 60%; }
 
 .create-new-product-form {
   display: flex;
@@ -484,7 +550,15 @@ body {
     width: 100%;
     display: flex;
     justify-content: center;
-    margin: 30px 0; }
+    margin: 30px 0;
+    font-size: 12px; }
+    #product-page .show-more a:hover {
+      text-decoration: none;
+      font-weight: 600; }
+    #product-page .show-more a:link {
+      color: inherit; }
+    #product-page .show-more a:visited {
+      color: inherit; }
 
 #detail-product-page {
   font-family: 'Spartan', sans-serif;
@@ -617,13 +691,15 @@ body {
       @media (min-width: 820px) {
         #detail-product-page #info-div .desktop-bag {
           display: flex; } }
-      #detail-product-page #info-div .desktop-bag button {
-        width: 100%;
-        height: 40px;
-        margin: 20px 0 0 0;
-        border-color: #e1e1e1;
-        background-color: #7f8375;
-        color: white; }
+      #detail-product-page #info-div .desktop-bag a {
+        width: 100%; }
+        #detail-product-page #info-div .desktop-bag a button {
+          width: 100%;
+          height: 40px;
+          margin: 20px 0 0 0;
+          border-color: #e1e1e1;
+          background-color: #7f8375;
+          color: white; }
     #detail-product-page #info-div .product-description {
       width: 100%;
       display: flex;
@@ -689,9 +765,12 @@ body {
         border-color: #e1e1e1; }
       #detail-product-page .mobile-sticky .buttons-about-bag-container .choose-size {
         background-color: white; }
-      #detail-product-page .mobile-sticky .buttons-about-bag-container .add-to-bag {
-        background-color: #7f8375;
-        color: white; }
+      #detail-product-page .mobile-sticky .buttons-about-bag-container a {
+        width: 48%; }
+        #detail-product-page .mobile-sticky .buttons-about-bag-container a .add-to-bag {
+          width: 100%;
+          background-color: #7f8375;
+          color: white; }
     @media (min-width: 820px) {
       #detail-product-page .mobile-sticky {
         position: relative; } }
@@ -780,10 +859,15 @@ body {
 
 #back-to-top-btn {
   position: fixed;
+  border: none;
+  border-radius: 50%;
+  background-color: #949988;
   bottom: 20px;
   right: 20px;
   z-index: 1000;
-  border: solid 1px gray;
   cursor: pointer;
-  transition-duration: 0.2s;
-  transition-timing-function: ease-in-out; }
+  scroll-behavior: smooth;
+  bottom: 3vh;
+  width: 30px;
+  height: 30px;
+  color: white; }

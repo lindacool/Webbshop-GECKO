@@ -19,11 +19,11 @@ body {
         // height: 95vh;
         position: absolute;
         top: 35px;
-        transform: translateX(-130%);
+        transform: translateX(-140%);
         transition-timing-function: ease-in;
         background-color: white;
         transition: 1s;
-        margin-top: 50px;
+        margin-top: 60px;
 
 
 
@@ -83,6 +83,8 @@ body {
         transition: 0.5s;
         transform: translateX(0%);
         transition-timing-function: ease-out;
+        z-index: 2000;
+        margin-top: 60px;
 
         // opacity: unset;
         @include tablet {
@@ -121,7 +123,7 @@ body {
                 background-color: #cccccc;
                 height: 25px;
                 width: 25px;
-                margin: 10px 0 10px;
+                margin: 5px 0 10px;
 
             }
         }
@@ -135,6 +137,7 @@ body {
         background-repeat: no-repeat;
         height: 40px;
         width: 60px;
+
     }
 
     .wishlistandcart {
@@ -151,6 +154,7 @@ body {
             width: 20px;
             margin: 10px 0 10px;
             padding-left: 10px;
+            margin-left: 3px;
         }
 
         .wishlist {
