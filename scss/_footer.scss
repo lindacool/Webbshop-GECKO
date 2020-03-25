@@ -35,6 +35,21 @@ body {
 
     ul {
         padding: 5px;
+
+        .footerlogin {
+            a:link {
+                color: white;
+            }
+            a:visited {
+                color: white;
+            }
+            a:hover {
+                color: white;
+            }
+            a:active {
+                color: white;
+            }
+        }
     }
 
     .footerline {

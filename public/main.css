@@ -26,6 +26,14 @@ body {
     justify-content: left; }
   body ul {
     padding: 5px; }
+    body ul .footerlogin a:link {
+      color: white; }
+    body ul .footerlogin a:visited {
+      color: white; }
+    body ul .footerlogin a:hover {
+      color: white; }
+    body ul .footerlogin a:active {
+      color: white; }
   body .footerline {
     border: 0.4px solid white;
     opacity: 50%; }
