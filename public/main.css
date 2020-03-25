@@ -184,6 +184,7 @@ body {
       flex-direction: row; }
       body .burger-container .burgerandsearch .hamburger-button {
         border: none;
+        outline: none;
         background: white; }
       body .burger-container .burgerandsearch .search-icon {
         background-image: url("../public/assets/searchicon.png");
