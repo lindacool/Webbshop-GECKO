@@ -1,114 +1,121 @@
     <!DOCTYPE html>
-<html lang="en">
-<%- include ("partial/header.ejs") %>
+    <html lang="en">
+    <%- include ("partial/header.ejs") %>
 
-<body>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-12" id="subscribebox">
-                subscribe for 10% off
-            </div>
-        </div>
-    </div>
-
-    <%- include ("partial/navbar.ejs") %>
-    <%- include ("partial/tothetop") %>
-
-
-    <div class="start-container">
-        <div class="welcome-container">
-            <div class="welcome-img-one"></div>
-            <div class="welcome-img-two"></div>
-
-            <div class="gecko-info">
-                <h1>gecko news</h1>
-                <span>100% organic cotton</span>
-
-                <a href="/women"><button class="shop-women">shop women</button></a>
-                <a href="/men"><button class="shop-men">shop men</button></a>
-
-            </div>
-        </div>
-        <div class="opacity"></div>
-    </div>
-    <div class="container">
-        <div class="new-arrival">
-            <p>new arrivals</p>
-        </div>
-        <div class="scrolling-wrapper">
-            <% startPageProducts.newArrivals.forEach(newArrival => { %>
-            <div class="scroll-items">
-
-
-                <div class="product-image">
-                    <a href="/products/<%= newArrival._id %>"><img src="<%= newArrival.imgUrl %>"
-                            alt="productImage"></a>
-                </div>
-                <div class="product-info">
-                    <div class="product-title">
-                        <span class="title"><%= newArrival.title %></span>
-                        <span class="colors"></span>
-                    </div>
-                    <div class="product-price">
-                        <span class="price"><%= newArrival.price %> SEK</span>
-                    </div>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12" id="subscribebox">
+                    subscribe for 10% off
                 </div>
             </div>
-            <% }); %>
-        </div>
-        <div class="top-seller">
-            <p>top seller</p>
-        </div>
-        <div class="scrolling-wrapper">
-            <% startPageProducts.topSellers.forEach(topSeller => { %>
-            <div class="scroll-items">
 
 
-                <div class="product-image">
-                    <a href="/products/<%= topSeller._id %>"><img src="<%= topSeller.imgUrl %>" alt="productImage"></a>
-                </div>
-                <div class="product-info">
-                    <div class="product-title">
-                        <span class="title"><%= topSeller.title %></span>
-                        <span class="colors"></span>
-                    </div>
-                    <div class="product-price">
-                        <span class="price"><%= topSeller.price %> SEK</span>
-                    </div>
+            <%- include ("partial/navbar.ejs") %>
+            <%- include ("partial/tothetop") %>
+
+
+
+            <div class="welcome-container">
+                <div class="welcome-img-one"></div>
+                <div class="welcome-img-two"></div>
+
+                <div class="gecko-info">
+                    <h1>gecko news</h1>
+                    <span>100% organic cotton</span>
+
+                    <a href="/women"><button class="shop-women">shop women</button></a>
+                    <a href="/men"><button class="shop-men">shop men</button></a>
+
                 </div>
             </div>
-            <% }); %>
-        </div>
+            <div class="opacity"></div>
 
-        <div class="category-img">
-            <div class="women">
-                <a href="/women"><button class="shop-women">shop women</button></a>
+
+        </div>
+        <div class="container">
+            <div class="new-arrival">
+                <p>new arrivals</p>
+            </div>
+            <div class="scrolling-wrapper">
+                <% startPageProducts.newArrivals.forEach(newArrival => { %>
+                <div class="scroll-items">
+
+
+                    <div class="product-image">
+                        <a href="/products/<%= newArrival._id %>"><img src="<%= newArrival.imgUrl %>"
+                                alt="productImage"></a>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-title">
+                            <span class="title"><%= newArrival.title %></span>
+                            <span class="colors"></span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price"><%= newArrival.price %> SEK</span>
+                        </div>
+                    </div>
+                </div>
+                <% }); %>
+            </div>
+            <div class="top-seller">
+                <p>top seller</p>
+            </div>
+            <div class="scrolling-wrapper">
+                <% startPageProducts.topSellers.forEach(topSeller => { %>
+                <div class="scroll-items">
+
+
+                    <div class="product-image">
+                        <a href="/products/<%= topSeller._id %>"><img src="<%= topSeller.imgUrl %>"
+                                alt="productImage"></a>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-title">
+                            <span class="title"><%= topSeller.title %></span>
+                            <span class="colors"></span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price"><%= topSeller.price %> SEK</span>
+                        </div>
+                    </div>
+                </div>
+                <% }); %>
+            </div>
+
+            <div class="category-img">
+                <div class="women">
+                    <a href="/women"><button class="shop-women">shop women</button></a>
+                </div>
+            </div>
+            <div class="category-img">
+                <div class="men">
+                    <a href="/men"><button class="shop-men">shop men</button></a>
+                </div>
+            </div>
+
+            <div class="gecko-store">
+                <span class="gecko-title">gecko store</span>
+                <div class="gecko-store-img"></div>
+
+
+                <div class="gecko-text">
+                    GECKO STORE dolor sit amet, consectetur adipisicing elit. Aut nobis error quaerat provident, ipsam
+                    unde
+                    eaque est in praesentium, voluptatum nisi modi ut nesciunt, eos odio deleniti. Reprehenderit,
+                    asperiores
+                    voluptatem? Dolor sit amet consectetur adipisicing elit. Iure, libero iusto recusandae voluptatum
+                    dicta
+                    nulla unde veritatis error? Odio vero explicabo quia rem amet delectus sit aliquam eveniet
+                    dignissimos
+                    repellendus.
+                </div>
             </div>
         </div>
-        <div class="category-img">
-            <div class="men">
-                <a href="/men"><button class="shop-men">shop men</button></a>
-            </div>
-        </div>
+        <%- include ("partial/tothetop.ejs") %>
+        <%- include ("partial/footer.ejs") %>
 
-        <div class="gecko-store">
-            <span class="gecko-title">gecko store</span>
-            <div class="gecko-store-img"></div>
+    </body>
 
 
-            <div class="gecko-text">
-                GECKO STORE dolor sit amet, consectetur adipisicing elit. Aut nobis error quaerat provident, ipsam unde
-                eaque est in praesentium, voluptatum nisi modi ut nesciunt, eos odio deleniti. Reprehenderit, asperiores
-                voluptatem? Dolor sit amet consectetur adipisicing elit. Iure, libero iusto recusandae voluptatum dicta
-                nulla unde veritatis error? Odio vero explicabo quia rem amet delectus sit aliquam eveniet dignissimos
-                repellendus.
-            </div>
-        </div>
-    </div>
-    <%- include ("partial/tothetop.ejs") %>
-    <%- include ("partial/footer.ejs") %>
-
-</body>
-
-
-</html>
+    </html>
