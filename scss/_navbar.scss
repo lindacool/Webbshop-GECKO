@@ -22,17 +22,13 @@ body {
             font-weight: 100;
             font-size: 70%;
             text-transform: uppercase;
-
         }
-
     }
-
     .nav-container {
         font-family: 'Spartan', sans-serif;
         visibility: hidden;
         z-index: 999;
         width: 100%;
-        // height: 95vh;
         position: absolute;
         top: 35px;
         transform: translateX(-140%);
@@ -53,9 +49,6 @@ body {
                 margin-bottom: 40px;
                 font-weight: bold;
             }
-
-            // display: none;
-
             .fat {
                 font-weight: bold;
             }
@@ -73,9 +66,7 @@ body {
                 a {
                     color: black;
                     text-decoration: none;
-
                 }
-
                 :hover {
                     color: #7f8375;
                     text-decoration: none;
@@ -88,7 +79,6 @@ body {
             border-bottom: 1px solid #7f8375;
             width: 92%;
             padding-bottom: 50px;
-            // margin: 0 4%;
         }
     }
 
@@ -99,8 +89,8 @@ body {
         transition-timing-function: ease-out;
         z-index: 2000;
         margin-top: 60px;
+        position: fixed;
 
-        // opacity: unset;
         @include tablet {
             width: 70%;
         }
@@ -112,13 +102,15 @@ body {
 
     .burger-container {
         width: 100%;
-        // padding: 10px 20px;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         z-index: 1000;
-        margin: 10px 0 10px;
-
+        // margin: 10px 0 10px;
+        overflow: hidden;
+        background-color: white;
+        position: -webkit-sticky;
+        padding: 7px;
 
         .burgerandsearch {
             display: flex;
@@ -135,58 +127,53 @@ body {
                 background-position: center;
                 background-repeat: no-repeat;
                 background-size: cover;
-
                 background-color: #cccccc;
                 height: 25px;
                 width: 25px;
                 margin: 5px 0 10px;
-
             }
         }
-
-    }
-
-    .logo {
-        background-image: url("../public/assets/Logo-gecko.png");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        height: 40px;
-        width: 60px;
-
-    }
-
-    .wishlistandcart {
-        display: flex;
-        flex-direction: row;
-        margin-right: 10px;
-
-        .cart {
-            background-image: url("../public/assets/cart.png");
+        .logo {
+            background-image: url("../public/assets/Logo-gecko.png");
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            height: 20px;
-            width: 20px;
-            margin: 10px 0 10px;
-            padding-left: 10px;
-            margin-left: 3px;
+            height: 43px;
+            width: 60px;
         }
-
-        .wishlist {
-            background-image: url("../public/assets/heart.png");
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            height: 20px;
-            width: 20px;
-            margin-top: 12px;
-
-
+        .wishlistandcart {
+            display: flex;
+            flex-direction: row;
+            margin-right: 10px;
+            .cart {
+                background-image: url("../public/assets/cart.png");
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                height: 20px;
+                width: 20px;
+                margin: 10px 0 10px;
+                padding-left: 10px;
+                margin-left: 3px;
+            }
+            .wishlist {
+                background-image: url("../public/assets/heart.png");
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                height: 20px;
+                width: 20px;
+                margin-top: 12px;
+            }
         }
-
-
     }
-
-
-}
+    .sticky {
+        position: fixed;
+        width: 100%;
+        left: 0;
+        top: 0;
+        z-index: 2000;
+        border-top: 0;
+        margin-top: 0;  
+      }
+    }
