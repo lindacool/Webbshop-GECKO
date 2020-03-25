@@ -42,13 +42,16 @@
                         <span>Quantity:</span>
                         <span><%= product.amount%></span>
                         <a href="/reduceCart/<%= user.cart.indexOf(product) %>">-</a> /
-                        <a href="/increaseCart/<%= user.cart.indexOf(product) %>">+</a> 
+                        <a href="/increaseCart/<%= user.cart.indexOf(product) %>">+</a><br>
+                         
                     </div>
                 </div>
 
                 <div class="total-item-price-container">
-                    <span>X</span>
-                    <span><299 SEK></span>
+                    <span><a href="/deleteCart/<%= user.cart.indexOf(product) %>">X</a> </span>
+
+                    
+                    <span><%= (product.productId.price) * (product.amount) %> SEK</span>
                 </div>
             </div>
 
@@ -59,7 +62,7 @@
 
             <div class="order-value-container info-container">
                 <span>Order value</span>
-                <span>2599 SEK</span>
+                <span><%= user.totalCartPrice %></span>
             </div>
             <div class="delivery-container info-container">
                 <span>Delivery</span>
@@ -70,7 +73,7 @@
             </div>
             <div class="total-price-container info-container">
                 <span>TOTAL</span>
-                <span>2599 SEK</span>
+                <span><%= user.totalCartPrice %></span>
             </div>
             <div class="checkout-button-container">
                 <button>Proceed to checkout</button>
