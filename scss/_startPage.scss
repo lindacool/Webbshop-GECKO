@@ -2,7 +2,7 @@
   font-family: 'Spartan', sans-serif;
 
 
-  .container-fluid {
+  .container-fluid{
     #subscribebox {
       background-color: #7f8375;
       color: white;
@@ -293,8 +293,9 @@
         font-size: 60%;
       }
 
-      
+
     }
+
     @include tablet {
       width: 50%;
 
