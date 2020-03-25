@@ -95,6 +95,21 @@ this.cart.splice(index, 1);
     return this.save();
 };
 
+userSchema.methods.reduceCart = function(index){
+
+
+console.log(index+'   '+ this.cart[index].amount)  
+
+if(this.cart[index].amount >1 ){
+
+this.cart[index].amount --;
+} else {
+    this.cart.splice(index, 1);
+}
+
+
+    return this.save();
+};
 
 
 
