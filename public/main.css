@@ -540,6 +540,10 @@ body {
         background-color: #7f8375;
         border-color: white; }
 
+h2 {
+  font-weight: 300;
+  font-size: 40%; }
+
 #product-page {
   font-family: 'Spartan', sans-serif;
   text-transform: uppercase; }
