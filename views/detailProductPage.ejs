@@ -59,53 +59,55 @@
                     <span class="color-header">color</span>
                     <button class="color-picker"><span>choose color</span><span>+</span></button>
                 </div>
-                <div class="size-container">
-                    <span class="size-header">size</span>
-                    <button>XS</button>
-                    <button>S</button>
-                    <button>M</button>
-                    <button>L</button>
-                    <button>XL</button>
-                    <select id="" name="size">
-                            <option value="xs">XS</option>
-                            <option value="s">S</option>
-                            <option value="m">M</option>
-                            <option value="l">L</option>
-                            <option value="xl">XL</option>
-                          </select>
-                </div>
-
-                <div class="desktop-bag">
-                    <a href="/cart/<%=clickedProduct._id%>"><button>add to bag</button></a>
-                </div>
-
-                <div class="product-description">
-                    <div class="description-header">
-                        <div><span>description</span> - delivery & payment - details</div>
+                <form action="/cart/<%= clickedProduct._id %>" method="POST">
+                    <div class="size-container">
+                    
+                            <label for="size">Choose a size:</label>
+                            <select id="" name="size">
+                            <option value="XS">XS</option>
+                            <option value="S">S</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
+                            </select>
+                                
+                        
+                                
+                            
+                            
                     </div>
-                    <div class="description">
-                        <%= clickedProduct.description %>
+
+                    <div class="desktop-bag">
+                        <a href="/cart/<%=clickedProduct._id%>"><button>add to bag</button></a>
+                    </div>
+
+                    <div class="product-description">
+                        <div class="description-header">
+                            <div><span>description</span> - delivery & payment - details</div>
+                        </div>
+                        <div class="description">
+                            <%= clickedProduct.description %>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Sticky div that only appears in mobile -->
+                <div class="mobile-sticky">
+                    <div class="info-title-price-container">
+                        <span>
+                            <%= clickedProduct.title %>
+                        </span>
+                        <span class="price">
+                            <%= clickedProduct.price %> SEK
+                        </span>
+                    </div>
+                    <div class="buttons-about-bag-container">
+                        <button class="choose-size">product info +</button>
+                        <a href="/cart/<%=clickedProduct._id%>"><button class="add-to-bag">add to bag</button></a>
                     </div>
                 </div>
-
-            </div>
-
-            <!-- Sticky div that only appears in mobile -->
-            <div class="mobile-sticky">
-                <div class="info-title-price-container">
-                    <span>
-                        <%= clickedProduct.title %>
-                    </span>
-                    <span class="price">
-                        <%= clickedProduct.price %> SEK
-                    </span>
-                </div>
-                <div class="buttons-about-bag-container">
-                    <button class="choose-size">product info +</button>
-                    <a href="/cart/<%=clickedProduct._id%>"><button class="add-to-bag">add to bag</button></a>
-                </div>
-            </div>
-
+            </form>
 
         </section>
 
