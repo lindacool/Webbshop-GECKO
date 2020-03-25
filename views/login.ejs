@@ -3,13 +3,17 @@
 <%- include ("partial/tothetop") %>
 
 <body>
-    <div class="container-fluid">
+    <div class="container-fluid-login">
         <div class="gecko-login">
         <h2>Welcome to Gecko! Log in here</h2>
         <form action="/login" method="POST">
-            <input type="email" name="loginEmail" placeholder="Email">
-            <input type="password" name="loginPassword" placeholder="Password">
-            <button type="submit">Log in</button>
+            <div>
+                <input type="email" name="loginEmail" placeholder="Email">
+                <input type="password" name="loginPassword" placeholder="Password">
+            </div>
+            <div>
+                <button type="submit">Log in</button>
+            </div>
         </form>
 
         <div>

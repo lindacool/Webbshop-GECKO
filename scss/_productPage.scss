@@ -10,7 +10,7 @@
         align-items: center;
         flex-direction: column;
         width: 100%;
-        margin: 30px 0 50px 0;
+        margin: 60px 0 50px 0;
 
         .category-container-header {
             display: flex;
@@ -31,6 +31,7 @@
                 width: 60%;
                 height: auto;
                 font-size: 0.7rem;
+                text-align: center;
             }
         }
 
@@ -101,9 +102,11 @@
                         text-overflow: ellipsis;
                     }
 
-                    .colors {
-                        width: 20%;
-                        text-align: right;
+                    .wish-list {
+
+                        img {
+                            height: 16px;
+                        }
                     }
                 }
 
@@ -114,17 +117,11 @@
                     align-items: center;
                     flex-direction: row;
                     flex-wrap: wrap;
+                    padding: 3px 0 0 0;
 
                     .price {
                         font-weight: 700;
                         font-size: 80%;
-                    }
-
-                    .wish-list {
-
-                        img {
-                            height: 16px;
-                        }
                     }
                 }
             }

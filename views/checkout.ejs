@@ -48,7 +48,7 @@
                 </div>
 
                 <div class="total-item-price-container">
-                    <span><a href="/deleteCart/<%= user.cart.indexOf(product) %>">X</a> </span>
+                    <span><a href="/deleteCart/<%= user.cart.indexOf(product) %>"><i class="far fa-trash-alt"></i></a> </span>
 
                     
                     <span><%= (product.productId.price) * (product.amount) %> SEK</span>
@@ -62,7 +62,7 @@
 
             <div class="order-value-container info-container">
                 <span>Order value</span>
-                <span><%= user.totalCartPrice %></span>
+                <span><%= user.totalCartPrice %> SEK</span>
             </div>
             <div class="delivery-container info-container">
                 <span>Delivery</span>
@@ -73,7 +73,7 @@
             </div>
             <div class="total-price-container info-container">
                 <span>TOTAL</span>
-                <span><%= user.totalCartPrice %></span>
+                <span><%= user.totalCartPrice %> SEK</span>
             </div>
             <div class="checkout-button-container">
                 <button>Proceed to checkout</button>

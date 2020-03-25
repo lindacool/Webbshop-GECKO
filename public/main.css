@@ -90,7 +90,7 @@ body {
   background-color: white;
   opacity: 60%;
   z-index: 998;
-  position: fixed;
+  position: relative;
   width: 100%;
   height: 100%; }
 
@@ -228,15 +228,6 @@ body {
   font-family: 'Spartan', sans-serif; }
   * .container-fluid {
     max-width: 1250px; }
-  * .opacity {
-    position: absolute;
-    opacity: 0.2;
-    z-index: 2;
-    top: 12.5%;
-    left: 0;
-    width: 100%;
-    background-color: black;
-    height: 100%; }
   * .welcome {
     display: flex;
     position: relative;
@@ -245,7 +236,7 @@ body {
     width: 100%;
     height: 100vh; }
     * .welcome .welcome-img-one {
-      background-image: url("../public/assets/men_hoodie_white.jpeg");
+      background-image: url("../public/assets/men_hoodie_white_opacity.jpg");
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
@@ -259,7 +250,7 @@ body {
         * .welcome .welcome-img-one {
           background-position: top; } }
     * .welcome .welcome-img-two {
-      background-image: url("../public/assets/women_hoodie_pink.jpeg");
+      background-image: url("../public/assets/women_hoodie_pink_opacity.jpg");
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
@@ -479,13 +470,20 @@ body {
     width: 100%; }
     .create-new-product-form .create-new-product-form-header h2 {
       text-align: center;
-      margin: 0 0 20px 0; }
+      margin: 0 0 20px 0;
+      font-size: 130%;
+      margin-top: 5%; }
+  .create-new-product-form .createproduct {
+    width: 50%; }
+    .create-new-product-form .createproduct .form-group {
+      font-size: 70%; }
   .create-new-product-form form {
     width: 60%;
     margin: 0 0 40px 0; }
     .create-new-product-form form .form-check {
       width: 100%;
-      padding: 0; }
+      padding: 0;
+      font-size: 12px; }
       .create-new-product-form form .form-check input {
         margin-left: 10px; }
       .create-new-product-form form .form-check input:checked {
@@ -499,7 +497,9 @@ body {
       .create-new-product-form form .form-button-container button {
         margin: 10px 0;
         background-color: #7f8375;
-        border-color: white; }
+        border-color: white;
+        font-size: 13px;
+        font-weight: 200; }
 
 .all-products {
   display: flex;
@@ -512,7 +512,8 @@ body {
     width: 100%; }
     .all-products .all-products-header h2 {
       text-align: center;
-      margin: 20px 0; }
+      margin: 20px 0;
+      font-size: 110%; }
   .all-products .hide-product {
     height: 300px;
     overflow: hidden; }
@@ -546,40 +547,90 @@ body {
       text-align: center; }
       .all-products .product .edit-product-button-container button {
         background-color: #7f8375;
-        border-color: white; }
+        border-color: white;
+        font-size: 13px;
+        font-weight: 200; }
 
-.container-fluid {
+.container-fluid-login {
   display: flex;
   justify-content: center;
   margin-top: 30%;
   margin-bottom: 30%;
   text-align: center; }
-  .container-fluid h2 {
+  @media (min-width: 820px) {
+    .container-fluid-login {
+      margin-top: 10%;
+      margin-bottom: 10%; } }
+  .container-fluid-login h2 {
     font-size: 15px;
     text-transform: uppercase;
     font-weight: 200; }
-  .container-fluid input {
+  .container-fluid-login input {
     font-size: 12px; }
-  .container-fluid button {
+  .container-fluid-login button {
     width: 300px;
     height: 25px;
     background-color: #949988;
     color: white;
     font-size: 13px;
     margin-top: 5%; }
-  .container-fluid h3 {
+    @media (min-width: 820px) {
+      .container-fluid-login button {
+        width: 300px; } }
+  .container-fluid-login h3 {
     font-size: 12px;
     font-weight: 200;
     margin: 10px; }
-  .container-fluid a {
+  .container-fluid-login a {
     font-size: 12px; }
-  .container-fluid a:link {
+  .container-fluid-login a:link {
     color: black; }
-  .container-fluid a:visited {
+  .container-fluid-login a:visited {
     color: black; }
-  .container-fluid a:hover {
+  .container-fluid-login a:hover {
     color: black; }
-  .container-fluid a:active {
+  .container-fluid-login a:active {
+    color: black; }
+
+.container-fluid-register {
+  display: flex;
+  justify-content: center;
+  margin-top: 30%;
+  margin-bottom: 30%;
+  text-align: center; }
+  @media (min-width: 820px) {
+    .container-fluid-register {
+      margin-top: 10%;
+      margin-bottom: 10%; } }
+  .container-fluid-register h2 {
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 200; }
+  .container-fluid-register input {
+    font-size: 12px; }
+  .container-fluid-register button {
+    width: 300px;
+    height: 25px;
+    background-color: #949988;
+    color: white;
+    font-size: 13px;
+    margin-top: 5%; }
+    @media (min-width: 820px) {
+      .container-fluid-register button {
+        width: 300px; } }
+  .container-fluid-register h3 {
+    font-size: 12px;
+    font-weight: 200;
+    margin: 10px; }
+  .container-fluid-register a {
+    font-size: 12px; }
+  .container-fluid-register a:link {
+    color: black; }
+  .container-fluid-register a:visited {
+    color: black; }
+  .container-fluid-register a:hover {
+    color: black; }
+  .container-fluid-register a:active {
     color: black; }
 
 #product-page {
@@ -591,7 +642,7 @@ body {
     align-items: center;
     flex-direction: column;
     width: 100%;
-    margin: 30px 0 50px 0; }
+    margin: 60px 0 50px 0; }
     #product-page .category-container .category-container-header {
       display: flex;
       align-items: center;
@@ -607,7 +658,8 @@ body {
       #product-page .category-container .category-container-header p {
         width: 60%;
         height: auto;
-        font-size: 0.7rem; }
+        font-size: 0.7rem;
+        text-align: center; }
     #product-page .category-container .category-container-buttons {
       display: flex;
       justify-content: center;
@@ -650,21 +702,19 @@ body {
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis; }
-          #product-page .product-container .product .product-info .product-title .colors {
-            width: 20%;
-            text-align: right; }
+          #product-page .product-container .product .product-info .product-title .wish-list img {
+            height: 16px; }
         #product-page .product-container .product .product-info .product-price {
           width: 100%;
           display: flex;
           justify-content: space-between;
           align-items: center;
           flex-direction: row;
-          flex-wrap: wrap; }
+          flex-wrap: wrap;
+          padding: 3px 0 0 0; }
           #product-page .product-container .product .product-info .product-price .price {
             font-weight: 700;
             font-size: 80%; }
-          #product-page .product-container .product .product-info .product-price .wish-list img {
-            height: 16px; }
       @media (min-width: 820px) {
         #product-page .product-container .product {
           width: 30.33%;
@@ -938,7 +988,7 @@ body {
       font-size: 0.8rem; }
       #checkout-body .all-products-container .product-container .image-container {
         width: 30%;
-        margin: 0 0 30px 0; }
+        margin: 0 0 0 0; }
         #checkout-body .all-products-container .product-container .image-container img {
           width: 90%; }
         @media (min-width: 820px) {
@@ -985,7 +1035,9 @@ body {
         justify-content: space-between;
         text-align: right;
         text-transform: uppercase;
-        font-size: 1rem; }
+        font-size: 0.8rem; }
+        #checkout-body .all-products-container .product-container .total-item-price-container i {
+          color: black; }
   #checkout-body .order-info-container {
     width: 100%;
     display: flex;
@@ -997,6 +1049,8 @@ body {
       flex-direction: row;
       justify-content: space-between;
       padding: 10px 0; }
+    #checkout-body .order-info-container .order-value-container, #checkout-body .order-info-container .delivery-container, #checkout-body .order-info-container .promotion-container {
+      font-size: 0.7rem; }
     #checkout-body .order-info-container .total-price-container {
       border-top: 1px solid #e1e1e1;
       padding: 20px 0;
@@ -1010,7 +1064,8 @@ body {
         background-color: #7f8375;
         color: white;
         border-color: #e1e1e1;
-        text-transform: uppercase; }
+        text-transform: uppercase;
+        font-size: 0.8rem; }
 
 html {
   scroll-behavior: smooth; }

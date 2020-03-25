@@ -3,14 +3,21 @@
 <%- include ("partial/navbar") %>
 <%- include ("partial/tothetop") %>
 
-
-<h2>Register</h2>
-<form action="/register" method="POST">
-    <input type="text" name="firstName" placeholder="firstname">
-    <input type="text" name="surName" placeholder="surname">
-    <input type="email" name="email" placeholder="email">
-    <input type="password" name="password" placeholder="password">
-    <button type="submit">Sign up</button>
-</form>
+<div class="container-fluid-register">
+    <div>
+        <h2>Register</h2>
+        <form action="/register" method="POST">
+            <div class="firstinput">
+                <input type="text" name="firstName" placeholder="firstname">
+                <input type="text" name="surName" placeholder="surname">
+            </div>
+            <div class="secondinput">
+                <input type="email" name="email" placeholder="email">
+                <input type="password" name="password" placeholder="password">
+            </div>
+            <button type="submit">Sign up</button>
+        </form>
+    </div>
+</div>
 
 <%- include ("partial/footer") %>
