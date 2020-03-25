@@ -16,7 +16,6 @@ router.post("/cart/:id", verifyToken, async (req, res) => {
     }).populate("cart.productId");
 
     await user.addToCart(product, size);
-    await user.updateTotalCartPrice();
     
     res.redirect(`/products/${req.params.id}`);
 
@@ -30,7 +29,6 @@ router.get("/reduceCart/:index", verifyToken, async (req, res) => {
     const index = req.params.index
     const user = await User.findOne({_id: req.user.user._id});
     user.reduceCart(index);
-    await user.updateTotalCartPrice();
 
     res.redirect('/checkout');
 
@@ -42,7 +40,6 @@ router.get("/increaseCart/:index", verifyToken, async (req, res) => {
     const index = req.params.index
     const user = await User.findOne({_id: req.user.user._id});
     user.increaseCart(index);
-    await user.updateTotalCartPrice();
 
     res.redirect('/checkout');
 
@@ -55,24 +52,10 @@ router.get("/deleteCart/:index", verifyToken, async (req, res) => {
     const index = req.params.index
     const user = await User.findOne({_id: req.user.user._id});
     user.removeFromCart(index);
-    await user.updateTotalCartPrice();
 
     res.redirect('/checkout');
 
 });
-
-// router.get("/cart", verifyToken, async (req, res) => {
-
-//     const user = await User.findOne({
-//         _id: req.user.user._id
-//     }).populate("cart.productId");
-
-//     res.render('cart', {user});
-
-// });
-
-
-
 
 
 module.exports = router;
