@@ -548,9 +548,39 @@ body {
         background-color: #7f8375;
         border-color: white; }
 
-h2 {
-  font-weight: 300;
-  font-size: 40%; }
+.container-fluid {
+  display: flex;
+  justify-content: center;
+  margin-top: 30%;
+  margin-bottom: 30%;
+  text-align: center; }
+  .container-fluid h2 {
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 200; }
+  .container-fluid input {
+    font-size: 12px; }
+  .container-fluid button {
+    width: 300px;
+    height: 25px;
+    background-color: #949988;
+    color: white;
+    font-size: 13px;
+    margin-top: 5%; }
+  .container-fluid h3 {
+    font-size: 12px;
+    font-weight: 200;
+    margin: 10px; }
+  .container-fluid a {
+    font-size: 12px; }
+  .container-fluid a:link {
+    color: black; }
+  .container-fluid a:visited {
+    color: black; }
+  .container-fluid a:hover {
+    color: black; }
+  .container-fluid a:active {
+    color: black; }
 
 #product-page {
   font-family: 'Spartan', sans-serif;
