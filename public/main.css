@@ -224,10 +224,11 @@ body {
     position: absolute;
     opacity: 0.2;
     z-index: 2;
-    top: 0;
+    top: 12.5%;
     left: 0;
     width: 100%;
-    background-color: black; }
+    background-color: black;
+    height: 100%; }
   * .welcome {
     display: flex;
     position: relative;
