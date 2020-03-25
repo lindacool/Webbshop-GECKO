@@ -576,7 +576,7 @@ body {
     margin-top: 5%; }
     @media (min-width: 820px) {
       .container-fluid-login button {
-        width: 200px; } }
+        width: 300px; } }
   .container-fluid-login h3 {
     font-size: 12px;
     font-weight: 200;
