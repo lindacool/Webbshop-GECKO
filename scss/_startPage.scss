@@ -11,10 +11,11 @@
     position: absolute;
     opacity: 0.2;
     z-index: 2;
-    top: 0;
+    top: 12.5%;
     left: 0;
     width: 100%;
     background-color: black;
+    height: 100%;
 
   }
 
@@ -186,7 +187,22 @@
   }
 
   .gecko-store {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5%;
 
+    @include tablet {
+      flex-direction: row;
+    }  
+
+    .store-info {
+      flex-direction: column;
+      @include tablet {
+        flex-direction: row;
+        width: 50%;
+        margin-right: 2%;
+      }  
+    }
 
     .gecko-store-img {
       background-image: url("../public/assets/geckostore.png");
@@ -196,22 +212,40 @@
       background-repeat: no-repeat;
       background-size: cover;
 
+      @include tablet {
+        width: 50%;
+        margin-right: 0.5%;
+      }
+
     }
 
     .gecko-title {
       text-transform: uppercase;
-      font-weight: 200;
-      font-size: 150%;
-    }
+      font-weight: 700;
+      font-size: 200%;
+      margin-top: 10%;
+      margin-bottom: 10%;
+      text-align: center;
 
+      @include tablet {
+        text-align: left;
+        margin-left: 2%;
+      }
+      
+    }
 
     .gecko-text {
       text-align: center;
       font-weight: 100;
       font-size: 100%;
-      // margin: 30px;
-    }
+      text-align: left;
+      margin: 2%;
+      margin-bottom: 10%;
 
+      @include tablet {
+        padding-top: 5%;
+      }
+    }
   }
 
   .shop-box {
