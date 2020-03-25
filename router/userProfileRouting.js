@@ -18,6 +18,8 @@ router.get("/cart/:id", verifyToken, async (req, res) => {
     
     res.redirect("/cart");
 
+    // Lägg till så att man kan lägga till ett nytt objekt till cart om storleken inte stämmer
+
 });
 
 router.get("/deleteCart/:id", verifyToken, async (req, res) => {
