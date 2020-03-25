@@ -2,3 +2,4 @@ node_modules/
 config/
 .gitignore/
 cypress/
+.DS_Store

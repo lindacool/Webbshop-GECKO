@@ -788,15 +788,13 @@ h2 {
       @media (min-width: 820px) {
         #detail-product-page #info-div .desktop-bag {
           display: flex; } }
-      #detail-product-page #info-div .desktop-bag a {
-        width: 100%; }
-        #detail-product-page #info-div .desktop-bag a button {
-          width: 100%;
-          height: 40px;
-          margin: 20px 0 0 0;
-          border-color: #e1e1e1;
-          background-color: #7f8375;
-          color: white; }
+      #detail-product-page #info-div .desktop-bag button {
+        width: 100%;
+        height: 40px;
+        margin: 20px 0 0 0;
+        border-color: #e1e1e1;
+        background-color: #7f8375;
+        color: white; }
     #detail-product-page #info-div .product-description {
       width: 100%;
       display: flex;
@@ -862,12 +860,9 @@ h2 {
         border-color: #e1e1e1; }
       #detail-product-page .mobile-sticky .buttons-about-bag-container .choose-size {
         background-color: white; }
-      #detail-product-page .mobile-sticky .buttons-about-bag-container a {
-        width: 48%; }
-        #detail-product-page .mobile-sticky .buttons-about-bag-container a .add-to-bag {
-          width: 100%;
-          background-color: #7f8375;
-          color: white; }
+      #detail-product-page .mobile-sticky .buttons-about-bag-container .add-to-bag {
+        background-color: #7f8375;
+        color: white; }
     @media (min-width: 820px) {
       #detail-product-page .mobile-sticky {
         position: relative; } }

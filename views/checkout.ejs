@@ -1,17 +1,9 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="en">
 <%- include ("partial/header.ejs") %>
 
 <body>
 
-
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-12" id="subscribebox">
-                SUBSCRIBE FOR 10% OFF
-            </div>
-        </div>
-    </div>
     <%- include ("partial/navbar") %>
     <%- include ("partial/tothetop") %>
 
@@ -21,7 +13,7 @@
     <section id="checkout-body">
 
         <div class="header-container">
-            <span>shopping bag items (obs denna visar för tillfället wishlist)</span>
+            <span>shopping bag items</span>
         </div>
 
         <div class="all-products-container">
@@ -43,15 +35,13 @@
                     </div>
                     <div class="size-container container">
                         <span>Size</span>
-                        <span>M</span>
+                        <span><%= product.size %></span>
                     </div>
-                    <div class="color-container container">
-                        <span>Color</span>
-                        <span>Blue</span>
-                    </div>
+                    
                     <div class="quantity-container container">
-                        <span>Quantity</span>
-                        <span>+ / -</span>
+                        <span>Quantity: <%= product.amount%></span>
+                        <a href="/reduceCart/<%= user.cart.indexOf(product) %>">-</a> /
+                        <a href="">+</a> 
                     </div>
                 </div>
 
