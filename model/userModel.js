@@ -73,7 +73,7 @@ userSchema.methods.addToCart = function(product, size){
     
     return this.save();
 
-}
+};
 
 // Function that removes product to cart
 userSchema.methods.removeFromCart = function(index){
@@ -88,24 +88,31 @@ userSchema.methods.removeFromCart = function(index){
     // Overwrites the old cart with the newly created list which does not contain the removed product
     // this.cart = restOfProducts;
 
-this.cart.splice(index, 1);
+    this.cart.splice(index, 1);
     
 
 
     return this.save();
 };
 
+userSchema.methods.increaseCart = function(index){
+
+
+    this.cart[index].amount ++;
+    
+    return this.save();
+
+}
+
 userSchema.methods.reduceCart = function(index){
 
 
-console.log(index+'   '+ this.cart[index].amount)  
+    if(this.cart[index].amount >1 ){
 
-if(this.cart[index].amount >1 ){
-
-this.cart[index].amount --;
-} else {
-    this.cart.splice(index, 1);
-}
+    this.cart[index].amount --;
+    } else {
+        this.cart.splice(index, 1);
+    }
 
 
     return this.save();

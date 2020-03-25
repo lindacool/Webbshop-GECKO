@@ -17,7 +17,7 @@ router.post("/cart/:id", verifyToken, async (req, res) => {
 
     await user.addToCart(product, size);
     
-    res.redirect("/cart");
+    res.redirect(`/products/${req.params.id}`);
 
     // Lägg till så att man kan lägga till ett nytt objekt till cart om storleken inte stämmer
 
@@ -30,7 +30,18 @@ router.get("/reduceCart/:index", verifyToken, async (req, res) => {
     const user = await User.findOne({_id: req.user.user._id});
     user.reduceCart(index);
 
-    res.redirect('/cart');
+    res.redirect('/checkout');
+
+});
+
+router.get("/increaseCart/:index", verifyToken, async (req, res) => {
+
+
+    const index = req.params.index
+    const user = await User.findOne({_id: req.user.user._id});
+    user.increaseCart(index);
+
+    res.redirect('/checkout');
 
 });
 
@@ -42,19 +53,19 @@ router.get("/deleteCart/:index", verifyToken, async (req, res) => {
     const user = await User.findOne({_id: req.user.user._id});
     user.removeFromCart(index);
 
-    res.redirect('/cart');
+    res.redirect('/checkout');
 
 });
 
-router.get("/cart", verifyToken, async (req, res) => {
+// router.get("/cart", verifyToken, async (req, res) => {
 
-    const user = await User.findOne({
-        _id: req.user.user._id
-    }).populate("cart.productId");
+//     const user = await User.findOne({
+//         _id: req.user.user._id
+//     }).populate("cart.productId");
 
-    res.render('cart', {user});
+//     res.render('cart', {user});
 
-});
+// });
 
 
 
