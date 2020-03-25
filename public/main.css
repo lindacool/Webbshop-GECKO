@@ -228,27 +228,43 @@ body {
       top: 0;
       left: 0;
       width: 100%;
-      height: 100%;
+      height: 100vh;
       background-color: black; }
-    * .start-container .welcome-img {
-      display: flex;
-      position: absolute;
-      align-items: center;
-      justify-content: center;
-      background-image: url("../public/assets/men_hoodie_white.jpeg");
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 1; }
-    * .start-container .gecko-info {
+    * .start-container .welcome-container {
       display: flex;
       position: relative;
       align-items: center;
-      transform: translateY(180%);
+      justify-content: center;
+      width: 100%;
+      height: 100vh; }
+      * .start-container .welcome-container .welcome-img-one {
+        background-image: url("../public/assets/men_hoodie_white.jpeg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        z-index: 1; }
+        @media (min-width: 820px) {
+          * .start-container .welcome-container .welcome-img-one {
+            width: 50%; } }
+      * .start-container .welcome-container .welcome-img-two {
+        background-image: url("../public/assets/women_hoodie_pink.jpeg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 50%;
+        height: 100%;
+        z-index: 1;
+        display: none; }
+        @media (min-width: 820px) {
+          * .start-container .welcome-container .welcome-img-two {
+            display: block; } }
+    * .start-container .gecko-info {
+      display: flex;
+      position: absolute;
+      align-items: center;
+      transform: translateY(30%);
       flex-direction: column;
       z-index: 1000; }
       * .start-container .gecko-info h1 {
