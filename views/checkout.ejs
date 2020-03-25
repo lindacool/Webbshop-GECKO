@@ -34,12 +34,13 @@
                         <span><%= product.productId.price %> SEK</span>
                     </div>
                     <div class="size-container container">
-                        <span>Size</span>
+                        <span>Size:</span>
                         <span><%= product.size %></span>
                     </div>
                     
                     <div class="quantity-container container">
-                        <span>Quantity: <%= product.amount%></span>
+                        <span>Quantity:</span>
+                        <span><%= product.amount%></span>
                         <a href="/reduceCart/<%= user.cart.indexOf(product) %>">-</a> /
                         <a href="/increaseCart/<%= user.cart.indexOf(product) %>">+</a> 
                     </div>
@@ -47,7 +48,7 @@
 
                 <div class="total-item-price-container">
                     <span>X</span>
-                    <span>299 SEK</span>
+                    <span><299 SEK></span>
                 </div>
             </div>
 
