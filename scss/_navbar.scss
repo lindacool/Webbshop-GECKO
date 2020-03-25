@@ -10,6 +10,22 @@
 body {
     font-family: 'Spartan', sans-serif;
     padding-bottom: 0;
+    
+
+    .container-fluid-first {
+        
+        #subscribebox {
+          background-color: #7f8375;
+          color: white;
+          text-align: center;
+          padding: 12px;
+          font-weight: 100;
+          font-size: 70%;
+          text-transform: uppercase;
+          
+        }
+    
+      }
 
     .nav-container {
         font-family: 'Spartan', sans-serif;
@@ -24,9 +40,7 @@ body {
         background-color: white;
         transition: 1s;
         margin-top: 60px;
-
-
-
+        
         .about,
         .sign-in,
         .men-women {
@@ -104,6 +118,7 @@ body {
         justify-content: space-between;
         z-index: 1000;
         margin: 10px 0 10px;
+        
 
         .burgerandsearch {
             display: flex;

@@ -89,6 +89,14 @@ body {
 body {
   font-family: 'Spartan', sans-serif;
   padding-bottom: 0; }
+  body .container-fluid-first #subscribebox {
+    background-color: #7f8375;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    font-weight: 100;
+    font-size: 70%;
+    text-transform: uppercase; }
   body .nav-container {
     font-family: 'Spartan', sans-serif;
     visibility: hidden;
@@ -210,24 +218,17 @@ body {
 
 * {
   font-family: 'Spartan', sans-serif; }
-  * .container-fluid-first #subscribebox {
-    background-color: #7f8375;
-    color: white;
-    text-align: center;
-    padding: 12px;
-    font-weight: 100;
-    font-size: 70%;
-    text-transform: uppercase; }
   * .container-fluid {
     max-width: 1250px; }
   * .opacity {
     position: absolute;
     opacity: 0.2;
     z-index: 2;
-    top: 0;
+    top: 12.5%;
     left: 0;
     width: 100%;
-    background-color: black; }
+    background-color: black;
+    height: 100%; }
   * .welcome {
     display: flex;
     position: relative;
@@ -335,21 +336,52 @@ body {
         font-size: 70%;
         font-weight: 600;
         margin: 12px 0px 12px 0px; }
-  * .gecko-store .gecko-store-img {
-    background-image: url("../public/assets/geckostore.png");
-    width: 100%;
-    height: 500px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover; }
-  * .gecko-store .gecko-title {
-    text-transform: uppercase;
-    font-weight: 200;
-    font-size: 150%; }
-  * .gecko-store .gecko-text {
-    text-align: center;
-    font-weight: 100;
-    font-size: 100%; }
+  * .gecko-store {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5%; }
+    @media (min-width: 820px) {
+      * .gecko-store {
+        flex-direction: row; } }
+    * .gecko-store .store-info {
+      flex-direction: column; }
+      @media (min-width: 820px) {
+        * .gecko-store .store-info {
+          flex-direction: row;
+          width: 50%;
+          margin-right: 2%; } }
+    * .gecko-store .gecko-store-img {
+      background-image: url("../public/assets/geckostore.png");
+      width: 100%;
+      height: 500px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+      @media (min-width: 820px) {
+        * .gecko-store .gecko-store-img {
+          width: 50%;
+          margin-right: 0.5%; } }
+    * .gecko-store .gecko-title {
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 200%;
+      margin-top: 10%;
+      margin-bottom: 10%;
+      text-align: center; }
+      @media (min-width: 820px) {
+        * .gecko-store .gecko-title {
+          text-align: left;
+          margin-left: 2%; } }
+    * .gecko-store .gecko-text {
+      text-align: center;
+      font-weight: 100;
+      font-size: 100%;
+      text-align: left;
+      margin: 2%;
+      margin-bottom: 10%; }
+      @media (min-width: 820px) {
+        * .gecko-store .gecko-text {
+          padding-top: 5%; } }
   * .shop-box {
     display: flex;
     flex-direction: column; }
@@ -914,16 +946,17 @@ body {
         border-color: #e1e1e1;
         text-transform: uppercase; }
 
+html {
+  scroll-behavior: smooth; }
+
 #back-to-top-btn {
   position: fixed;
   border: none;
   border-radius: 50%;
   background-color: #949988;
-  bottom: 20px;
   right: 20px;
   z-index: 1000;
   cursor: pointer;
-  scroll-behavior: smooth;
   bottom: 3vh;
   width: 30px;
   height: 30px;
