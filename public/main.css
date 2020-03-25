@@ -857,7 +857,6 @@ body {
       #detail-product-page .mobile-sticky .buttons-about-bag-container .choose-size {
         background-color: white; }
       #detail-product-page .mobile-sticky .buttons-about-bag-container .add-to-bag {
-        width: 100%;
         background-color: #7f8375;
         color: white; }
     @media (min-width: 820px) {
