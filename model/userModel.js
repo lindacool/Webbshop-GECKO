@@ -43,6 +43,10 @@ const userSchema = new Schema({
             amount: {
                 type: Number,
                 default: 1
+            },
+            size: {
+                type: String,
+                required: true
             }
         }],
     }
