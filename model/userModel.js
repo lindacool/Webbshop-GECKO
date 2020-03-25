@@ -43,20 +43,24 @@ const userSchema = new Schema({
             amount: {
                 type: Number,
                 default: 1
+            },
+            size: {
+                type: String,
+                required: true
             }
         }],
     }
 );
 
 // Function that adds product to cart
-userSchema.methods.addToCart = function(product){
+userSchema.methods.addToCart = function(product, size){
 
     // Will track if product exists in cart
     let exists = false;
 
     // Loop through the cart and sets exists = true if the clicked product already exists
     for (let i = 0; i < this.cart.length; i++) {
-        if (this.cart[i].productId._id.toString() == product._id.toString()) {
+        if (this.cart[i].productId._id.toString() == product._id.toString() && this.cart[i].size == size) {
             exists = true;
             this.cart[i].amount ++;
         }
@@ -64,7 +68,7 @@ userSchema.methods.addToCart = function(product){
 
     // Push the clicked product to the user cart if the product does not already exist
     if (!exists) {
-        this.cart.push({productId: product._id});
+        this.cart.push({productId: product._id, size: size});
     }
     
     return this.save();
@@ -72,17 +76,21 @@ userSchema.methods.addToCart = function(product){
 }
 
 // Function that removes product to cart
-userSchema.methods.removeFromCart = function(productId){
+userSchema.methods.removeFromCart = function(index){
 
     // Creates a new list which contains all products except the removed one
     
 
-    const restOfProducts = this.cart.filter( (product)=> {
-         return product.productId.toString() != productId.toString()
-    })
+    // const restOfProducts = this.cart.filter( (product)=> {
+    //      return product.productId.toString() != productId.toString()
+    // })
 
     // Overwrites the old cart with the newly created list which does not contain the removed product
-    this.cart = restOfProducts;
+    // this.cart = restOfProducts;
+
+this.cart.splice(index, 1);
+    
+
 
     return this.save();
 };

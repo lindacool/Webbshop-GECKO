@@ -13,7 +13,15 @@
     <li>
         <%= product.productId.description %>
     </li>
-    <a href="/deleteCart/<%= product.productId._id %>">Delete</a>
+    <li>
+            <%= product.size %>
+    </li>
+    <li>
+            <%= product.amount %>
+
+    </li>
+    <span><%=user.cart.indexOf(product)%></span>
+    <a href="/deleteCart/<%= user.cart.indexOf(product) %>">Delete</a>
     <br>
     <hr>
     <br>
