@@ -7,18 +7,6 @@
   }
 
 
-  .opacity {
-    position: absolute;
-    opacity: 0.2;
-    z-index: 2;
-    top: 12.5%;
-    left: 0;
-    width: 100%;
-    background-color: black;
-    height: 100%;
-
-  }
-
   .welcome {
     display: flex;
     position: relative;
@@ -28,7 +16,7 @@
     height: 100vh;
 
     .welcome-img-one {
-      background-image: url("../public/assets/men_hoodie_white.jpeg");
+      background-image: url("../public/assets/men_hoodie_white_opacity.jpg");
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
@@ -50,7 +38,7 @@
     }
 
     .welcome-img-two {
-      background-image: url("../public/assets/women_hoodie_pink.jpeg");
+      background-image: url("../public/assets/women_hoodie_pink_opacity.jpg");
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
@@ -160,10 +148,8 @@
         @include tablet {
           width: 20vw;
         }
-    
-        @include desktop {
-          
-        }
+
+        @include desktop {}
 
 
         img {
@@ -193,15 +179,16 @@
 
     @include tablet {
       flex-direction: row;
-    }  
+    }
 
     .store-info {
       flex-direction: column;
+
       @include tablet {
         flex-direction: row;
         width: 50%;
         margin-right: 2%;
-      }  
+      }
     }
 
     .gecko-store-img {
@@ -231,7 +218,7 @@
         text-align: left;
         margin-left: 2%;
       }
-      
+
     }
 
     .gecko-text {
@@ -260,92 +247,92 @@
       background-position: top;
     }
 
-  .category-img {
-    display: flex;
-    width: 100;
-    align-items: center;
-    flex-direction: column;
-    position: relative;
-    margin: 10px;
-
-    .women {
-      background-image: url('../public/assets/women_crewneck_black.jpeg');
+    .category-img {
       display: flex;
-      width: 100%;
-      height: 800px;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      margin: 20px 0px 20px 0px;
-      z-index: 1;
+      width: 100;
+      align-items: center;
+      flex-direction: column;
+      position: relative;
+      margin: 10px;
 
-      .shop-women {
-        text-align: center;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 200px;
-        margin: 10px;
-        padding: 7px;
-        background-color: white;
-        border: none;
-        text-transform: uppercase;
-        font-weight: 400;
-        font-size: 60%;
+      .women {
+        background-image: url('../public/assets/women_crewneck_black.jpeg');
+        display: flex;
+        width: 100%;
+        height: 800px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 20px 0px 20px 0px;
+        z-index: 1;
+
+        .shop-women {
+          text-align: center;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 200px;
+          margin: 10px;
+          padding: 7px;
+          background-color: white;
+          border: none;
+          text-transform: uppercase;
+          font-weight: 400;
+          font-size: 60%;
+
+        }
+      }
+
+      @include tablet {
+        width: 50%;
+        flex-direction: row;
 
       }
-    }
 
-    @include tablet {
-      width: 50%;
-      flex-direction: row;
-      
-    }
+      @include desktop {
+        background-position: top;
 
-    @include desktop {
-      background-position: top;
-
-    }
-
-    .men {
-      background-image: url('../public/assets/men_tshirt_green.jpeg');
-      display: flex;
-      width: 100%;
-      height: 800px;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      // position: relative;
-
-
-      .shop-men {
-        text-align: center;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 200px;
-        margin: 10px;
-        padding: 7px;
-        background-color: white;
-        border: none;
-        text-transform: uppercase;
-        font-weight: 400;
-        font-size: 60%;
       }
-      
-    }
 
-    @include tablet {
-      width: 50%;
-      flex-direction: row;
+      .men {
+        background-image: url('../public/assets/men_tshirt_green.jpeg');
+        display: flex;
+        width: 100%;
+        height: 800px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        // position: relative;
 
-    }
 
-    @include desktop {
-      background-position: top;
+        .shop-men {
+          text-align: center;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 200px;
+          margin: 10px;
+          padding: 7px;
+          background-color: white;
+          border: none;
+          text-transform: uppercase;
+          font-weight: 400;
+          font-size: 60%;
+        }
+
+      }
+
+      @include tablet {
+        width: 50%;
+        flex-direction: row;
+
+      }
+
+      @include desktop {
+        background-position: top;
+      }
     }
   }
-}
 }
