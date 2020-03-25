@@ -151,28 +151,31 @@
             }
         }
 
-        .size-container {
-            display: flex;
-            justify-content: center;
-            flex-direction: row;
-            flex-wrap: wrap;
-            width: 100%;
-            margin: 40px 0;
+        
+            
+            .addToBagForm {
+
+                .size-container {
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    width: 100%;
+                    margin: 40px 0;
+            
+
+                select {}
 
             @include tablet {
                 justify-content: flex-start;
             }
 
-            .size-header {
-                width: 100%;
-                text-align: center;
-                margin: 15px 0;
-                font-size: 0.8rem;
+            
 
                 @include tablet {
                     text-align: left;
                 }
-            }
+            
 
             button {
                 width: 40px;

@@ -791,33 +791,36 @@ body {
         border-color: #e1e1e1; }
         #detail-product-page #info-div .color-container .color-picker span {
           font-size: 0.6rem; }
-    #detail-product-page #info-div .size-container {
+    #detail-product-page #info-div .addToBagForm .size-container {
       display: flex;
       justify-content: center;
       flex-direction: row;
       flex-wrap: wrap;
       width: 100%;
       margin: 40px 0; }
+      #detail-product-page #info-div .addToBagForm .size-container select {
+        border-radius: 2px;
+        border: black; }
+    @media (min-width: 820px) {
+      #detail-product-page #info-div .addToBagForm {
+        justify-content: flex-start; } }
+    #detail-product-page #info-div .addToBagForm .size-header {
+      width: 100%;
+      text-align: center;
+      margin: 15px 0;
+      font-size: 0.8rem; }
       @media (min-width: 820px) {
-        #detail-product-page #info-div .size-container {
-          justify-content: flex-start; } }
-      #detail-product-page #info-div .size-container .size-header {
-        width: 100%;
-        text-align: center;
-        margin: 15px 0;
-        font-size: 0.8rem; }
-        @media (min-width: 820px) {
-          #detail-product-page #info-div .size-container .size-header {
-            text-align: left; } }
-      #detail-product-page #info-div .size-container button {
-        width: 40px;
-        height: 40px;
-        margin: 0 5px;
-        background-color: white;
-        border-color: #e1e1e1; }
-        @media (min-width: 820px) {
-          #detail-product-page #info-div .size-container button {
-            margin: 0 10px 0 0; } }
+        #detail-product-page #info-div .addToBagForm .size-header {
+          text-align: left; } }
+    #detail-product-page #info-div .addToBagForm button {
+      width: 40px;
+      height: 40px;
+      margin: 0 5px;
+      background-color: white;
+      border-color: #e1e1e1; }
+      @media (min-width: 820px) {
+        #detail-product-page #info-div .addToBagForm button {
+          margin: 0 10px 0 0; } }
     #detail-product-page #info-div .desktop-bag {
       display: none;
       justify-content: space-between;

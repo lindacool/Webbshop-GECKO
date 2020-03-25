@@ -12,6 +12,6 @@ $(document).ready(function () {
 
     })
 
-    
+    console.log($('hej'))
 
 });
