@@ -210,7 +210,7 @@ body {
 
 * {
   font-family: 'Spartan', sans-serif; }
-  * .container-fluid #subscribebox {
+  * .container-fluid-first #subscribebox {
     background-color: #7f8375;
     color: white;
     text-align: center;
@@ -218,6 +218,8 @@ body {
     font-weight: 100;
     font-size: 70%;
     text-transform: uppercase; }
+  * .container-fluid {
+    max-width: 1250px; }
   * .opacity {
     position: absolute;
     opacity: 0.2;
@@ -320,6 +322,9 @@ body {
       * .scrolling-wrapper .scroll-items .product-image {
         width: 45vw;
         margin-right: 20px; }
+        @media (min-width: 820px) {
+          * .scrolling-wrapper .scroll-items .product-image {
+            width: 20vw; } }
         * .scrolling-wrapper .scroll-items .product-image img {
           width: 100%; }
       * .scrolling-wrapper .scroll-items .title {
@@ -345,71 +350,82 @@ body {
     text-align: center;
     font-weight: 100;
     font-size: 100%; }
-  * .category-img {
+  * .shop-box {
     display: flex;
-    align-items: center;
     flex-direction: column; }
-    * .category-img .women {
-      background-image: url("../public/assets/women_crewneck_black.jpeg");
-      width: 100%;
-      height: 800px;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      margin: 20px 0px 20px 0px;
+    @media (min-width: 820px) {
+      * .shop-box {
+        flex-direction: row; } }
+    @media (min-width: 1200px) {
+      * .shop-box {
+        background-position: top; } }
+    * .shop-box .category-img {
+      display: flex;
+      width: 100;
+      align-items: center;
+      flex-direction: column;
       position: relative;
-      z-index: 1; }
-      * .category-img .women .shop-women {
-        text-align: center;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 200px;
-        margin: 10px;
-        padding: 7px;
-        background-color: white;
-        border: none;
-        text-transform: uppercase;
-        font-weight: 400;
-        font-size: 60%; }
-    @media (min-width: 820px) {
-      * .category-img {
-        width: 50%;
-        flex-direction: row;
-        display: block;
-        flex-wrap: nowrap; } }
-    @media (min-width: 1200px) {
-      * .category-img {
-        background-position: top; } }
-    * .category-img .men {
-      background-image: url("../public/assets/men_tshirt_green.jpeg");
-      width: 100%;
-      height: 800px;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      position: relative; }
-      * .category-img .men .shop-men {
-        text-align: center;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 200px;
-        margin: 10px;
-        padding: 7px;
-        background-color: white;
-        border: none;
-        text-transform: uppercase;
-        font-weight: 400;
-        font-size: 60%; }
-    @media (min-width: 820px) {
-      * .category-img {
-        width: 50%; } }
-    @media (min-width: 1200px) {
-      * .category-img {
-        background-position: top; } }
+      margin: 10px; }
+      * .shop-box .category-img .women {
+        background-image: url("../public/assets/women_crewneck_black.jpeg");
+        display: flex;
+        width: 100%;
+        height: 800px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 20px 0px 20px 0px;
+        z-index: 1; }
+        * .shop-box .category-img .women .shop-women {
+          text-align: center;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 200px;
+          margin: 10px;
+          padding: 7px;
+          background-color: white;
+          border: none;
+          text-transform: uppercase;
+          font-weight: 400;
+          font-size: 60%; }
+      @media (min-width: 820px) {
+        * .shop-box .category-img {
+          width: 50%;
+          flex-direction: row; } }
+      @media (min-width: 1200px) {
+        * .shop-box .category-img {
+          background-position: top; } }
+      * .shop-box .category-img .men {
+        background-image: url("../public/assets/men_tshirt_green.jpeg");
+        display: flex;
+        width: 100%;
+        height: 800px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover; }
+        * .shop-box .category-img .men .shop-men {
+          text-align: center;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 200px;
+          margin: 10px;
+          padding: 7px;
+          background-color: white;
+          border: none;
+          text-transform: uppercase;
+          font-weight: 400;
+          font-size: 60%; }
+      @media (min-width: 820px) {
+        * .shop-box .category-img {
+          width: 50%;
+          flex-direction: row; } }
+      @media (min-width: 1200px) {
+        * .shop-box .category-img {
+          background-position: top; } }
 
 .create-new-product-form {
   display: flex;
