@@ -218,85 +218,87 @@ body {
     font-weight: 100;
     font-size: 70%;
     text-transform: uppercase; }
-  * .start-container {
+  * .opacity {
+    position: absolute;
+    opacity: 0.2;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: black; }
+  * .welcome {
+    display: flex;
     position: relative;
-    height: 712px; }
-    * .start-container .opacity {
-      position: absolute;
-      opacity: 0.2;
-      z-index: 2;
-      top: 0;
-      left: 0;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh; }
+    * .welcome .welcome-img-one {
+      background-image: url("../public/assets/men_hoodie_white.jpeg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
       width: 100%;
-      height: 100vh;
-      background-color: black; }
-    * .start-container .welcome-container {
-      display: flex;
-      position: relative;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      height: 100vh; }
-      * .start-container .welcome-container .welcome-img-one {
-        background-image: url("../public/assets/men_hoodie_white.jpeg");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        width: 100%;
-        height: 100%;
-        z-index: 1; }
-        @media (min-width: 820px) {
-          * .start-container .welcome-container .welcome-img-one {
-            width: 50%; } }
-      * .start-container .welcome-container .welcome-img-two {
-        background-image: url("../public/assets/women_hoodie_pink.jpeg");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        width: 50%;
-        height: 100%;
-        z-index: 1;
-        display: none; }
-        @media (min-width: 820px) {
-          * .start-container .welcome-container .welcome-img-two {
-            display: block; } }
-    * .start-container .gecko-info {
-      display: flex;
-      position: absolute;
-      align-items: center;
-      transform: translateY(30%);
-      flex-direction: column;
-      z-index: 1000; }
-      * .start-container .gecko-info h1 {
-        color: white;
-        font-weight: 700;
-        font-size: 200%;
-        text-transform: uppercase;
-        letter-spacing: 4px; }
-      * .start-container .gecko-info span {
-        font-size: 75%;
-        font-weight: 100;
-        color: white;
-        letter-spacing: 2px;
-        margin-bottom: 10px; }
-      * .start-container .gecko-info .shop-women {
-        width: 200px;
-        margin: 10px;
-        padding: 7px;
-        background-color: white;
-        border: none;
-        text-transform: uppercase;
-        font-weight: 400;
-        font-size: 60%; }
-      * .start-container .gecko-info .shop-men {
-        width: 200px;
-        margin: 10px;
-        padding: 7px;
-        background-color: white;
-        border: none;
-        text-transform: uppercase;
-        font-weight: 400;
-        font-size: 60%; }
+      height: 100%;
+      z-index: 1; }
+      @media (min-width: 820px) {
+        * .welcome .welcome-img-one {
+          width: 50%; } }
+      @media (min-width: 1200px) {
+        * .welcome .welcome-img-one {
+          background-position: top; } }
+    * .welcome .welcome-img-two {
+      background-image: url("../public/assets/women_hoodie_pink.jpeg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 50%;
+      height: 100%;
+      z-index: 1;
+      display: none; }
+      @media (min-width: 820px) {
+        * .welcome .welcome-img-two {
+          display: block; } }
+      @media (min-width: 1200px) {
+        * .welcome .welcome-img-two {
+          background-position: top; } }
+  * .gecko-info {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    transform: translateY(30%);
+    flex-direction: column;
+    z-index: 1000; }
+    * .gecko-info h1 {
+      color: white;
+      font-weight: 700;
+      font-size: 200%;
+      text-transform: uppercase;
+      letter-spacing: 4px; }
+    * .gecko-info span {
+      font-size: 75%;
+      font-weight: 100;
+      color: white;
+      letter-spacing: 2px;
+      margin-bottom: 10px; }
+    * .gecko-info .shop-women {
+      width: 200px;
+      margin: 10px;
+      padding: 7px;
+      background-color: white;
+      border: none;
+      text-transform: uppercase;
+      font-weight: 400;
+      font-size: 60%; }
+    * .gecko-info .shop-men {
+      width: 200px;
+      margin: 10px;
+      padding: 7px;
+      background-color: white;
+      border: none;
+      text-transform: uppercase;
+      font-weight: 400;
+      font-size: 60%; }
   * .new-arrival p {
     text-transform: uppercase;
     font-weight: 300;
@@ -371,6 +373,15 @@ body {
         text-transform: uppercase;
         font-weight: 400;
         font-size: 60%; }
+    @media (min-width: 820px) {
+      * .category-img {
+        width: 50%;
+        flex-direction: row;
+        display: block;
+        flex-wrap: nowrap; } }
+    @media (min-width: 1200px) {
+      * .category-img {
+        background-position: top; } }
     * .category-img .men {
       background-image: url("../public/assets/men_tshirt_green.jpeg");
       width: 100%;
@@ -379,20 +390,26 @@ body {
       background-repeat: no-repeat;
       background-size: cover;
       position: relative; }
-    * .category-img .shop-men {
-      text-align: center;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 200px;
-      margin: 10px;
-      padding: 7px;
-      background-color: white;
-      border: none;
-      text-transform: uppercase;
-      font-weight: 400;
-      font-size: 60%; }
+      * .category-img .men .shop-men {
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 200px;
+        margin: 10px;
+        padding: 7px;
+        background-color: white;
+        border: none;
+        text-transform: uppercase;
+        font-weight: 400;
+        font-size: 60%; }
+    @media (min-width: 820px) {
+      * .category-img {
+        width: 50%; } }
+    @media (min-width: 1200px) {
+      * .category-img {
+        background-position: top; } }
 
 .create-new-product-form {
   display: flex;
