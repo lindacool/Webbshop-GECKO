@@ -41,7 +41,7 @@
                     <div class="quantity-container container">
                         <span>Quantity: <%= product.amount%></span>
                         <a href="/reduceCart/<%= user.cart.indexOf(product) %>">-</a> /
-                        <a href="">+</a> 
+                        <a href="/increaseCart/<%= user.cart.indexOf(product) %>">+</a> 
                     </div>
                 </div>
 
