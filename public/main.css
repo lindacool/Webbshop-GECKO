@@ -90,7 +90,7 @@ body {
   background-color: white;
   opacity: 60%;
   z-index: 998;
-  position: fixed;
+  position: relative;
   width: 100%;
   height: 100%; }
 
@@ -228,15 +228,6 @@ body {
   font-family: 'Spartan', sans-serif; }
   * .container-fluid {
     max-width: 1250px; }
-  * .opacity {
-    position: absolute;
-    opacity: 0.2;
-    z-index: 2;
-    top: 12.5%;
-    left: 0;
-    width: 100%;
-    background-color: black;
-    height: 100%; }
   * .welcome {
     display: flex;
     position: relative;
@@ -245,7 +236,7 @@ body {
     width: 100%;
     height: 100vh; }
     * .welcome .welcome-img-one {
-      background-image: url("../public/assets/men_hoodie_white.jpeg");
+      background-image: url("../public/assets/men_hoodie_white_opacity.jpg");
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
@@ -259,7 +250,7 @@ body {
         * .welcome .welcome-img-one {
           background-position: top; } }
     * .welcome .welcome-img-two {
-      background-image: url("../public/assets/women_hoodie_pink.jpeg");
+      background-image: url("../public/assets/women_hoodie_pink_opacity.jpg");
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
@@ -995,7 +986,7 @@ body {
       font-size: 0.8rem; }
       #checkout-body .all-products-container .product-container .image-container {
         width: 30%;
-        margin: 0 0 30px 0; }
+        margin: 0 0 0 0; }
         #checkout-body .all-products-container .product-container .image-container img {
           width: 90%; }
         @media (min-width: 820px) {
@@ -1042,7 +1033,9 @@ body {
         justify-content: space-between;
         text-align: right;
         text-transform: uppercase;
-        font-size: 1rem; }
+        font-size: 0.8rem; }
+        #checkout-body .all-products-container .product-container .total-item-price-container i {
+          color: black; }
   #checkout-body .order-info-container {
     width: 100%;
     display: flex;
@@ -1054,6 +1047,8 @@ body {
       flex-direction: row;
       justify-content: space-between;
       padding: 10px 0; }
+    #checkout-body .order-info-container .order-value-container, #checkout-body .order-info-container .delivery-container, #checkout-body .order-info-container .promotion-container {
+      font-size: 0.8rem; }
     #checkout-body .order-info-container .total-price-container {
       border-top: 1px solid #e1e1e1;
       padding: 20px 0;
@@ -1067,7 +1062,8 @@ body {
         background-color: #7f8375;
         color: white;
         border-color: #e1e1e1;
-        text-transform: uppercase; }
+        text-transform: uppercase;
+        font-size: 0.8rem; }
 
 html {
   scroll-behavior: smooth; }
