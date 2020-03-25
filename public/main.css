@@ -225,16 +225,15 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
     background-color: black; }
-  * .welcome-container {
+  * .welcome {
     display: flex;
     position: relative;
     align-items: center;
     justify-content: center;
     width: 100%;
     height: 100vh; }
-    * .welcome-container .welcome-img-one {
+    * .welcome .welcome-img-one {
       background-image: url("../public/assets/men_hoodie_white.jpeg");
       background-position: center;
       background-repeat: no-repeat;
@@ -243,9 +242,12 @@ body {
       height: 100%;
       z-index: 1; }
       @media (min-width: 820px) {
-        * .welcome-container .welcome-img-one {
+        * .welcome .welcome-img-one {
           width: 50%; } }
-    * .welcome-container .welcome-img-two {
+      @media (min-width: 1200px) {
+        * .welcome .welcome-img-one {
+          background-position: top; } }
+    * .welcome .welcome-img-two {
       background-image: url("../public/assets/women_hoodie_pink.jpeg");
       background-position: center;
       background-repeat: no-repeat;
@@ -255,8 +257,11 @@ body {
       z-index: 1;
       display: none; }
       @media (min-width: 820px) {
-        * .welcome-container .welcome-img-two {
+        * .welcome .welcome-img-two {
           display: block; } }
+      @media (min-width: 1200px) {
+        * .welcome .welcome-img-two {
+          background-position: top; } }
   * .gecko-info {
     display: flex;
     position: absolute;
@@ -368,6 +373,15 @@ body {
         text-transform: uppercase;
         font-weight: 400;
         font-size: 60%; }
+    @media (min-width: 820px) {
+      * .category-img {
+        width: 50%;
+        flex-direction: row;
+        display: block;
+        flex-wrap: nowrap; } }
+    @media (min-width: 1200px) {
+      * .category-img {
+        background-position: top; } }
     * .category-img .men {
       background-image: url("../public/assets/men_tshirt_green.jpeg");
       width: 100%;
@@ -376,20 +390,26 @@ body {
       background-repeat: no-repeat;
       background-size: cover;
       position: relative; }
-    * .category-img .shop-men {
-      text-align: center;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 200px;
-      margin: 10px;
-      padding: 7px;
-      background-color: white;
-      border: none;
-      text-transform: uppercase;
-      font-weight: 400;
-      font-size: 60%; }
+      * .category-img .men .shop-men {
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 200px;
+        margin: 10px;
+        padding: 7px;
+        background-color: white;
+        border: none;
+        text-transform: uppercase;
+        font-weight: 400;
+        font-size: 60%; }
+    @media (min-width: 820px) {
+      * .category-img {
+        width: 50%; } }
+    @media (min-width: 1200px) {
+      * .category-img {
+        background-position: top; } }
 
 .create-new-product-form {
   display: flex;
