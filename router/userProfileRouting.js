@@ -34,6 +34,17 @@ router.get("/reduceCart/:index", verifyToken, async (req, res) => {
 
 });
 
+router.get("/increaseCart/:index", verifyToken, async (req, res) => {
+
+
+    const index = req.params.index
+    const user = await User.findOne({_id: req.user.user._id});
+    user.increaseCart(index);
+
+    res.redirect('/checkout');
+
+});
+
 
 router.get("/deleteCart/:index", verifyToken, async (req, res) => {
 
