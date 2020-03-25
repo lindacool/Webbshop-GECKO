@@ -470,13 +470,20 @@ body {
     width: 100%; }
     .create-new-product-form .create-new-product-form-header h2 {
       text-align: center;
-      margin: 0 0 20px 0; }
+      margin: 0 0 20px 0;
+      font-size: 130%;
+      margin-top: 5%; }
+  .create-new-product-form .createproduct {
+    width: 50%; }
+    .create-new-product-form .createproduct .form-group {
+      font-size: 70%; }
   .create-new-product-form form {
     width: 60%;
     margin: 0 0 40px 0; }
     .create-new-product-form form .form-check {
       width: 100%;
-      padding: 0; }
+      padding: 0;
+      font-size: 12px; }
       .create-new-product-form form .form-check input {
         margin-left: 10px; }
       .create-new-product-form form .form-check input:checked {
@@ -490,7 +497,9 @@ body {
       .create-new-product-form form .form-button-container button {
         margin: 10px 0;
         background-color: #7f8375;
-        border-color: white; }
+        border-color: white;
+        font-size: 13px;
+        font-weight: 200; }
 
 .all-products {
   display: flex;
@@ -503,7 +512,8 @@ body {
     width: 100%; }
     .all-products .all-products-header h2 {
       text-align: center;
-      margin: 20px 0; }
+      margin: 20px 0;
+      font-size: 110%; }
   .all-products .hide-product {
     height: 300px;
     overflow: hidden; }
@@ -537,11 +547,64 @@ body {
       text-align: center; }
       .all-products .product .edit-product-button-container button {
         background-color: #7f8375;
-        border-color: white; }
+        border-color: white;
+        font-size: 13px;
+        font-weight: 200; }
 
-h2 {
-  font-weight: 300;
-  font-size: 40%; }
+.container-fluid {
+  display: flex;
+  justify-content: center;
+  margin-top: 30%;
+  margin-bottom: 30%;
+  text-align: center; }
+  @media (min-width: 820px) {
+    .container-fluid {
+      margin-top: 10%;
+      margin-bottom: 10%; } }
+  .container-fluid h2 {
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 200; }
+  .container-fluid input {
+    font-size: 12px; }
+  .container-fluid button {
+    width: 300px;
+    height: 25px;
+    background-color: #949988;
+    color: white;
+    font-size: 13px;
+    margin-top: 5%; }
+    @media (min-width: 820px) {
+      .container-fluid button {
+        width: 200px; } }
+  .container-fluid h3 {
+    font-size: 12px;
+    font-weight: 200;
+    margin: 10px; }
+  .container-fluid a {
+    font-size: 12px; }
+  .container-fluid a:link {
+    color: black; }
+  .container-fluid a:visited {
+    color: black; }
+  .container-fluid a:hover {
+    color: black; }
+  .container-fluid a:active {
+    color: black; }
+
+.container-fluid {
+  display: flex;
+  justify-content: center;
+  margin-top: 30%;
+  margin-bottom: 30%;
+  text-align: center; }
+  @media (min-width: 820px) {
+    .container-fluid {
+      margin-top: 10%;
+      margin-bottom: 10%; } }
+  @media (min-width: 820px) {
+    .container-fluid button {
+      width: 300px; } }
 
 #product-page {
   font-family: 'Spartan', sans-serif;
@@ -896,7 +959,7 @@ h2 {
       font-size: 0.8rem; }
       #checkout-body .all-products-container .product-container .image-container {
         width: 30%;
-        margin: 0 0 30px 0; }
+        margin: 0 0 0 0; }
         #checkout-body .all-products-container .product-container .image-container img {
           width: 90%; }
         @media (min-width: 820px) {
@@ -943,7 +1006,9 @@ h2 {
         justify-content: space-between;
         text-align: right;
         text-transform: uppercase;
-        font-size: 1rem; }
+        font-size: 0.8rem; }
+        #checkout-body .all-products-container .product-container .total-item-price-container i {
+          color: black; }
   #checkout-body .order-info-container {
     width: 100%;
     display: flex;
@@ -955,6 +1020,8 @@ h2 {
       flex-direction: row;
       justify-content: space-between;
       padding: 10px 0; }
+    #checkout-body .order-info-container .order-value-container, #checkout-body .order-info-container .delivery-container, #checkout-body .order-info-container .promotion-container {
+      font-size: 0.8rem; }
     #checkout-body .order-info-container .total-price-container {
       border-top: 1px solid #e1e1e1;
       padding: 20px 0;
@@ -968,7 +1035,8 @@ h2 {
         background-color: #7f8375;
         color: white;
         border-color: #e1e1e1;
-        text-transform: uppercase; }
+        text-transform: uppercase;
+        font-size: 0.8rem; }
 
 html {
   scroll-behavior: smooth; }

@@ -10,7 +10,7 @@ router.post("/cart/:id", verifyToken, async (req, res) => {
 
     const product = await Product.findOne({_id: req.params.id}).populate("user");
     const size = req.body.size
-    console.log(size);
+
     const user = await User.findOne({
         _id: req.user.user._id
     }).populate("cart.productId");
@@ -56,19 +56,6 @@ router.get("/deleteCart/:index", verifyToken, async (req, res) => {
     res.redirect('/checkout');
 
 });
-
-// router.get("/cart", verifyToken, async (req, res) => {
-
-//     const user = await User.findOne({
-//         _id: req.user.user._id
-//     }).populate("cart.productId");
-
-//     res.render('cart', {user});
-
-// });
-
-
-
 
 
 module.exports = router;

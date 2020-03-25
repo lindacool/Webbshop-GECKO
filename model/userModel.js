@@ -47,8 +47,11 @@ const userSchema = new Schema({
             size: {
                 type: String,
                 required: true
-            }
+            },
         }],
+        totalCartPrice: {
+            type: Number
+        }
     }
 );
 
@@ -118,6 +121,17 @@ userSchema.methods.reduceCart = function(index){
     return this.save();
 };
 
+// userSchema.methods.updateTotalCartPrice = function(){
+
+//     let total = 0;
+
+//     for (let i = 0; i < this.cart.length; i++) {
+//         total += this.cart[i].productId.price * this.cart[i].amount;
+        
+//     }
+//     this.totalCartPrice = total;
+
+// };
 
 
 const User = mongoose.model("User", userSchema);
