@@ -5,6 +5,11 @@
     margin-bottom: 30%;
     text-align: center;
 
+    @include tablet {
+        margin-top: 10%;
+        margin-bottom: 10%;
+    }
+
     h2 {
         font-size: 15px;
         text-transform: uppercase;
@@ -22,6 +27,10 @@
         color: white;
         font-size: 13px;
         margin-top: 5%;
+
+        @include tablet {
+            width: 200px;
+        }
     }
 
     h3 {

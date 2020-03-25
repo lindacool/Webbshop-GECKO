@@ -554,6 +554,10 @@ body {
   margin-top: 30%;
   margin-bottom: 30%;
   text-align: center; }
+  @media (min-width: 820px) {
+    .container-fluid {
+      margin-top: 10%;
+      margin-bottom: 10%; } }
   .container-fluid h2 {
     font-size: 15px;
     text-transform: uppercase;
@@ -567,6 +571,9 @@ body {
     color: white;
     font-size: 13px;
     margin-top: 5%; }
+    @media (min-width: 820px) {
+      .container-fluid button {
+        width: 200px; } }
   .container-fluid h3 {
     font-size: 12px;
     font-weight: 200;
@@ -581,6 +588,20 @@ body {
     color: black; }
   .container-fluid a:active {
     color: black; }
+
+.container-fluid {
+  display: flex;
+  justify-content: center;
+  margin-top: 30%;
+  margin-bottom: 30%;
+  text-align: center; }
+  @media (min-width: 820px) {
+    .container-fluid {
+      margin-top: 10%;
+      margin-bottom: 10%; } }
+  @media (min-width: 820px) {
+    .container-fluid button {
+      width: 300px; } }
 
 #product-page {
   font-family: 'Spartan', sans-serif;
