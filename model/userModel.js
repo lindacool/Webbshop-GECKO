@@ -121,18 +121,17 @@ userSchema.methods.reduceCart = function(index){
     return this.save();
 };
 
-userSchema.methods.updateTotalCartPrice = function(){
+// userSchema.methods.updateTotalCartPrice = function(){
 
-    let total = 0;
+//     let total = 0;
 
-    for (let i = 0; i < this.cart.length; i++) {
-        total += this.cart[i].productId.price * this.cart[i].amount;
+//     for (let i = 0; i < this.cart.length; i++) {
+//         total += this.cart[i].productId.price * this.cart[i].amount;
         
-    }
-    this.totalCartPrice = total;
+//     }
+//     this.totalCartPrice = total;
 
-    return this.save();
-};
+// };
 
 
 const User = mongoose.model("User", userSchema);
