@@ -551,23 +551,23 @@ body {
         font-size: 13px;
         font-weight: 200; }
 
-.container-fluid {
+.container-fluid-login {
   display: flex;
   justify-content: center;
   margin-top: 30%;
   margin-bottom: 30%;
   text-align: center; }
   @media (min-width: 820px) {
-    .container-fluid {
+    .container-fluid-login {
       margin-top: 10%;
       margin-bottom: 10%; } }
-  .container-fluid h2 {
+  .container-fluid-login h2 {
     font-size: 15px;
     text-transform: uppercase;
     font-weight: 200; }
-  .container-fluid input {
+  .container-fluid-login input {
     font-size: 12px; }
-  .container-fluid button {
+  .container-fluid-login button {
     width: 300px;
     height: 25px;
     background-color: #949988;
@@ -575,36 +575,63 @@ body {
     font-size: 13px;
     margin-top: 5%; }
     @media (min-width: 820px) {
-      .container-fluid button {
-        width: 200px; } }
-  .container-fluid h3 {
+      .container-fluid-login button {
+        width: 300px; } }
+  .container-fluid-login h3 {
     font-size: 12px;
     font-weight: 200;
     margin: 10px; }
-  .container-fluid a {
+  .container-fluid-login a {
     font-size: 12px; }
-  .container-fluid a:link {
+  .container-fluid-login a:link {
     color: black; }
-  .container-fluid a:visited {
+  .container-fluid-login a:visited {
     color: black; }
-  .container-fluid a:hover {
+  .container-fluid-login a:hover {
     color: black; }
-  .container-fluid a:active {
+  .container-fluid-login a:active {
     color: black; }
 
-.container-fluid {
+.container-fluid-register {
   display: flex;
   justify-content: center;
   margin-top: 30%;
   margin-bottom: 30%;
   text-align: center; }
   @media (min-width: 820px) {
-    .container-fluid {
+    .container-fluid-register {
       margin-top: 10%;
       margin-bottom: 10%; } }
-  @media (min-width: 820px) {
-    .container-fluid button {
-      width: 300px; } }
+  .container-fluid-register h2 {
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 200; }
+  .container-fluid-register input {
+    font-size: 12px; }
+  .container-fluid-register button {
+    width: 300px;
+    height: 25px;
+    background-color: #949988;
+    color: white;
+    font-size: 13px;
+    margin-top: 5%; }
+    @media (min-width: 820px) {
+      .container-fluid-register button {
+        width: 300px; } }
+  .container-fluid-register h3 {
+    font-size: 12px;
+    font-weight: 200;
+    margin: 10px; }
+  .container-fluid-register a {
+    font-size: 12px; }
+  .container-fluid-register a:link {
+    color: black; }
+  .container-fluid-register a:visited {
+    color: black; }
+  .container-fluid-register a:hover {
+    color: black; }
+  .container-fluid-register a:active {
+    color: black; }
 
 #product-page {
   font-family: 'Spartan', sans-serif;
