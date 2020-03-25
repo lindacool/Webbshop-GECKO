@@ -847,116 +847,117 @@ body {
       flex-direction: row;
       flex-wrap: wrap;
       width: 100%;
-      margin: 40px 0; }
-      #detail-product-page #info-div .addToBagForm .size-container select {
-        border-radius: 2px;
-        border: black; }
-    @media (min-width: 820px) {
-      #detail-product-page #info-div .addToBagForm {
-        justify-content: flex-start; } }
-    #detail-product-page #info-div .addToBagForm .size-header {
-      width: 100%;
-      text-align: center;
-      margin: 15px 0;
-      font-size: 0.8rem; }
-      @media (min-width: 820px) {
-        #detail-product-page #info-div .addToBagForm .size-header {
-          text-align: left; } }
-    #detail-product-page #info-div .addToBagForm button {
-      width: 40px;
       height: 40px;
-      margin: 0 5px;
-      background-color: white;
-      border-color: #e1e1e1; }
+      margin: 40px 0;
+      align-items: center; }
+      #detail-product-page #info-div .addToBagForm .size-container .sizeLabel {
+        margin-right: 10px;
+        font-size: 0.8rem;
+        margin-bottom: 0; }
+      #detail-product-page #info-div .addToBagForm .size-container select {
+        height: 26px;
+        font-size: 0.8rem; }
       @media (min-width: 820px) {
-        #detail-product-page #info-div .addToBagForm button {
-          margin: 0 10px 0 0; } }
-    #detail-product-page #info-div .desktop-bag {
+        #detail-product-page #info-div .addToBagForm .size-container {
+          justify-content: flex-start; } }
+      @media (min-width: 820px) {
+        #detail-product-page #info-div .addToBagForm .size-container {
+          text-align: left; } }
+      #detail-product-page #info-div .addToBagForm .size-container button {
+        width: 40px;
+        height: 40px;
+        margin: 0 5px;
+        background-color: white;
+        border-color: #e1e1e1; }
+        @media (min-width: 820px) {
+          #detail-product-page #info-div .addToBagForm .size-container button {
+            margin: 0 10px 0 0; } }
+    #detail-product-page #info-div .addToBagForm .desktop-bag {
       display: none;
       justify-content: space-between;
       width: 100%;
       height: 60px; }
       @media (min-width: 820px) {
-        #detail-product-page #info-div .desktop-bag {
+        #detail-product-page #info-div .addToBagForm .desktop-bag {
           display: flex; } }
-      #detail-product-page #info-div .desktop-bag button {
+      #detail-product-page #info-div .addToBagForm .desktop-bag button {
         width: 100%;
         height: 40px;
         margin: 20px 0 0 0;
         border-color: #e1e1e1;
         background-color: #7f8375;
         color: white; }
-    #detail-product-page #info-div .product-description {
+    #detail-product-page #info-div .addToBagForm .product-description {
       width: 100%;
       display: flex;
       flex-direction: column;
       margin: 20px 0 30px 0; }
-      #detail-product-page #info-div .product-description .description-header div {
+      #detail-product-page #info-div .addToBagForm .product-description .description-header div {
         width: 100%;
         text-align: center;
         padding: 15px 0;
         font-size: 0.7rem; }
         @media (min-width: 820px) {
-          #detail-product-page #info-div .product-description .description-header div {
+          #detail-product-page #info-div .addToBagForm .product-description .description-header div {
             text-align: left; } }
-        #detail-product-page #info-div .product-description .description-header div span {
+        #detail-product-page #info-div .addToBagForm .product-description .description-header div span {
           text-decoration: underline; }
-      #detail-product-page #info-div .product-description .description {
+      #detail-product-page #info-div .addToBagForm .product-description .description {
         padding: 2% 10%;
         font-size: 0.6rem; }
         @media (min-width: 820px) {
-          #detail-product-page #info-div .product-description .description {
+          #detail-product-page #info-div .addToBagForm .product-description .description {
             padding: 2% 20% 2% 0; } }
-  #detail-product-page .mobile-sticky {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    border-top: 1px solid #e1e1e1;
-    padding: 0 10px;
-    background-color: white;
-    position: sticky;
-    position: -webkit-sticky;
-    bottom: 0;
-    left: 0; }
-    @media (min-width: 820px) {
-      #detail-product-page .mobile-sticky {
-        display: none; } }
-    #detail-product-page .mobile-sticky .info-title-price-container {
+    #detail-product-page #info-div .addToBagForm .mobile-sticky {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
+      flex-direction: column;
       width: 100%;
-      margin: 10px 0; }
-      #detail-product-page .mobile-sticky .info-title-price-container span {
-        width: 100%;
-        font-size: 0.8rem; }
-      #detail-product-page .mobile-sticky .info-title-price-container .price {
-        text-align: end;
-        font-size: 0.7rem;
-        font-weight: 500; }
+      border-top: 1px solid #e1e1e1;
+      padding: 0 10px;
+      background-color: white;
+      position: sticky;
+      position: -webkit-sticky;
+      bottom: 0;
+      left: 0; }
       @media (min-width: 820px) {
-        #detail-product-page .mobile-sticky .info-title-price-container {
-          flex-direction: row;
-          flex-wrap: wrap;
-          justify-content: flex-start;
-          margin: 0 0 20px 0; } }
-    #detail-product-page .mobile-sticky .buttons-about-bag-container {
-      display: flex;
-      justify-content: space-between;
-      width: 100%;
-      height: 60px; }
-      #detail-product-page .mobile-sticky .buttons-about-bag-container button {
-        width: 48%;
-        height: 40px;
-        border-color: #e1e1e1; }
-      #detail-product-page .mobile-sticky .buttons-about-bag-container .choose-size {
-        background-color: white; }
-      #detail-product-page .mobile-sticky .buttons-about-bag-container .add-to-bag {
-        background-color: #7f8375;
-        color: white; }
-    @media (min-width: 820px) {
-      #detail-product-page .mobile-sticky {
-        position: relative; } }
+        #detail-product-page #info-div .addToBagForm .mobile-sticky {
+          display: none; } }
+      #detail-product-page #info-div .addToBagForm .mobile-sticky .info-title-price-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin: 10px 0; }
+        #detail-product-page #info-div .addToBagForm .mobile-sticky .info-title-price-container span {
+          width: 100%;
+          font-size: 0.8rem; }
+        #detail-product-page #info-div .addToBagForm .mobile-sticky .info-title-price-container .price {
+          text-align: end;
+          font-size: 0.7rem;
+          font-weight: 500; }
+        @media (min-width: 820px) {
+          #detail-product-page #info-div .addToBagForm .mobile-sticky .info-title-price-container {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            margin: 0 0 20px 0; } }
+      #detail-product-page #info-div .addToBagForm .mobile-sticky .buttons-about-bag-container {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: 60px; }
+        #detail-product-page #info-div .addToBagForm .mobile-sticky .buttons-about-bag-container button {
+          width: 48%;
+          height: 40px;
+          border-color: #e1e1e1; }
+        #detail-product-page #info-div .addToBagForm .mobile-sticky .buttons-about-bag-container .choose-size {
+          background-color: white; }
+        #detail-product-page #info-div .addToBagForm .mobile-sticky .buttons-about-bag-container .add-to-bag {
+          background-color: #7f8375;
+          color: white; }
+      @media (min-width: 820px) {
+        #detail-product-page #info-div .addToBagForm .mobile-sticky {
+          position: relative; } }
 
 #checkout-body {
   display: flex;

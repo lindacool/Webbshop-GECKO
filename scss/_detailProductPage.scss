@@ -161,10 +161,21 @@
                     flex-direction: row;
                     flex-wrap: wrap;
                     width: 100%;
+                    height: 40px;
                     margin: 40px 0;
+                    align-items: center;
+                    .sizeLabel {
+                        margin-right: 10px;
+                        font-size: 0.8rem;
+                        margin-bottom: 0;
+                        // line-height: 20px;
+                    }
             
 
-                select {}
+                    select {
+                        height: 26px;
+                        font-size: 0.8rem;
+                    }
 
             @include tablet {
                 justify-content: flex-start;
@@ -243,75 +254,77 @@
                 }
             }
         }
-
-    }
-
-    .mobile-sticky {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        border-top: 1px solid rgb(225, 225, 225);
-        padding: 0 10px;
-        background-color: white;
-        position: sticky;
-        position: -webkit-sticky;
-        bottom: 0;
-        left: 0;
-
-        @include tablet {
-            display: none;
-        }
-
-        .info-title-price-container {
+        .mobile-sticky {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
+            flex-direction: column;
             width: 100%;
-            margin: 10px 0;
-
-            span {
-                width: 100%;
-                font-size: 0.8rem;
-            }
-            .price {
-                text-align: end;
-                font-size: 0.7rem;
-                font-weight: 500;
-            }
-
+            border-top: 1px solid rgb(225, 225, 225);
+            padding: 0 10px;
+            background-color: white;
+            position: sticky;
+            position: -webkit-sticky;
+            bottom: 0;
+            left: 0;
+    
             @include tablet {
-                flex-direction: row;
-                flex-wrap: wrap;
-                justify-content: flex-start;
-                margin: 0 0 20px 0;
+                display: none;
             }
+    
+            .info-title-price-container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                margin: 10px 0;
+    
+                span {
+                    width: 100%;
+                    font-size: 0.8rem;
+                }
+                .price {
+                    text-align: end;
+                    font-size: 0.7rem;
+                    font-weight: 500;
+                }
+    
+                @include tablet {
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    justify-content: flex-start;
+                    margin: 0 0 20px 0;
+                }
+            }
+    
+            .buttons-about-bag-container {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                height: 60px;
+                
+                button {
+                    width: 48%;
+                    height: 40px;
+                    border-color: rgb(225, 225, 225);
+                }
+                .choose-size {
+                    background-color: white;
+                }
+                .add-to-bag {
+                    background-color:#7f8375;
+                    color: white;
+                }
+                
+            }
+    
+            @include tablet {
+                position: relative;
+            }
+            
         }
 
-        .buttons-about-bag-container {
-            display: flex;
-            justify-content: space-between;
-            width: 100%;
-            height: 60px;
-            
-            button {
-                width: 48%;
-                height: 40px;
-                border-color: rgb(225, 225, 225);
-            }
-            .choose-size {
-                background-color: white;
-            }
-            .add-to-bag {
-                background-color:#7f8375;
-                color: white;
-            }
-            
-        }
-
-        @include tablet {
-            position: relative;
-        }
-        
     }
+
+    
+}
     
 }
