@@ -1,6 +1,50 @@
+.container-fluid {
+    display: flex;
+    justify-content: center;
+    margin-top: 30%;
+    margin-bottom: 30%;
+    text-align: center;
 
+    h2 {
+        font-size: 15px;
+        text-transform: uppercase;
+        font-weight: 200;
+    }
 
-h2 {
-    font-weight: 300;
-    font-size: 40%;
+    input {
+        font-size: 12px;
+    }
+
+    button {
+        width: 300px;
+        height: 25px;
+        background-color: #949988;
+        color: white;
+        font-size: 13px;
+        margin-top: 5%;
+    }
+
+    h3 {
+        font-size: 12px;
+        font-weight: 200;
+        margin: 10px;
+
+    }
+    a {
+        font-size: 12px;
+    }
+
+    a:link {
+        color: black;
+    }
+    a:visited {
+        color: black;
+    }
+    a:hover {
+        color: black;
+    }
+    a:active {
+        color: black;
+    }
+
 }
