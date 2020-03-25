@@ -23,6 +23,18 @@ router.post("/cart/:id", verifyToken, async (req, res) => {
 
 });
 
+router.get("/reduceCart/:index", verifyToken, async (req, res) => {
+
+
+    const index = req.params.index
+    const user = await User.findOne({_id: req.user.user._id});
+    user.reduceCart(index);
+
+    res.redirect('/cart');
+
+});
+
+
 router.get("/deleteCart/:index", verifyToken, async (req, res) => {
 
 
@@ -43,6 +55,7 @@ router.get("/cart", verifyToken, async (req, res) => {
     res.render('cart', {user});
 
 });
+
 
 
 
