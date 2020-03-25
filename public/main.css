@@ -869,10 +869,14 @@ body {
   flex-direction: column;
   width: 90%;
   margin: 60px 5% 0 5%; }
+  @media (min-width: 820px) {
+    #checkout-body {
+      width: 70%;
+      margin: 60px 15% 0 15%; } }
   #checkout-body .header-container {
     width: 100%;
-    border-bottom: 1px solid #e1e1e1;
-    padding: 10px 0; }
+    padding: 10px 0;
+    border-bottom: 1px solid #e1e1e1; }
     #checkout-body .header-container span {
       text-transform: uppercase; }
   #checkout-body .all-products-container {
@@ -886,31 +890,49 @@ body {
       flex-wrap: nowrap;
       padding: 20px 0;
       border-bottom: 1px solid #e1e1e1;
-      font-size: 0.9rem; }
+      font-size: 0.8rem; }
       #checkout-body .all-products-container .product-container .image-container {
         width: 30%;
         margin: 0 0 30px 0; }
         #checkout-body .all-products-container .product-container .image-container img {
           width: 90%; }
+        @media (min-width: 820px) {
+          #checkout-body .all-products-container .product-container .image-container {
+            width: 15%; } }
+        @media (min-width: 1200px) {
+          #checkout-body .all-products-container .product-container .image-container {
+            width: 10%; } }
       #checkout-body .all-products-container .product-container .info-container {
         width: 50%;
         display: flex;
         flex-direction: column; }
+        @media (min-width: 820px) {
+          #checkout-body .all-products-container .product-container .info-container {
+            width: 65%; } }
+        @media (min-width: 1200px) {
+          #checkout-body .all-products-container .product-container .info-container {
+            width: 70%; } }
         #checkout-body .all-products-container .product-container .info-container .container {
           padding: 6px 0; }
           #checkout-body .all-products-container .product-container .info-container .container span {
-            margin-right: 25px; }
+            margin-right: 15px; }
         #checkout-body .all-products-container .product-container .info-container .title-container {
           text-transform: uppercase;
           padding: 0;
-          font-size: 1rem; }
+          font-size: 0.8rem; }
         #checkout-body .all-products-container .product-container .info-container .price-container {
           text-transform: uppercase;
           padding: 0;
-          margin-bottom: 30px;
-          font-size: 1rem; }
+          margin-bottom: 15px;
+          font-size: 0.8rem; }
         #checkout-body .all-products-container .product-container .info-container .quantity-container {
-          margin-top: 20px; }
+          margin-top: 15px; }
+          #checkout-body .all-products-container .product-container .info-container .quantity-container a {
+            color: black;
+            font-weight: 500; }
+          #checkout-body .all-products-container .product-container .info-container .quantity-container a:hover {
+            text-decoration: none;
+            font-weight: bold; }
       #checkout-body .all-products-container .product-container .total-item-price-container {
         width: 20%;
         display: flex;
