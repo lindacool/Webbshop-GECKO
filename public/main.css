@@ -89,6 +89,14 @@ body {
 body {
   font-family: 'Spartan', sans-serif;
   padding-bottom: 0; }
+  body .container-fluid-first #subscribebox {
+    background-color: #7f8375;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    font-weight: 100;
+    font-size: 70%;
+    text-transform: uppercase; }
   body .nav-container {
     font-family: 'Spartan', sans-serif;
     visibility: hidden;
@@ -210,14 +218,6 @@ body {
 
 * {
   font-family: 'Spartan', sans-serif; }
-  * .container-fluid-first #subscribebox {
-    background-color: #7f8375;
-    color: white;
-    text-align: center;
-    padding: 12px;
-    font-weight: 100;
-    font-size: 70%;
-    text-transform: uppercase; }
   * .container-fluid {
     max-width: 1250px; }
   * .opacity {
