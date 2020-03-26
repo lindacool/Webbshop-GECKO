@@ -5,6 +5,14 @@ const verifyToken = require('./verifyToken');
 const {
     User
 } = require("../model/userModel");
+router.get('/myaccount', verifyToken, async (req, res)=> {
+
+    const user = await User.findOne({
+        _id: req.user.user._id
+    })
+
+    res.send(`Hi ${user.firstName} ${user.surName}! This is your account `)
+})
 
 router.post("/cart/:id", verifyToken, async (req, res) => {
 

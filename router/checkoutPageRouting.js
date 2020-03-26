@@ -13,13 +13,13 @@ router.get("/checkout", verifyToken, async (req, res) => {
         _id: req.user.user._id
     }).populate("cart.productId");
     
-    let total = 0;
+    let totalPrice = 0;
 
     for (let i = 0; i < user.cart.length; i++) {
-        total += user.cart[i].amount * user.cart[i].productId.price
+        totalPrice += user.cart[i].amount * user.cart[i].productId.price
         
     }
-    user.totalCartPrice = total;
+    user.totalCartPrice = totalPrice;
     await user.save()
     res.render('checkout', {user});
     
