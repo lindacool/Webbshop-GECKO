@@ -1090,6 +1090,8 @@ body {
       padding: 10px 0; }
     #checkout-body .order-info-container .order-value-container, #checkout-body .order-info-container .delivery-container, #checkout-body .order-info-container .promotion-container {
       font-size: 0.7rem; }
+    #checkout-body .order-info-container .order-value-container {
+      margin-top: 10px; }
     #checkout-body .order-info-container .total-price-container {
       border-top: 1px solid #e1e1e1;
       padding: 20px 0;

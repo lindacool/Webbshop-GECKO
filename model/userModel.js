@@ -58,7 +58,6 @@ const userSchema = new Schema({
 // Function that adds product to cart
 userSchema.methods.addToCart = function(product, size){
 
-    // Will track if product exists in cart
     let exists = false;
 
     // Loop through the cart and sets exists = true if the clicked product already exists
@@ -78,23 +77,11 @@ userSchema.methods.addToCart = function(product, size){
 
 };
 
-// Function that removes product to cart
+// Function that removes product from cart
 userSchema.methods.removeFromCart = function(index){
-
-    // Creates a new list which contains all products except the removed one
-    
-
-    // const restOfProducts = this.cart.filter( (product)=> {
-    //      return product.productId.toString() != productId.toString()
-    // })
-
-    // Overwrites the old cart with the newly created list which does not contain the removed product
-    // this.cart = restOfProducts;
 
     this.cart.splice(index, 1);
     
-
-
     return this.save();
 };
 
@@ -107,6 +94,7 @@ userSchema.methods.increaseCart = function(index){
 
 }
 
+// Function that reduces amount of product in cart
 userSchema.methods.reduceCart = function(index){
 
 
@@ -117,21 +105,8 @@ userSchema.methods.reduceCart = function(index){
         this.cart.splice(index, 1);
     }
 
-
     return this.save();
 };
-
-// userSchema.methods.updateTotalCartPrice = function(){
-
-//     let total = 0;
-
-//     for (let i = 0; i < this.cart.length; i++) {
-//         total += this.cart[i].productId.price * this.cart[i].amount;
-        
-//     }
-//     this.totalCartPrice = total;
-
-// };
 
 
 const User = mongoose.model("User", userSchema);
