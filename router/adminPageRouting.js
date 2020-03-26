@@ -7,10 +7,8 @@ const router = express.Router();
 
 
 router.get('/admin', verifyToken, async (req, res) => {
-    const products = await Product.find();
 
-    
-   // const user = await req.user
+   const products = await Product.find().populate("user");
 
     if (req.user.user.isAdmin === true) {
         res.render('admin.ejs', {products}) 

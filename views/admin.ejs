@@ -96,6 +96,7 @@
                 <p>Top seller: <input name="topSeller" type="checkbox" <% if(product.topSeller){%> checked <%} %>></p>
                 <p>Male: <input name="male" type="checkbox" <% if(product.male){%> checked <%} %>></p>
                 <p>Female: <input name="female" type="checkbox" <% if(product.female){%> checked <%} %>></p>
+                <p>Created by: <%= product.user.email %></p>
 
                 <p class="edit-product-button-container"><button class="btn btn-dark" type="submit">Update
                         product</button></p>
