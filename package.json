@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha",
     "mon": "nodemon index",
     "start": "node-sass scss -o public --w"
   },
@@ -43,8 +43,9 @@
   "devDependencies": {
     "chai": "^4.2.0",
     "cypress": "^4.0.2",
-    "mocha": "^7.0.1",
+    "mocha": "^7.1.1",
     "node-sass-middleware": "^0.11.0",
-    "nodemon": "^2.0.2"
+    "nodemon": "^2.0.2",
+    "supertest": "^4.0.2"
   }
 }
