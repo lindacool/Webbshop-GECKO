@@ -12,6 +12,21 @@ $(document).ready(function () {
 
     })
 
-    console.log($('hej'))
+    var stickyNavTop = $('.burger-container').offset().top;
+    var stickyNav = function(){
+    var scrollTop = $(window).scrollTop(); 
 
+        if (scrollTop > stickyNavTop) { 
+            $('.burger-container').addClass('sticky');
+        } else {
+            $('.burger-container').removeClass('sticky'); 
+        }
+    };
+
+    stickyNav();
+    $(window).scroll(function() {
+        stickyNav();
+    });
+    
+    console.log($('hej'))
 });

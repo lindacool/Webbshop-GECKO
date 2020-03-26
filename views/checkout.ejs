@@ -12,11 +12,13 @@
 
     <section id="checkout-body">
 
-        <div class="header-container">
-            <span>shopping bag items</span>
-        </div>
+        
 
         <div class="all-products-container">
+
+            <div class="header-container">
+                <span>shopping bag items</span>
+            </div>
 
             <% user.cart.forEach( (product) => { %>
 
@@ -40,8 +42,8 @@
                     
                     <div class="quantity-container container">
                         <span>Quantity:</span>
-                        <span><%= product.amount%></span>
-                        <a href="/reduceCart/<%= user.cart.indexOf(product) %>">-</a> /
+                        <a href="/reduceCart/<%= user.cart.indexOf(product) %>">-</a>
+                        <span class="product-amount"><%= product.amount%></span>
                         <a href="/increaseCart/<%= user.cart.indexOf(product) %>">+</a><br>
                          
                     </div>
@@ -59,6 +61,10 @@
         </div>
 
         <div class="order-info-container">
+
+            <div class="header-container">
+                <span>order summary</span>
+            </div>
 
             <div class="order-value-container info-container">
                 <span>Order value</span>
