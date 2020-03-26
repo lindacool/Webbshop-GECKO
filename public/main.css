@@ -116,7 +116,7 @@ body {
     transition-timing-function: ease-in;
     background-color: white;
     transition: 1s;
-    margin-top: 60px; }
+    margin-top: 10px; }
     body .nav-container .about,
     body .nav-container .sign-in,
     body .nav-container .men-women {
@@ -165,7 +165,7 @@ body {
     transform: translateX(0%);
     transition-timing-function: ease-out;
     z-index: 2000;
-    margin-top: 60px;
+    margin-top: 15px;
     position: fixed; }
     @media (min-width: 820px) {
       body .nav-show {
@@ -178,7 +178,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    z-index: 1000;
+    z-index: 10000;
     overflow: hidden;
     background-color: white;
     position: -webkit-sticky;
