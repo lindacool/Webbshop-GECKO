@@ -14,14 +14,21 @@ body {
 
     .container-fluid-first {
 
-        #subscribebox {
-            background-color: #7f8375;
-            color: white;
-            text-align: center;
-            padding: 12px;
-            font-weight: 100;
-            font-size: 70%;
-            text-transform: uppercase;
+        .row {
+        
+            margin: 0;
+        
+            #subscribebox {
+                background-color: #7f8375;
+                color: white;
+                text-align: center;
+                padding: 12px;
+                font-weight: 100;
+                font-size: 70%;
+                text-transform: uppercase;
+            }
+
+            
         }
     }
     .nav-container {

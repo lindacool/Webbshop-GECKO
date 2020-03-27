@@ -41,7 +41,8 @@ body {
     background-color: #CECFCC;
     justify-content: center;
     color: white;
-    padding-top: 10px; }
+    padding-top: 10px;
+    margin: 0; }
     body #icon-box #icon-link {
       text-align: end;
       margin: auto;
@@ -97,14 +98,16 @@ body {
 body {
   font-family: 'Spartan', sans-serif;
   padding-bottom: 0; }
-  body .container-fluid-first #subscribebox {
-    background-color: #7f8375;
-    color: white;
-    text-align: center;
-    padding: 12px;
-    font-weight: 100;
-    font-size: 70%;
-    text-transform: uppercase; }
+  body .container-fluid-first .row {
+    margin: 0; }
+    body .container-fluid-first .row #subscribebox {
+      background-color: #7f8375;
+      color: white;
+      text-align: center;
+      padding: 12px;
+      font-weight: 100;
+      font-size: 70%;
+      text-transform: uppercase; }
   body .nav-container {
     font-family: 'Spartan', sans-serif;
     visibility: hidden;

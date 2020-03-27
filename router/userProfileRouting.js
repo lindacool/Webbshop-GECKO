@@ -5,6 +5,14 @@ const verifyToken = require('./verifyToken');
 const {
     User
 } = require("../model/userModel");
+router.get('/myaccount', verifyToken, async (req, res)=> {
+
+    const user = await User.findOne({
+        _id: req.user.user._id
+    })
+
+    res.send(`Hi ${user.firstName} ${user.surName}! This is your account `)
+})
 
 router.post("/cart/:id", verifyToken, async (req, res) => {
 
@@ -28,7 +36,7 @@ router.get("/reduceCart/:index", verifyToken, async (req, res) => {
 
     const index = req.params.index
     const user = await User.findOne({_id: req.user.user._id});
-    user.reduceCart(index);
+    await user.reduceCart(index);
 
     res.redirect('/checkout');
 
@@ -39,7 +47,7 @@ router.get("/increaseCart/:index", verifyToken, async (req, res) => {
 
     const index = req.params.index
     const user = await User.findOne({_id: req.user.user._id});
-    user.increaseCart(index);
+    await user.increaseCart(index);
 
     res.redirect('/checkout');
 
@@ -51,7 +59,7 @@ router.get("/deleteCart/:index", verifyToken, async (req, res) => {
 
     const index = req.params.index
     const user = await User.findOne({_id: req.user.user._id});
-    user.removeFromCart(index);
+    await user.removeFromCart(index);
 
     res.redirect('/checkout');
 

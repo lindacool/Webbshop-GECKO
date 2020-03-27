@@ -3,5 +3,10 @@
 <%- include ("partial/tothetop") %>
 
 
-Reset your password <a href="">HERE</a>
+<h1>Hello, reset your password here</h1>
+
+<form action="/reset" method="post">
+    <input type="email" name="resetMail" placeholder="your email">
+    <button type="submit">Get new Password</button>
+</form>
 <%- include ("partial/footer") %>

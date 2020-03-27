@@ -19,6 +19,8 @@ module.exports = (req, res, next)=>{
 
 
 }
+
+
 //req.cookies.jsonwebtoken
   // kollar om användare har cookies 
   // jwt verifiering metod  för att kolla om det är en valid cookies
