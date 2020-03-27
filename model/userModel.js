@@ -126,3 +126,4 @@ function validateUser(user) {
 
 module.exports.User = User;
 module.exports.validateUser = validateUser;
+
