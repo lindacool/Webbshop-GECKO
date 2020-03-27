@@ -685,6 +685,9 @@ body {
       #product-page .category-container .category-container-buttons p {
         text-align: center;
         margin: 0 80px; }
+        #product-page .category-container .category-container-buttons p a {
+          font-weight: 400;
+          font-size: 0.9rem; }
         #product-page .category-container .category-container-buttons p a:hover {
           text-decoration: none;
           font-weight: 500; }
