@@ -1,0 +1,163 @@
+@import "mixins";
+
+#product-page {
+    font-family: 'Spartan', sans-serif;
+    text-transform: uppercase;
+
+    .category-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        margin: 60px 0 50px 0;
+
+        .category-container-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 100%;
+            height: 100px;
+
+            h2 {
+                font-size: 2rem;
+                width: 100%;
+                text-align: center;
+            }
+
+            p {
+                width: 60%;
+                height: auto;
+                font-size: 0.7rem;
+                text-align: center;
+            }
+        }
+
+        .category-container-buttons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 80%;
+            margin-top: 60px;
+
+
+            p {
+                text-align: center;
+                margin: 0 80px;
+
+                a {
+                    font-weight: 400;
+                    font-size: 0.9rem;
+                }
+
+                a:hover {
+                    text-decoration: none;
+                    font-weight: 500;
+                }
+
+                a:link {
+                    color: inherit;
+                }
+
+                a:visited {
+                    color: inherit;
+                }
+            }
+
+        }
+    }
+
+    .product-container {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 0 2% 50px 2%;
+
+
+        .product {
+            width: 46%;
+            margin: 0 2% 20px 2%;
+
+            .product-image {
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .product-info {
+                margin-top: 10px;
+                font-size: 0.7rem;
+
+                .product-title {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+
+                    .title {
+                        width: 75%;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+
+                    .wish-list {
+
+                        img {
+                            height: 16px;
+                        }
+                    }
+                }
+
+                .product-price {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    padding: 3px 0 0 0;
+
+                    .price {
+                        font-weight: 700;
+                        font-size: 80%;
+                    }
+                }
+            }
+
+            @include tablet {
+                width: 30.33%;
+                margin: 0 1.5% 20px 1.5%;
+            }
+        }
+    }
+
+    .show-more {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin: 30px 0;
+        font-size: 12px;
+
+        a:hover {
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        a:link {
+            color: inherit;
+        }
+
+        a:visited {
+            color: inherit;
+        }
+
+    }
+
+}

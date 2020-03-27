@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include ("partial/header.ejs") %>
+
+<body>
+    <%- include ("partial/navbar") %>
+    <%- include ("partial/tothetop") %>
+
+
+    <div class="create-new-product-form">
+        <div class="create-new-product-form-header">
+            <h2>Edit user</h2>
+        </div>
+
+        <% users.forEach((user) => { %>
+
+
+
+
+        <form action="/editUser/<%= user._id %>" method="post">
+            <div class="form-group">
+                <%= user.firstName %>
+
+                <%= user._id %>
+
+            </div>
+
+            <div class="form-group">
+                <%= user.surName %>
+            </div>
+
+            <div class="form-group">
+                <%= user.email %>
+            </div>
+
+            <div>Admin: <input name="isAdmin" type="checkbox" <% if(user.isAdmin){%> checked <%} %>>
+            </div>
+
+            <button class="btn btn-dark" type="submit">
+                Update User
+            </button>
+        </form>
+        <% }) %>
+
+    </div>
+
+    <%- include ("partial/footer") %>
+
+</html>

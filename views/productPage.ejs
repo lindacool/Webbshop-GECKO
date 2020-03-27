@@ -1,0 +1,60 @@
+<%- include ("partial/header.ejs") %>
+<%- include ("partial/tothetop") %>
+
+<body>
+    <!-- Navbar -->
+    <%- include ("partial/navbar.ejs") %>
+
+
+    <section id="product-page">
+        <!-- Categories -->
+        <div class="category-container">
+            <div class="category-container-header">
+                <h2><%= heading %></h2>
+                <p><%= headingDescription %></p>
+            </div>
+            <div class="category-container-buttons">
+                <p><a href="/<%= otherCategories[0] %>">Shop <%= otherCategories[0] %></a></p>
+                <p><a href="/<%= otherCategories[1] %>">Shop <%= otherCategories[1] %></a></p>
+            </div>
+        </div>
+
+        <!-- Products -->
+
+        <div class="product-container">
+            <% productsShow.forEach((product) => { %>
+            <div class="product">
+
+                <div class="product-image">
+                    <a href="/products/<%= product._id %>"><img src="<%= product.imgUrl %>" alt="product-image"></a>
+                </div>
+                <div class="product-info">
+                    <div class="product-title">
+                        <span class="title"><%= product.title %></span>
+                        <span class="wish-list"><a href=> <img src="../public/assets/heart.png" /></a></span>
+                    </div>
+                    <div class="product-price">
+                        <span class="price"><%= product.price%> SEK</span>
+                    </div>
+                </div>
+            </div>
+            <% }) %>
+        </div>
+
+        <div class="show-more">
+            <% if(totalPages !== itemsToShow/itemPerPage ) { %>
+            <a href="/<%=route%>/?page=<%=(itemsToShow/itemPerPage) + 1%>">Show more</a>
+            <% } else { %>
+            <a href="/<%=route%>/?page=1">Show less</a>
+            <% } %>
+        </div>
+
+    </section>
+
+
+
+    <%- include ("partial/footer") %>
+
+</body>
+
+</html>

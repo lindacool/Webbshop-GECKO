@@ -1,0 +1,338 @@
+* {
+  font-family: 'Spartan', sans-serif;
+
+
+  .container-fluid {
+    max-width: 1300px;
+  }
+
+
+  .welcome {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+
+    .welcome-img-one {
+      background-image: url("../public/assets/men_hoodie_white_opacity.jpg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+
+
+      @include tablet {
+        width: 50%;
+
+
+      }
+
+      @include desktop {
+        background-position: top;
+
+      }
+    }
+
+    .welcome-img-two {
+      background-image: url("../public/assets/women_hoodie_pink_opacity.jpg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 50%;
+      height: 100%;
+      z-index: 1;
+      display: none;
+
+
+      @include tablet {
+        display: block;
+
+      }
+
+      @include desktop {
+        background-position: top;
+
+      }
+    }
+  }
+
+  .gecko-info {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    transform: translateY(30%);
+    flex-direction: column;
+    z-index: 1000;
+
+    h1 {
+      color: white;
+      font-weight: 700;
+      font-size: 200%;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+    }
+
+    span {
+      font-size: 75%;
+      font-weight: 100;
+      color: white;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+    }
+
+    .shop-women {
+      width: 200px;
+      margin: 10px;
+      padding: 7px;
+      background-color: white;
+      border: none;
+      text-transform: uppercase;
+      font-weight: 400;
+      font-size: 60%;
+
+    }
+
+    .shop-men {
+      width: 200px;
+      margin: 10px;
+      padding: 7px;
+      background-color: white;
+      border: none;
+      text-transform: uppercase;
+      font-weight: 400;
+      font-size: 60%;
+    }
+  }
+
+
+
+
+  .new-arrival {
+    p {
+      text-transform: uppercase;
+      font-weight: 300;
+      font-size: 90%;
+      margin: 30px 0px 10px 0px;
+    }
+  }
+
+  .top-seller {
+    p {
+      text-transform: uppercase;
+      font-weight: 300;
+      font-size: 90%;
+      margin: 30px 0px 10px 0px;
+    }
+  }
+
+  .scrolling-wrapper {
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+
+
+    .scroll-items {
+
+      display: inline-block;
+
+      .product-image {
+        width: 45vw;
+        margin-right: 20px;
+
+        @include tablet {
+          width: 20vw;
+        }
+
+        @include desktop {}
+
+
+        img {
+
+          width: 100%;
+        }
+      }
+
+      .title {
+        font-size: 85%;
+        font-weight: 200;
+        margin: 15px 0px 15px 0px;
+      }
+
+      .price {
+        font-size: 70%;
+        font-weight: 600;
+        margin: 12px 0px 12px 0px;
+      }
+    }
+  }
+
+  .gecko-store {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5%;
+
+    @include tablet {
+      flex-direction: row;
+    }
+
+    .store-info {
+      flex-direction: column;
+
+      @include tablet {
+        flex-direction: row;
+        width: 50%;
+        margin-right: 2%;
+      }
+    }
+
+    .gecko-store-img {
+      background-image: url("../public/assets/geckostore.png");
+      width: 100%;
+      height: 500px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      @include tablet {
+        width: 50%;
+        margin-right: 0.5%;
+      }
+
+    }
+
+    .gecko-title {
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 200%;
+      margin-top: 10%;
+      margin-bottom: 10%;
+      text-align: center;
+
+      @include tablet {
+        text-align: left;
+        margin-left: 2%;
+      }
+
+    }
+
+    .gecko-text {
+      text-align: center;
+      font-weight: 100;
+      font-size: 100%;
+      text-align: left;
+      margin: 2%;
+      margin-bottom: 10%;
+
+      @include tablet {
+        padding-top: 5%;
+      }
+    }
+  }
+
+  .shop-box {
+    display: flex;
+    flex-direction: column;
+
+    @include tablet {
+      flex-direction: row;
+    }
+
+    @include desktop {
+      background-position: top;
+    }
+
+    .category-img {
+      display: flex;
+      width: 100;
+      align-items: center;
+      flex-direction: column;
+      position: relative;
+      margin: 10px;
+
+      .women {
+        background-image: url('../public/assets/women_crewneck_black.jpeg');
+        display: flex;
+        width: 100%;
+        height: 800px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 20px 0px 20px 0px;
+        z-index: 1;
+
+        .shop-women {
+          text-align: center;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 200px;
+          margin: 10px;
+          padding: 7px;
+          background-color: white;
+          border: none;
+          text-transform: uppercase;
+          font-weight: 400;
+          font-size: 60%;
+
+        }
+      }
+
+      @include tablet {
+        width: 50%;
+        flex-direction: row;
+
+      }
+
+      @include desktop {
+        background-position: top;
+
+      }
+
+      .men {
+        background-image: url('../public/assets/men_tshirt_green.jpeg');
+        display: flex;
+        width: 100%;
+        height: 800px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        // position: relative;
+
+
+        .shop-men {
+          text-align: center;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 200px;
+          margin: 10px;
+          padding: 7px;
+          background-color: white;
+          border: none;
+          text-transform: uppercase;
+          font-weight: 400;
+          font-size: 60%;
+        }
+
+      }
+
+      @include tablet {
+        width: 50%;
+        flex-direction: row;
+
+      }
+
+      @include desktop {
+        background-position: top;
+      }
+    }
+  }
+}

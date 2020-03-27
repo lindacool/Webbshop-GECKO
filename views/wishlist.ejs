@@ -1,0 +1,22 @@
+<% user.cart.forEach( (product) => { %>
+
+    <li>
+        <%= product.productId._id %>
+    </li>
+    <li>
+        <%= product.productId.title %>
+    </li>
+    <li>
+        <%= product.productId.price %>
+    </li>
+    <li>
+        <%= product.productId.description %>
+    </li>
+    <a href="/deleteCart/<%= product.productId._id %>">Delete</a>
+    <br>
+    <hr>
+    <br>
+
+<% }) %>
+
+

@@ -1,0 +1,59 @@
+.container-fluid-login {
+    display: flex;
+    justify-content: center;
+    margin-top: 30%;
+    margin-bottom: 30%;
+    text-align: center;
+
+    @include tablet {
+        margin-top: 10%;
+        margin-bottom: 10%;
+    }
+
+    h2 {
+        font-size: 15px;
+        text-transform: uppercase;
+        font-weight: 200;
+    }
+
+    input {
+        font-size: 12px;
+    }
+
+    button {
+        width: 300px;
+        height: 25px;
+        background-color: #949988;
+        color: white;
+        font-size: 13px;
+        margin-top: 5%;
+
+        @include tablet {
+            width: 300px;
+        }
+    }
+
+    h3 {
+        font-size: 12px;
+        font-weight: 200;
+        margin: 10px;
+
+    }
+    a {
+        font-size: 12px;
+    }
+
+    a:link {
+        color: black;
+    }
+    a:visited {
+        color: black;
+    }
+    a:hover {
+        color: black;
+    }
+    a:active {
+        color: black;
+    }
+
+}

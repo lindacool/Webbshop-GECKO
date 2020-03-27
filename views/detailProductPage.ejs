@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include ("partial/header.ejs") %>
+
+<body>
+    <!-- Navbar -->
+    <%- include ("partial/navbar") %>
+
+
+    <!-- Product -->
+
+    <section id="detail-product-page">
+        <!-- image mobile -->
+        <div id="image-div-mobile">
+                <i class=" dots fas fa-ellipsis-h"></i>
+            <div class="image-container">
+                <img src="<%= clickedProduct.imgUrl %>" alt="product-image">
+                <img src="<%= clickedProduct.imgUrlTwo %>" alt="product-image" class="middle-picture">
+                <img src="<%= clickedProduct.imgUrlThree %>" alt="product-image">
+            </div>
+        </div>
+            <!-- image desktop -->
+            <div id="image-div-desktop">
+                <div class="image-container">
+                    <img src="<%= clickedProduct.imgUrl %>" alt="product-image">
+                </div>
+                <div class="image-container">
+                    <img src="<%= clickedProduct.imgUrlTwo %>" alt="product-image">
+                </div>
+                <div class="image-container">
+                    <img src="<%= clickedProduct.imgUrlThree %>" alt="product-image">
+                </div>
+            </div>
+
+            <!-- product info -->
+            <div id="info-div">
+
+                <div class="desktop-title-price">
+                    <span>
+                        <%= clickedProduct.title %>
+                    </span>
+                    <span class="desktop-price">
+                        <%= clickedProduct.price %> SEK
+                    </span>
+                </div>
+
+                <div class="fabric-container">
+                    <span>organic cotton</span>
+                </div>
+
+                <div class="color-container">
+                    <span class="color-header">color</span>
+                    <button class="color-picker"><span>choose color</span><span>+</span></button>
+                </div>
+                <form action="/cart/<%= clickedProduct._id %>" method="POST" class="addToBagForm">
+                    <div class="size-container">
+                    
+                            <label for="size" class="sizeLabel">Choose a size:</label>
+                            <select id="" name="size">
+                            <option value="XS">XS</option>
+                            <option value="S">S</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
+                            </select>
+                                
+                        
+                                
+                            
+                            
+                    </div>
+
+                    <div class="desktop-bag">
+                        <button type="submit">add to bag</button>
+                    </div>
+
+                    <div class="product-description">
+                        <div class="description-header">
+                            <div><span>description</span> - delivery & payment - details</div>
+                        </div>
+                        <div class="description">
+                            <%= clickedProduct.description %>
+                        </div>
+                    </div>
+
+                
+
+                <!-- Sticky div that only appears in mobile -->
+                <div class="mobile-sticky">
+                    <div class="info-title-price-container">
+                        <span>
+                            <%= clickedProduct.title %>
+                        </span>
+                        <span class="price">
+                            <%= clickedProduct.price %> SEK
+                        </span>
+                    </div>
+                    <div class="buttons-about-bag-container">
+                        <button class="add-to-bag" type="submit">add to bag</button>
+                    </div>
+                </div>
+            </form>
+
+        </section>
+
+        <%- include ("partial/footer.ejs") %>
+
+
+</body>
+
+</html>

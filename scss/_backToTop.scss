@@ -1,0 +1,16 @@
+html {
+    scroll-behavior: smooth;
+}
+#back-to-top-btn {
+    position: fixed;
+    border: none;
+    border-radius: 50%;
+    background-color: #949988;
+    right: 20px;
+    z-index: 1000;
+    cursor: pointer;
+    bottom: 3vh;
+    width: 30px;
+    height: 30px;
+    color: white;
+}

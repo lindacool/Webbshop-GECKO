@@ -1,0 +1,99 @@
+    <!DOCTYPE html>
+<html lang="en">
+<%- include ("partial/header.ejs") %>
+
+<body>
+
+    <%- include ("partial/navbar") %>
+    <%- include ("partial/tothetop") %>
+
+
+    <!-- Checkout -->
+
+    <section id="checkout-body">
+
+        
+
+        <div class="all-products-container">
+
+            <div class="header-container">
+                <span>shopping bag items</span>
+            </div>
+
+            <% user.cart.forEach( (product) => { %>
+
+            <div class="product-container">
+
+                <div class="image-container">
+                    <img src="<%= product.productId.imgUrl %>" alt="">
+                </div>
+
+                <div class="info-container">
+                    <div class="title-container container">
+                        <span><%= product.productId.title %></span>
+                    </div>
+                    <div class="price-container container">
+                        <span><%= product.productId.price %> SEK</span>
+                    </div>
+                    <div class="size-container container">
+                        <span>Size:</span>
+                        <span><%= product.size %></span>
+                    </div>
+                    
+                    <div class="quantity-container container">
+                        <span>Quantity:</span>
+                        <a href="/reduceCart/<%= user.cart.indexOf(product) %>">-</a>
+                        <span class="product-amount"><%= product.amount%></span>
+                        <a href="/increaseCart/<%= user.cart.indexOf(product) %>">+</a><br>
+                         
+                    </div>
+                </div>
+
+                <div class="total-item-price-container">
+                    <span><a href="/deleteCart/<%= user.cart.indexOf(product) %>"><i class="far fa-trash-alt"></i></a> </span>
+
+                    
+                    <span><%= (product.productId.price) * (product.amount) %> SEK</span>
+                </div>
+            </div>
+
+            <% }) %>
+        </div>
+
+        <div class="order-info-container">
+
+            <div class="header-container">
+                <span>order summary</span>
+            </div>
+
+            <div class="order-value-container info-container">
+                <span>Order value</span>
+                <span><%= user.totalCartPrice %> SEK</span>
+            </div>
+            <div class="delivery-container info-container">
+                <span>Delivery</span>
+                <span>Free</span>
+            </div>
+            <div class="promotion-container info-container">
+                <span>Got a promotion code?</span>
+            </div>
+            <div class="total-price-container info-container">
+                <span>TOTAL</span>
+                <span><%= user.totalCartPrice %> SEK</span>
+            </div>
+            <div class="checkout-button-container">
+                <button>Proceed to checkout</button>
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+    <%- include ("partial/footer.ejs") %>
+
+
+</body>
+
+</html>

@@ -1,0 +1,137 @@
+
+
+.create-new-product-form {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 96%;
+    margin: 20px 2%;
+    border-bottom: 1px solid #CECFCC;
+
+    .create-new-product-form-header {
+        width: 100%;
+
+        h2 {
+            text-align: center;
+            margin: 0 0 20px 0;
+            font-size: 130%;
+            margin-top: 5%;
+        }
+    }
+
+    .createproduct {
+        width: 50%;
+
+        .form-group {
+            font-size: 70%;
+        }
+        
+    }
+
+    form {
+        width: 60%;
+        margin: 0 0 40px 0;
+
+        .form-check {
+            width: 100%;
+            padding: 0;
+            font-size: 12px;
+
+            input {
+                margin-left: 10px;
+            }
+            input:checked {
+                color: #7f8375;
+                background-color: #7f8375;
+            }
+        }
+
+        .form-button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            
+            
+            button {
+                margin: 10px 0;
+                background-color: #7f8375;
+                border-color: white;
+                font-size: 13px;
+                font-weight: 200;
+            }
+        }
+    }
+}
+
+.all-products {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 96%;
+    margin: 30px 2%;
+
+    .all-products-header {
+        width: 100%;
+
+        h2 {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 110%;
+        }
+    }
+
+    .hide-product {
+        height: 300px;
+        overflow: hidden;
+    }
+
+    .product {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 44%;
+        border: 1px solid #CECFCC;
+        border-radius: 5px;
+        margin-bottom: 20px;
+
+        @include tablet {
+            width: 30%;
+        }
+        @include desktop {
+            width: 23%;
+        }
+
+        .admin-image-container {
+            width: 100%;
+            img {
+                width: 40%;
+                margin: 16px 0 0 16px;
+                border: 1px solid #CECFCC;
+            }
+        }
+
+        p {
+            text-align: left;
+            font-weight: 400;
+
+            .text-input {
+                width: 100%;
+                font-weight: 200;
+            }
+        }
+        .edit-product-button-container {
+            text-align: center;
+
+            button {
+                background-color: #7f8375;
+                border-color: white;
+                font-size: 13px;
+                font-weight: 200;
+
+            }
+        }
+    }
+}

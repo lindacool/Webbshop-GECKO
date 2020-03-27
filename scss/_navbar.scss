@@ -1,0 +1,186 @@
+.opacity-cover {
+    background-color: white;
+    opacity: 60%;
+    z-index: 998;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: 'Spartan', sans-serif;
+    padding-bottom: 0;
+
+
+    .container-fluid-first {
+
+        .row {
+        
+            margin: 0;
+        
+            #subscribebox {
+                background-color: #7f8375;
+                color: white;
+                text-align: center;
+                padding: 12px;
+                font-weight: 100;
+                font-size: 70%;
+                text-transform: uppercase;
+            }
+
+            
+        }
+    }
+    .nav-container {
+        font-family: 'Spartan', sans-serif;
+        visibility: hidden;
+        z-index: 999;
+        width: 100%;
+        position: absolute;
+        top: 35px;
+        transform: translateX(-140%);
+        transition-timing-function: ease-in;
+        background-color: white;
+        transition: 1s;
+        margin-top: 10px;
+
+        .about,
+        .sign-in,
+        .men-women {
+            width: 90%;
+            margin: 50px auto;
+            padding: 0;
+
+            .free-shipping {
+                width: 35%;
+                margin-bottom: 40px;
+                font-weight: bold;
+            }
+            .fat {
+                font-weight: bold;
+            }
+
+            .bottom {
+                margin-bottom: 30px;
+            }
+
+            li {
+                list-style: none;
+                padding: 5px;
+                color: black;
+                text-decoration: none;
+
+                a {
+                    color: black;
+                    text-decoration: none;
+                }
+                :hover {
+                    color: #7f8375;
+                    text-decoration: none;
+                    font-weight: 900;
+                }
+            }
+        }
+
+        .men-women {
+            border-bottom: 1px solid #7f8375;
+            width: 92%;
+            padding-bottom: 50px;
+        }
+    }
+
+    .nav-show {
+        visibility: visible;
+        transition: 0.5s;
+        transform: translateX(0%);
+        transition-timing-function: ease-out;
+        z-index: 2000;
+        margin-top: 15px;
+        position: fixed;
+
+        @include tablet {
+            width: 70%;
+        }
+
+        @include desktop {
+            width: 50%;
+        }
+    }
+
+    .burger-container {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        z-index: 10000;
+        // margin: 10px 0 10px;
+        overflow: hidden;
+        background-color: white;
+        position: -webkit-sticky;
+        padding: 7px;
+
+        .burgerandsearch {
+            display: flex;
+            flex-direction: row;
+
+            .hamburger-button {
+                border: none;
+                outline: none;
+                background: white;
+            }
+
+            .search-icon {
+                background-image: url("../public/assets/searchicon.png");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-color: #cccccc;
+                height: 25px;
+                width: 25px;
+                margin: 5px 0 10px;
+            }
+        }
+        .logo {
+            background-image: url("../public/assets/Logo-gecko.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 43px;
+            width: 60px;
+        }
+        .wishlistandcart {
+            display: flex;
+            flex-direction: row;
+            margin-right: 10px;
+            .cart {
+                background-image: url("../public/assets/cart.png");
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                height: 20px;
+                width: 20px;
+                margin: 10px 0 10px;
+                padding-left: 10px;
+                margin-left: 3px;
+            }
+            .wishlist {
+                background-image: url("../public/assets/heart.png");
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                height: 20px;
+                width: 20px;
+                margin-top: 12px;
+            }
+        }
+    }
+    .sticky {
+        position: fixed;
+        width: 100%;
+        left: 0;
+        top: 0;
+        z-index: 2000;
+        border-top: 0;
+        margin-top: 0;  
+      }
+    }

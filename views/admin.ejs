@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include ("partial/header.ejs") %>
+
+<body>
+
+    <%- include ("partial/navbar") %>
+    <%- include ("partial/tothetop") %>
+
+
+    <div class="create-new-product-form">
+
+        <div class="create-new-product-form-header">
+            <h2>Create new product</h2>
+        </div>
+
+        <form action="/createProduct" class="createproduct" method="POST">
+
+            <div class="form-group">
+                <label for="title">Product title</label>
+                <input class="form-control form-control-sm" type="text" name="title" />
+            </div>
+
+            <div class="form-group">
+                <label for="imgUrl">Image URL</label>
+                <input class="form-control form-control-sm" type="text" name="imgUrl" />
+            </div>
+
+            <div class="form-group">
+                <label for="imgUrl2">Image URL 2</label>
+                <input class="form-control form-control-sm" type="text" name="imgUrlTwo" />
+            </div>
+
+            <div class="form-group">
+                <label for="imgUrl3">Image URL 3</label>
+                <input class="form-control form-control-sm" type="text" name="imgUrlThree" />
+            </div>
+
+            <div class="form-group">
+                <label for="price">Price</label>
+                <input class="form-control form-control-sm" type="text" name="price" />
+            </div>
+
+            <div class="form-group">
+                <label for="description">Description</label>
+                <textarea rows="4" cols="50" class="form-control form-control-sm" type="text" name="description"></textarea>
+            </div>
+
+            <div class="form-check">
+                <label class="form-check-label" for="newArrival">New arrival: </label>
+                <input class="form-check-input" type="checkbox" name="newArrival">
+            </div>
+
+            <div class="form-check">
+                <label class="form-check-label" for="topSeller">Top seller: </label>
+                <input class="form-check-input" type="checkbox" name="topSeller">
+            </div>
+
+            <div class="form-check">
+                <label class="form-check-label" for="male">Male: </label>
+                <input class="form-check-input" type="checkbox" name="male">
+            </div>
+
+            <div class="form-check">
+                <label class="form-check-label" for="female">Female: </label>
+                <input class="form-check-input" type="checkbox" name="female">
+            </div>
+            <div class="form-button-container">
+                <button type="submit" class="btn btn-dark">Create product</button>
+            </div>
+
+        </form>
+    </div>
+
+    <div class="all-products">
+        <div class="all-products-header">
+            <h2>All products in database</h2>
+        </div>
+        <% products.forEach((product) => {  %>
+        <div class="product">
+            <form action="/edit/<%= product._id %>" method="POST">
+                <div class="admin-image-container">
+                    <img src="<%= product.imgUrl %>" alt="">
+                </div>
+                <p>Title: <input class="text-input" name="title" type="text" value="<%= product.title %>"></p>
+                <p>imgUrl: <input class="text-input" name="imgUrl" type="text" value="<%= product.imgUrl %>"></p>
+                <p>imgUrl 2: <input class="text-input" name="imgUrlTwo" type="text" value="<%= product.imgUrlTwo %>">
+                </p>
+                <p>imgUrl 3: <input class="text-input" name="imgUrlThree" type="text"
+                        value="<%= product.imgUrlThree %>"></p>
+                <p>Price: <input class="text-input" name="price" type="text" value="<%= product.price %>"></p>
+                <p>Description: <input class="text-input" name="description" type="text"
+                        value="<%= product.description %>"></p>
+                <p>New arrival: <input name="newArrival" type="checkbox" <% if(product.newArrival){%> checked <%} %>>
+                </p>
+                <p>Top seller: <input name="topSeller" type="checkbox" <% if(product.topSeller){%> checked <%} %>></p>
+                <p>Male: <input name="male" type="checkbox" <% if(product.male){%> checked <%} %>></p>
+                <p>Female: <input name="female" type="checkbox" <% if(product.female){%> checked <%} %>></p>
+                <p>Created by: <%= product.user.email %></p>
+
+                <p class="edit-product-button-container"><button class="btn btn-dark" type="submit">Update
+                        product</button></p>
+            </form>
+        </div>
+        <%   }); %>
+    </div>
+    
+</body>
+
+</html>

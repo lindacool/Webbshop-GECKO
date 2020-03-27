@@ -1,0 +1,18 @@
+<%- include ("partial/header") %>
+<%- include ("partial/navbar") %>
+<%- include ("partial/tothetop") %>
+
+<body>
+    <h2>Log in as admin</h2>
+    <form action="/loginadmin" method="POST">
+        <input type="text" name="userName">
+        <input type="password" name="password">
+        <button type="submit">Log in</button>
+    </form>
+
+    <%= errorMessage %>
+
+    <%- include ("partial/footer") %>
+</body>
+
+</html>
