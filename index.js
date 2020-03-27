@@ -8,7 +8,6 @@ const adminPageRouter = require("./router/adminPageRouting");
 const detailProductPageRouter = require("./router/detailProductPageRouting");
 const checkoutPageRouter = require("./router/checkoutPageRouting");
 const loginRouter = require("./router/loginRouting");
-const loginAdminRouter = require("./router/loginAdminRouting");
 const registerRouter = require('./router/registerRouting');
 const adminUserRouter = require("./router/adminUserRouting");
 const userProfileRouter = require('./router/userProfileRouting');
@@ -37,7 +36,6 @@ app.use(
   detailProductPageRouter,
   loginRouter,
   adminUserRouter,
-  loginAdminRouter,
   userProfileRouter,
   checkoutPageRouter
 );
