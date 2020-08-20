@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/lindacool/Webbshop-GECKO#readme",
   "dependencies": {
-    "bcrypt": "^4.0.1",
+    "bcrypt": "^5.0.0",
     "bcryptjs": "^2.4.3",
     "c": "^0.1.0",
     "cookie-parser": "^1.4.4",
