@@ -1,0 +1,43 @@
+@import "nav";
+
+body {
+    font-family: 'Work Sans', sans-serif;
+
+    .container-fluid {
+        .row {
+            .header {
+                background-image: url("../images/header.jpg");
+                background-size: cover;
+                background-repeat: no-repeat;
+                height: 720px;
+            }
+
+            .image1-wrapper {
+                width: 100%;
+
+                img {
+                    width: 90%;
+                }
+            }
+
+            .col-3 {
+                .subarea {
+                    fill: pink;
+                    //     opacity: 0.6;
+                    //     &:hover {
+                    //         fill: rgba(0, 0, 0, 0.397);
+                    //     }
+                }
+
+                .region_link_list {
+                    color: black;
+
+                    &:hover {
+                        color: rgba(0, 0, 0, 0.623);
+                    }
+                }
+            }
+        }
+
+    }
+}
