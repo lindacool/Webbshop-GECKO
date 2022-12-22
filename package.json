@@ -34,7 +34,7 @@
     "fs": "0.0.1-security",
     "joi": "^14.3.1",
     "jquery": "^3.4.1",
-    "jsonwebtoken": "^8.5.1",
+    "jsonwebtoken": "^9.0.0",
     "mongoose": "^5.9.2",
     "node-sass": "^4.13.1",
     "nodemailer": "^6.4.5",
